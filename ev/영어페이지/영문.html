@@ -1,0 +1,764 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML><!--[if lte IE 8]>
+<html class="no-js ie8" lang="ko"> <![endif]--><!--[if IE 9]>
+<html class="no-js ie9" lang="ko"> <![endif]--><!--[if gt IE 9]><!-->
+<html class="no-js" lang="ko"> <!--<![endif]-->
+<head>
+    <title>환경부</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="/css/user/reset.css"/>
+    <link rel="stylesheet" href="/css/user/common.css"/>
+    <link rel="stylesheet" href="/css/user/common2.css"/>
+    <link rel="stylesheet" href="/css/user/jquery.bxslider.css">
+    <script type="text/javascript" src="/js/user/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/js/user/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="/js/user/iscroll.js"></script>
+    <script src="/js/user/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="/js/user/common.js"></script>
+    <script type="text/javascript" src="/js/search/search.js"></script>
+	<script type="text/javascript" src="/js/diquestCommon.js"></script>
+	<script>
+        window.REMODAL_GLOBALS = {
+            NAMESPACE: 'remodal',
+            DEFAULTS: {
+                hashTracking: false,
+                closeOnConfirm: true,
+                closeOnCancel: true,
+                closeOnEscape: true,
+                closeOnOutsideClick: true,
+                modifier: ''
+            }
+        };
+    </script>
+    
+</head>
+<body class="en">
+<div class="skip-menu">
+    <a href="#contents">본문 바로가기</a>
+</div>
+
+<div id="wrap">
+    <div id="overLayer"></div>
+	<!-- 헤더 start -->
+	
+
+
+
+
+
+
+
+
+	<header>
+        <a href="/en/main.do" class="home"><span class="m-hide-text">HOME</span></a>
+        <h1 class="logo"><a href="/en/main.do"><span class="hide-text">National Chemicals Information System</span></a></h1>
+        <ul class="util">
+            <li><a href="#">SITE MAP</a></li>
+            <li><a href="/main.do">KOREAN</a></li>
+        </ul>
+        <p class="m-gnb-open"><a href="#"><span class="hide-text">open</span></a></p>
+    </header>
+    <nav>
+        <div class="m-gnb-close"><a href="#"></a></div>
+        <div class="gnb-wrap">
+            <ul class="depth1 clfix">
+                <li><a href="#">Chemical Search</a>
+                    <ul class="depth2">
+                        <li><a href="/en/mttrList.do">Chemical Search</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About NCIS</a>
+                    <ul class="depth2">
+                        <li><a href="#">Overview</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+            <div class="gnb-back"></div>
+        </div>
+
+    </nav>
+	
+	<!-- 컨텐츠 start -->
+	
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+//조회
+function fnClearSearchValue(){
+	$("#currentPageNo").val("1");
+	$("#pageUnit").val("1");
+	$("#reSearchKeyword").val("");
+	$("#sortInfo").val("");
+	$("#search01Yn").val("");
+	$("#search02Yn").val("");
+	$("#search03Yn").val("");
+	$("#search04Yn").val("");
+	$("#search05Yn").val("");
+	$("#search06Yn").val("");
+	$("#search07Yn").val("");
+}
+
+function fnSearchMttrList(pageIndex){
+	setSearchCookie("searchQuery", $("#searchKeyword").val());
+	
+	$("#pageIndex").val(pageIndex);
+	$("#searchForm").attr("action","/en/mttrList.do").submit();
+}
+
+function fnMoveSearch(keyword){
+	$("#searchKeyword").val(keyword);
+
+	$("#searchForm").attr("action","/en/mttrList.do").submit();
+}
+
+//페이징
+function fn_egov_page(pageIndex){
+	fnSearchMttrList(pageIndex);
+}  
+
+function fnKeyEnter(){
+	if(event.keyCode == 13){
+		fn_egov_page(1);
+	}
+}
+
+//탭 리스트 데이터 호출
+function fnCallSearchSubmit(sort, filter) {
+	var sortInfo = "";
+	var search01Yn = "";
+	var search02Yn = "";
+	var search03Yn = "";
+	var search04Yn = "";
+	var search05Yn = "";
+	var search06Yn = "";
+	var search07Yn = "";
+	if($('#'+sort).hasClass("up")) {
+		$('#'+sort).removeClass("up");
+		$('#'+sort).addClass("down");
+		sortInfo = sort + " false";
+	} else if($('#'+sort).hasClass("down")) {
+		$('#'+sort).removeClass("down");
+		$('#'+sort).addClass("up");
+		sortInfo = sort + " true";
+	}else{
+		$('#'+sort).removeClass("up");
+		$('#'+sort).addClass("down");
+		sortInfo = sort + " false";
+	}
+	if(sort == "CAS_NO") {
+		$('#MTTR_NM_ENG').removeClass("up").removeClass("down");
+		$('#MTTR_NM_KOR').removeClass("up").removeClass("down");
+	} else if(sort == "MTTR_NM_ENG") {
+		$('#CAS_NO').removeClass("up").removeClass("down");
+		$('#MTTR_NM_KOR').removeClass("up").removeClass("down");
+	} else if(sort == "MTTR_NM_KOR") {
+		$('#CAS_NO').removeClass("up").removeClass("down");
+		$('#MTTR_NM_ENG').removeClass("up").removeClass("down");
+	} else{
+		sortInfo = "CAS_NO false";
+	}
+	$('#'+filter).toggleClass("on");
+	if($('#search01').hasClass("on")) search01Yn = "search01Yn";
+	if($('#search02').hasClass("on")) search02Yn = "search02Yn";
+	if($('#search03').hasClass("on")) search03Yn = "search03Yn";
+	if($('#search04').hasClass("on")) search04Yn = "search04Yn";
+	if($('#search05').hasClass("on")) search05Yn = "search05Yn";
+	if($('#search06').hasClass("on")) search06Yn = "search06Yn";
+	if($('#search07').hasClass("on")) search07Yn = "search07Yn";
+	
+	$("#currentPageNo").val("1");
+	$("#sortInfo").val(sortInfo);
+	$("#search01Yn").val(search01Yn);
+	$("#search02Yn").val(search02Yn);
+	$("#search03Yn").val(search03Yn);
+	$("#search04Yn").val(search04Yn);
+	$("#search05Yn").val(search05Yn);
+	$("#search06Yn").val(search06Yn);
+	$("#search07Yn").val(search07Yn);
+	
+	$("#searchForm").attr("action","/en/mttrList.do").submit();
+}
+//탭 리스트 데이터 호출
+function fnCallSearch(sort, filter) {
+	var searchKeyword = $('#searchKeyword').val();
+	var pageUnit = $('#pageUnit option:selected').val();
+	var sortInfo = "";
+	var search01Yn = "";
+	var search02Yn = "";
+	var search03Yn = "";
+	var search04Yn = "";
+	var search05Yn = "";
+	var search06Yn = "";
+	var search07Yn = "";
+	if($('#'+sort).hasClass("up")) {
+		$('#'+sort).removeClass("up");
+		$('#'+sort).addClass("down");
+		sortInfo = sort + " false";
+	} else if($('#'+sort).hasClass("down")) {
+		$('#'+sort).removeClass("down");
+		$('#'+sort).addClass("up");
+		sortInfo = sort + " true";
+	}else{
+		$('#'+sort).removeClass("up");
+		$('#'+sort).addClass("down");
+		sortInfo = sort + " false";
+	}
+	if(sort == "CAS_NO") {
+		$('#MTTR_NM_ENG').removeClass("up").removeClass("down");
+		$('#MTTR_NM_KOR').removeClass("up").removeClass("down");
+	} else if(sort == "MTTR_NM_ENG") {
+		$('#CAS_NO').removeClass("up").removeClass("down");
+		$('#MTTR_NM_KOR').removeClass("up").removeClass("down");
+	} else if(sort == "MTTR_NM_KOR") {
+		$('#CAS_NO').removeClass("up").removeClass("down");
+		$('#MTTR_NM_ENG').removeClass("up").removeClass("down");
+	} else{
+		sortInfo = "CAS_NO false";
+	}
+	
+	$('#'+filter).toggleClass("on");
+	if($('#search01').hasClass("on")) search01Yn = "search01Yn";
+	if($('#search02').hasClass("on")) search02Yn = "search02Yn";
+	if($('#search03').hasClass("on")) search03Yn = "search03Yn";
+	if($('#search04').hasClass("on")) search04Yn = "search04Yn";
+	if($('#search05').hasClass("on")) search05Yn = "search05Yn";
+	if($('#search06').hasClass("on")) search06Yn = "search06Yn";
+	if($('#search07').hasClass("on")) search07Yn = "search07Yn";
+	
+	$("#sortInfo").val(sortInfo);
+	
+	$.ajax({
+		type:'POST',
+		url:"/mttr/mttrTotalCnt.json",
+		dataType : "json",
+		data:{'searchKeyword' : searchKeyword
+			, 'currentPageNo' : "1"
+			, 'pageUnit' : pageUnit
+			, 'sortInfo' : sortInfo
+			, 'search01Yn' : search01Yn
+			, 'search02Yn' : search02Yn
+			, 'search03Yn' : search03Yn
+			, 'search04Yn' : search04Yn
+			, 'search05Yn' : search05Yn
+			, 'search06Yn' : search06Yn
+			, 'search07Yn' : search07Yn
+		},
+		beforeSend : function(){ loaderStart();	},
+		error:function() { alert("데이터를 불러 오는데 실패 하였습니다."); },
+		complete:function() { loaderStop(); },
+		success:function(data){
+			$("#totalCnt").html(data.totalRecordCount);
+			
+			$.ajax({
+				type:'POST',
+				url:"/mttr/mttrList.json",
+				dataType : "json",
+				data:{'searchKeyword' : searchKeyword
+					, 'currentPageNo' : "1"
+					, 'pageUnit' : pageUnit
+					, 'sortInfo' : sortInfo
+					, 'search01Yn' : search01Yn
+					, 'search02Yn' : search02Yn
+					, 'search03Yn' : search03Yn
+					, 'search04Yn' : search04Yn
+					, 'search05Yn' : search05Yn
+					, 'search06Yn' : search06Yn
+					, 'search07Yn' : search07Yn
+				},
+				beforeSend : function(){ loaderStart();	},
+				error:function() { alert("데이터를 불러 오는데 실패 하였습니다."); },
+				complete:function() { loaderStop(); },
+				success:function(data){
+					var htmlStr = "";
+					for(var i = 0 ; i < data.length; i++){
+						htmlStr += "<tr>";
+						htmlStr += "	<td class=\"bdln\">" +data[i].casNo +"</td>";
+						htmlStr += "	<td>" +data[i].engnm +"</td>";
+						htmlStr += "	<td>" +data[i].kornm +"</td>";
+						htmlStr += "	<td>" +data[i].search01 +"</td>";
+						htmlStr += "	<td>" +data[i].search02 +"</td>";
+						htmlStr += "	<td>" +data[i].search03 +"</td>";
+						htmlStr += "	<td>" +data[i].search04 +"</td>";
+						htmlStr += "	<td>" +data[i].search05 +"</td>";
+						htmlStr += "	<td>" +data[i].search06 +"</td>";
+						htmlStr += "	<td>" +data[i].search07 +"</td>";
+						if(null != data[i].search02 && "" != data[i].search02) htmlStr += "<td><a class=\"fcb\" id=\""+data[i].mttrId+"\" onclick=\"getContentInfo(\'"+data[i].mttrId+"\')\">정보보기</a></td>";
+						else htmlStr += "<td></td>";
+						htmlStr += "<td><a href=\"#\" class=\"fcb\">"+data[i].reportcount+"건</a></td>";
+						htmlStr += "</tr>";
+					}
+					$("#resultList").html(htmlStr);
+				}
+			});
+		}
+	});
+}
+
+function fnMoveToDetail(mttrId, tabIdx){
+	$("#mttrId").val(mttrId);
+	$("#tabIdx").val(tabIdx);
+	$("#searchForm").attr("action", "/en/mttrDetail.do").submit();
+}
+
+$(function () {
+	var str=getSearchCookie("searchQuery");
+	var cookieArr=str.split('|;|');
+	var htmlStr = "";
+	var substringStr = "";
+	if("" != str){	
+		htmlStr += "<dt>My search term</dt>";
+		if(cookieArr.length > 0) {
+			for (var i=0;i < cookieArr.length && i < 10;i++){
+				if("" != cookieArr[i]){
+					substringStr = cookieArr[i];
+					if(substringStr.length > 10) substringStr = substringStr.substring(0,10);
+					
+					htmlStr += "<dd><a href=\"javascript:fnMoveSearch('" + cookieArr[i] + "');\">" + substringStr+ "</a></dd>\n";
+				}
+			}
+		}
+		$("#cookieKeyword").html(htmlStr);
+	} 
+});
+</script>
+<script type="text/javascript" language=javascript src="/js/search/smartMakerCommon.js"></script>
+<form name="searchForm" id="searchForm" method="post">
+<input type="hidden" name="mttrId" id="mttrId"/>
+<input type="hidden" name="tabIdx" id="tabIdx"/>
+
+<input type="hidden" name="currentPageNo" id="currentPageNo"/>
+<input type="hidden" name="sortInfo" id="sortInfo" value="MTTR_NM_KOR false"/>
+<input type="hidden" name="search01Yn" id="search01Yn"/>
+<input type="hidden" name="search02Yn" id="search02Yn"/>
+<input type="hidden" name="search03Yn" id="search03Yn"/>
+<input type="hidden" name="search04Yn" id="search04Yn"/>
+<input type="hidden" name="search05Yn" id="search05Yn"/>
+<input type="hidden" name="search06Yn" id="search06Yn"/>
+<input type="hidden" name="search07Yn" id="search07Yn"/>
+
+	<section id="contents" class="sub">
+        <div class="center-col">
+
+            <div class="loaction-area clfix">
+                <ul class="location clfix">
+                    <li class="m-hide"><a href="#"><span class="hide-text">home</span></a></li>
+                    <li class="m-hide"><a href="#">Chemical Search</a></li>
+                    <li><a href="#">Chemical Search</a></li>
+                </ul>
+                <ul class="util-sns clfix">
+                    <li><a href="#"><span class="hide-text">Facebook</span></a></li>
+                    <li><a href="#"><span class="hide-text">Twitter</span></a></li>
+                    <li><a href="#"><span class="hide-text">kakaostory</span></a></li>
+                    <li><a href="#"><span class="hide-text">e-mail</span></a></li>
+                </ul>
+            </div>
+
+            <div class="title-area clfix">
+                <h2>Chemical Search</h2>
+                <ul class="util clfix m-hide">
+                    <li><a href="javascript:window.print();"><span class="hide-text">print</span></a></li>
+                    <li><a href="#"><span class="hide-text">download</span></a></li>
+                    <!-- <li><a href="#" class="btn3">List</a></li> -->
+                </ul>
+            </div>
+            <div class="search-area">
+                <div class="clfix">
+                    <select name="searchCondition" class="select1">
+                        <option value="">All</option>
+                        <option value="1" >KE No</option>
+                        <option value="7" >phase-in substances subject to registration</option>
+                        <option value="2" >Toxic sub stances</option>
+                        <option value="3" >Substances subject to authorization</option>
+                        <option value="4" >Restricted substances</option>
+                        <option value="5" >Prohibited substances</option>
+                        <option value="6" >Substances requiring preparation for accidents</option>
+                    </select>
+                    <div class="input-wrap1">
+                        <input type="text" id="searchKeyword" name="searchKeyword" value="Benzene" onKeyUp="fnClearSearchValue();fnKeyEnter();" onfocus="return dq_setTextbox('0',event);" onmousedown="dq_setTextbox('1',event);" onkeydown="dq_setTextbox('1',event);"><a href="javascript:fnClearSearchValue();fnSearchMttrList('1');"><span class="m-hide">Chemical </span>Search</a>
+                    	<div class="drop" id="autoSearchArea" style="display:none;"></div>
+                        <script type="text/javascript" language=javascript src="/js/search/smartMaker.js"></script>
+                    </div>
+                    <a href="#" class="help1"><span class="hide-text">help</span></a>
+                </div>
+                <dl class="search-word2 clfix" id="cookieKeyword">
+                </dl>
+            </div>
+            
+            <!-- 게시판 start -->
+	
+            <div class="search-results-area">
+                <div class="rel-pos clfix mb">
+                    <span class="control-wrap1 m-clfix">
+                        <span class="results-text1">Search Results <span class="num" id="totalCnt">4,327</span></span>
+                        <span class="input-wrap2">
+                            <input type="text"  name="reSearchKeyword" id="reSearchKeyword" value="" placeholder="Search within results" onKeyUp="fnKeyEnter();">
+                            <a href="javascript:fnSearchMttrList(1);">Search</a>
+                        </span>
+                    </span> 
+                    <div class="fr m-hide">
+	                    <select style="width: 162px" name="pageUnit" id="pageUnit" class="select2" onchange="javascript:fnCallSearchSubmit();">
+		                    <option value="10" selected>10 Items per Page</option>
+							<option value="20" >20 Items per Page</option>
+							<option value="30" >30 Items per Page</option>
+							<option value="40" >40 Items per Page</option>
+	                	</select>
+	                </div>
+                </div>
+                <div class="m-scroll-x">
+                    <table class="tbl1">
+                        <caption>통합검색 - CAS번호, 영문명, 국문명, 고유번호, 함량 및 기존화학 물질, 시험자료 등의 정보가 기재된 표</caption>
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th rowspan="2" tabindex="0" class="sort tbln bdln  "  onclick="javascript:fnCallSearch('CAS_NO');" id="CAS_NO">CAS No.</th>
+                            <th rowspan="2" tabindex="0" class="sort  " onclick="javascript:fnCallSearch('MTTR_NM_ENG');"  id="MTTR_NM_ENG">Chemical Name</th>
+                            <th rowspan="2" tabindex="0" class="sort   down " onclick="javascript:fnCallSearch('MTTR_NM_KOR');" id="MTTR_NM_KOR">Korean Chemical name</th>
+                            <th colspan="7">NIER’s No.</th>
+                            <th rowspan="2" tabindex="0">Percentage information of regulated chemicals</th>
+                        </tr>
+                        <tr>
+                            <th tabindex="0" class="filter "  onclick="javascript:fnCallSearchSubmit('','search01');" id="search01">KE No</th>
+                            <th tabindex="0" class="filter "" onclick="javascript:fnCallSearchSubmit('','search02');" id="search02">phase-in substances subject to registration</th>
+                            <th tabindex="0" class="filter "" onclick="javascript:fnCallSearchSubmit('','search03');" id="search03">Toxic sub stances</th>
+                            <th tabindex="0" class="filter "" onclick="javascript:fnCallSearchSubmit('','search04');" id="search04">Substances subject to authorization</th>
+                            <th tabindex="0" class="filter "" onclick="javascript:fnCallSearchSubmit('','search05');" id="search05">Restricted substances</th>
+                            <th tabindex="0" class="filter "" onclick="javascript:fnCallSearchSubmit('','search06');" id="search06">Prohibited substances</th>
+                            <th tabindex="0" class="filter "" onclick="javascript:fnCallSearchSubmit('','search07');" id="search07">Substances requiring preparation for accidents</th>
+
+                        </tr>
+                        </thead>
+                        <tbody id="resultList">
+                        	
+                        	
+	                        
+							
+							<tr>
+								<td class="bdln">100-44-7</td>
+	                            <td><a href="javascript:fnMoveToDetail('06-55729', '1')">α-Chlorotoluene [이명 : Benzyl chloride; (Chloromethyl)<b>benzene</b>]</a></td>
+	                            <td>α-클로로톨루엔 [이명 : 염화벤질; (클로로메틸)벤젠]</td>
+	                            <td>KE-05729</td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td>V</td>
+	                            <td></td>
+							</tr>
+							
+							
+							<tr>
+								<td class="bdln">106-50-3</td>
+	                            <td><a href="javascript:fnMoveToDetail('06-52176', '1')">1,4-Benzenediamine [이명 : (4-Aminophenyl)amine; 1,4-Diaminobenzene; 1,4-Phenylenediamine; 4-Aminoaniline; <b>BENZENE</b>, 1,4-DIAMINO-; p-Aminoaniline; p-Benzenediamine; PHENYLENE-1,4-DIAMINE; p-Phenylenediamine]</a></td>
+	                            <td>P-페닐렌디아민 [이명 : (4-아미노페닐)아민; 1,4-다이아미노벤젠; 1,4-벤젠다이아민; 1,4-페닐렌다이아민; 4-아미노아닐린; 벤젠, 1,4-다이아미노-; 페닐렌-1,4-다이아민; p-벤젠다이아민; p-아미노아닐린; p-페닐렌다이아민 ]</td>
+	                            <td>KE-02176</td>
+	                            <td></td>
+	                            <td>97-1-334</td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td><a class="fcb" id="06-52176" onclick="getContentInfo('06-52176')">정보보기</a></td>
+							</tr>
+							
+							
+							<tr>
+								<td class="bdln">156-43-4</td>
+	                            <td><a href="javascript:fnMoveToDetail('06-63338', '1')">p-Phenetidine  [이명 : Benzenamine, 4-ethoxy-; p-Aminophenetole; 4-Aminophenetole; p-Ethoxyaniline; 4-Ethoxyaniline; 4-Ethoxybenzenamine; 4-Ethoxyphenylamine; p-Phenetidin; 4-Phenetidine]</a></td>
+	                            <td>p-페네티딘 [이명 : 벤젠아민, 4-에톡시-; p-아미노페네톨레; 4-아미노페네톨레; p-에톡시아닐린; 4-에톡시아닐린; 4-에톡시벤젠아민; 4-에톡시페닐아민; 4-페네티딘]</td>
+	                            <td>KE-13338</td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+							</tr>
+							
+							
+							<tr>
+								<td class="bdln">20018-09-1</td>
+	                            <td><a href="javascript:fnMoveToDetail('06-86160', '1')">p-tolyl diiodomethyl sulfone [이명 : 4-Tolyl diiodomethyl sulfone; <b>Benzene</b>, 1-[(diiodomethyl)sulfonyl]-4-methyl-; Diiodomethyl 4-tolyl sulfone; Diiodomethyl p-tolyl sulfone; Diiodomethyl p-tolyl sulphone; p-[(Diiodomethyl)sulfonyl]toluene; p-[(diiodomethyl)sulphonyl]toluene; p-Methylphenyl diiodomethyl sulfone; p-Tolyl diiodomethyl sulfone ]</a></td>
+	                            <td>p-톨릴 디요오도메틸 술폰 [이명 : 1-[(다이아이오도메틸)설폰일]-4-메틸벤젠; 4-톨릴 다이아이오도메틸 설폰; 다이아이오도메틸 4-톨릴 설폰; 다이아이오도메틸 p-톨릴 설폰; p-[(다이아이오도메틸)설폰일]톨루엔; p-메틸페닐 다이아이오도메틸 설폰; p-톨릴 다이아이오도메틸 설폰; p-톨릴디요오도메틸술폰]</td>
+	                            <td>KE-05-0499</td>
+	                            <td></td>
+	                            <td>97-1-461</td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td><a class="fcb" id="06-86160" onclick="getContentInfo('06-86160')">정보보기</a></td>
+							</tr>
+							
+							
+							<tr>
+								<td class="bdln">106-49-0</td>
+	                            <td><a href="javascript:fnMoveToDetail('06-73448', '1')">p-Toluidine [이명 : 1-Amino-4-methylbenzene; 4-Amino-1-methylbenzene; 4-Aminotoluene; 4-Methylaniline; 4-Methylbenzenamine; 4-Methylphenylamine; 4-Toluidine; Benzenamine, 4-methyl-; C.I. 37107; C.I. Azoic Coupling Component 107; p-Aminotoluene; p-Methylaniline; p-Methylbenzenamine; p-Methylphenylamine; p-Tolylamine; TOLUENE, 4-AMINO-; TOLUIDINE, P- ]</a></td>
+	                            <td>p-톨루이딘 [이명 : 1-아미노-4-메틸벤젠; 4-메틸벤젠아민; 4-메틸아닐린; 4-메틸페닐아민; 4-아미노-1-메틸벤젠; 4-아미노톨루엔; 4-톨루이딘; 벤젠아민, 4-메틸-; 톨루엔, 4-아미노-; p-메틸벤젠아민; p-메틸아닐린; p-메틸페닐아민; p-아미노톨루엔; p-톨리아민]</td>
+	                            <td>KE-23448</td>
+	                            <td></td>
+	                            <td>97-1-300</td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td><a class="fcb" id="06-73448" onclick="getContentInfo('06-73448')">정보보기</a></td>
+							</tr>
+							
+							
+							<tr>
+								<td class="bdln">1576-35-8</td>
+	                            <td><a href="javascript:fnMoveToDetail('91230', '1')">p-Toluenesulfonylhydrazide [이명 : 4-Methylbenzenesulfonic acid hydrazide; 4-Methylbenzenesulfonohydrazide; Benzenesulfonic acid, 4-methyl-, hydrazide; N-Toluolsulphonyl-hydrazine; p-Toluenesulfohydrazide; p-Toluenesulfonic acid, hydrazide; p-Toluenesulfonylhydrazide; p-Tolylsulfonylhydrazine; TOLUENE-4-SULFONYL HYDRAZIDE; toluene-4-sulphonohydrazide ]</a></td>
+	                            <td>p-톨루엔설포닐히드라지드 [이명 : 4-메틸벤젠설포노하이드라자이드; 4-메틸벤젠설폰산 하이드라자이드; 벤젠설폰산, 4-메틸-, 하이드라자이드; 톨루엔-4-설포노하이드라자이드; 톨루엔-4-설폰일하이드라자이드; N-톨루올설포닐하이드라진; p-톨루엔설포하이드라자이드; p-톨루엔설폰산, 하이드라자이드; p-톨루엔설폰일하이드라자이드; p-톨릴설폰일하이드라진 ]</td>
+	                            <td>KE-14-0083</td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+							</tr>
+							
+							
+							<tr>
+								<td class="bdln">104-15-4</td>
+	                            <td><a href="javascript:fnMoveToDetail('06-73476', '1')">p-Toluene sulfonic acid [이명 : 4-Methylbenzenesulfonic acid; p-Methylphenylsulfonic acid; Benzenesufonic acid, 4-methyl-; p-Methylbenzenesulfonic acid]</a></td>
+	                            <td>p-톨루엔 설폰산 [이명 : 4-메틸벤젠설폰산; p-메틸페닐설폰산; 벤젠설폰산,4-메틸-; p-메틸벤젠설폰산]</td>
+	                            <td>KE-23476</td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+							</tr>
+							
+							
+							<tr>
+								<td class="bdln">106-48-9</td>
+	                            <td><a href="javascript:fnMoveToDetail('06-55804', '1')">p-Chlorophenol [이명 : 1-Chloro-4-ethoxybenzene; 4-Chloro-1-hydroxybenzene; 4-Chlorophenol; 4-Hydroxychlorobenzene; Chlorophenol; Parachlorophenol; p-Chlorophenic acid; Phenol, 4-chloro-; Phenol, p-chloro-]</a></td>
+	                            <td>p-클로로페놀 [이명 : 1-클로로-4-에톡시벤젠; 4-클로로-1-하이드록시벤젠; 4-클로로페놀; 4-하이드록시클로로벤젠; 클로로페놀; 파라클로로페놀; 페놀, 4-클로로-; 페놀, p-클로로-; 페놀,4-클로로-; p-모노클로로페놀; p-클로로펜산]</td>
+	                            <td>KE-05804</td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+							</tr>
+							
+							
+							<tr>
+								<td class="bdln">106-44-5</td>
+	                            <td><a href="javascript:fnMoveToDetail('06-74794', '1')">4-Methylphenol [이명 : 1-Hydroxy-4-methylbenzene; 1-Methyl-4-hydroxybenzene; 4-Cresol; 4-Hydroxy-1-methylbenzene; 4-Hydroxytoluene; CRESOL, P-; p-Cresol; p-Hydroxytoluene ]</a></td>
+	                            <td>P-크레졸 [이명 : 1-메틸-4-하이드록시벤젠; 1-하이드록시-4-메틸벤젠; 4-메틸페놀; 4-크레솔; 4-크레졸; 4-하이드록시-1-메틸벤젠; 4-하이드록시톨루엔; 크레솔, P-; 파라-크레실릭산; p-크레솔; P-하이드록시톨루엔]</td>
+	                            <td>KE-24794</td>
+	                            <td></td>
+	                            <td>97-1-268</td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td><a class="fcb" id="06-74794" onclick="getContentInfo('06-74794')">정보보기</a></td>
+							</tr>
+							
+							
+							<tr>
+								<td class="bdln">106-42-3</td>
+	                            <td><a href="javascript:fnMoveToDetail('06-85430', '1')">p-Xylene [이명 : 1,4-Dimethylbenzene; 1,4-Xylene; 4-Methyltoluene; <b>Benzene</b>, 1,4-dimethyl-; para-Xylene; p-Xylol; XYLENE, P-; XYLENE, PARA- ]</a></td>
+	                            <td>P-자일렌 [이명 : 1,4-다이메틸벤젠; 1,4-디메틸벤젠; 1,4-자일렌; 4-메틸톨루엔; 파라자일렌; 파라-자일렌; 파라크실렌; P-디메틸벤젠; P-메틸톨루엔; p-자일롤; P-크실렌]</td>
+	                            <td>KE-35430</td>
+	                            <td></td>
+	                            <td>97-1-275</td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td><a class="fcb" id="06-85430" onclick="getContentInfo('06-85430')">정보보기</a></td>
+							</tr>
+							
+							
+							
+							
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- 페이징 start -->
+				<div class="paging">
+					<span class="inner_paging">
+						<a href="#" class="btn_paging btn_fst" onclick="fn_egov_page(1);return false; "><span class="ico_corp">맨 처음</span></a><a href="#" class="btn_paging btn_prev" onclick="fn_egov_page(1);return false; "><span class="ico_corp">이전</span></a><a href="#" class="link_page on">1</a><a href="#" class="link_page" onclick="fn_egov_page(2);return false; ">2</a><a href="#" class="link_page" onclick="fn_egov_page(3);return false; ">3</a><a href="#" class="link_page" onclick="fn_egov_page(4);return false; ">4</a><a href="#" class="link_page" onclick="fn_egov_page(5);return false; ">5</a><a href="#" class="link_page" onclick="fn_egov_page(6);return false; ">6</a><a href="#" class="link_page" onclick="fn_egov_page(7);return false; ">7</a><a href="#" class="link_page" onclick="fn_egov_page(8);return false; ">8</a><a href="#" class="link_page" onclick="fn_egov_page(9);return false; ">9</a><a href="#" class="link_page" onclick="fn_egov_page(10);return false; ">10</a><a href="#" class="btn_paging btn_next" onclick="fn_egov_page(11);return false; "><span class="ico_corp">다음</span></a><a href="#" class="btn_paging btn_lst" onclick="fn_egov_page(433);return false; "><span class="ico_corp">맨 마지막</span></a>
+
+			   			<input type="hidden" id="pageIndex" name="pageIndex" value="1"/>
+					</span>
+				</div>
+                <div class="paging m">
+                    <span class="inner_paging">
+						<a href="#" class="btn_paging btn_fst" onclick="fn_egov_page(1);return false; "><span class="ico_corp">맨 처음</span></a><a href="#" class="btn_paging btn_prev" onclick="fn_egov_page(1);return false; "><span class="ico_corp">이전</span></a><span class="link_page on">1</span><span class="link_page">/ 433</span><a href="#" class="btn_paging btn_next" onclick="fn_egov_page(2);return false; "><span class="ico_corp">다음</span></a><a href="#" class="btn_paging btn_lst" onclick="fn_egov_page(433);return false; "><span class="ico_corp">맨 마지막</span></a>
+
+					</span>
+                </div>
+
+            </div>
+            <div class="guidance-area">
+                <div class="notice">
+                    <ul class="ul1">
+                        <li>When there is no matching result or the substance is only marked on the “OECD HPV chemicals”, it is considered “Non-phase-in substances”(※ “OECD HPV chemicals” means chemical substances that are globally manufactured or imported over 1.000 tons, excluding Korean market.)</li>
+                        <li>Be aware that the information of toxic substances, which includes sails or heavy metal compounds, may not be found at NCIS. In order to achieve proper regulatory information, you should refer to corresponding Act or Notification.</li>
+                        <li>When the substance is a “hydrate” and its anhydrous substance is listed on the phase-in substance, it is not considered as a non-phase substance.</li>
+                        <li>The phase-in substances subject to registration and its “hydrates” are both included on the list.</li>
+                        <li>If you click the “Percentage information of regulated chemicals, “you can find restricted percentage of its composition and regulatory information of toxic substances, substances subject to authorization, restricted substances, or prohibited substances.</li>
+                        <li>If substance is checked on the “Substances requiring preparation for accidents” under “NIER’s No, “you can find more information at “Korea Information System for Chemical safely management(http://kischem.nier.go.kr).”</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</form>  
+
+<div class="remodal modal1" data-remodal-id="modal">
+    <div class="pop-head">
+        <h2>Percentage information of regulated chemicals</h2>
+        <a data-remodal-action="close" class="remodal-close" href="#"><span class="hide-text">닫기</span></a>
+    </div>
+    <div id="pop-content">
+        <div class="info-area2">
+            <div class="rel-pos"><h3 id="contentTitle">벤젠</h3><!-- <a href="#" class="btn1">전체보기</a> --></div>
+            <div class="m-scroll-x">
+                <table class="tbl1">
+                    <caption>통합검색 - CAS번호, 영문명, 국문명, 고유번호, 함량 및 기존화학 물질, 시험자료 등의 정보가 기재된 표</caption>
+                    <colgroup>
+                        <col style="width:20%">
+                        <col style="width:10%">
+                        <col style="width:35%">
+                        <col style="width:35%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th class="bdln">Chemical Information</th>
+                        <th>NIER’s No</th>
+                        <th>Content(%)</th>
+                        <th>Prohibited information Limited information</th>
+                    </tr>
+                    </thead>
+                    <tbody id="contentsBody">
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div class="pop-ft">
+        <!-- <a class="btn6" data-remodal-action="cancel">취소</a> -->
+        <a class="btn7" data-remodal-action="confirm">Close Window</a>
+    </div>
+<!--    <div class="pop-ft">
+        <a href="#" class="btn1 btn-grey">취소</a> <a href="#" class="btn1 btn-red">확인</a>
+        &lt;!&ndash;        <a data-remodal-action="cancel" class="remodal-cancel">취소</a>
+                <a data-remodal-action="confirm" class="remodal-confirm">확인</a>&ndash;&gt;
+    </div>-->
+</div>
+<script>
+function getContentInfo(mttrId){
+	
+	$.ajax({
+		url : "/mttr/contentInfo.do",
+		data : {"mttrId" : mttrId },
+		type : "POST",
+		success : function(data){
+			
+			var title = data.title;
+			var list = data.resultList;
+			
+			var html = "";
+			for(i=0;i<list.length;i++){
+				html += "<tr>";
+				html += "<td class='bdln'><a href='#' class='fcb'>"+list[i].codeNmEng+"</a></td>";
+				html += "<td>"+list[i].identiNo+"</td>";
+				html += "<td>"+list[i].contentInfoEng+"</td>";
+				html += "<td>"+list[i].excpInfoEng+"</td>";
+				html += "</tr>";
+				
+			}
+			$("#contentTitle").html(title);
+			$("#contentsBody").html(html);
+			
+			var inst = $('[data-remodal-id=modal]').remodal();
+		    inst.open();
+		    
+		    //data-remodal-target="modal"
+		}
+	});
+}
+</script>
+<script type="text/javascript" src="/js/user/remodal.js"></script>
+
+	<!-- //컨텐츠 end -->
+	
+	<!-- 하단 영역 -->
+	
+
+
+
+
+
+
+
+
+ 	<footer class="clfix">
+        <div class="center-col clfix">
+            <div class="foot-mark"><span class="hide-text">환경부</span></div>
+            <address>
+                Address : Environmental Research Complex, Kyungseo-Dong, Seo-Gu, Incheon, Korea(Zipcode 404-708)<br>
+                Q&A : Chemicals Registration and Evaluation Division/Risk Assessment Division<br>
+                <span>COPYRIGHT (c) 2008 NIER. ALL RIGHTS RESERVED.</span>
+            </address>
+            <div class="foot-mark2 m-hide"><span class="hide-text">National Institute of Environmental Research</span></div>
+        </div>
+    </footer>
+	
+	<div class="dim"></div>
+
+</div>
+<!-- //푸터 end -->
+</body>
+</html>

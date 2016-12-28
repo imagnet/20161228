@@ -1,0 +1,772 @@
+<!DOCTYPE HTML><!--[if lte IE 8]>
+<html class="no-js ie8" lang="ko"> <![endif]--><!--[if IE 9]>
+<html class="no-js ie9" lang="ko"> <![endif]--><!--[if gt IE 9]><!-->
+<html class="no-js" lang="ko"> <!--<![endif]-->
+<head>
+    <title>국어원 관리자 시스템</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link href="../css/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+
+    <script src="../js/jquery.bxslider.js"></script>
+    <script>
+        $(function () {
+            $(".datepicker1").datepicker({
+                showOn: "button",
+                buttonImage: "../image/jquery_ui/calendar.gif",
+                buttonImageOnly: true,
+                buttonText: "Select date"
+            });
+        });
+    </script>
+    <!--<script type="text/javascript" src="../js/common.js"></script>-->
+    <!--    <script>
+            $(document).ready(function() {
+                $('.wrap').on( 'keyup', 'textarea', function (e){
+                    $(this).css('height', 'auto' );
+                    $(this).height( this.scrollHeight );
+                });
+                $('.wrap').find( 'textarea' ).keyup();
+            });
+        </script>-->
+
+</head>
+<body>
+<header class="clfix">
+    <h1 class="logo">
+        <a href="#">
+            <span class="hide-text">국립국어 원공공언어 지원</span>
+        </a>
+        <span class="title"><strong>관리자</strong> 시스템</span>
+    </h1>
+    <ul class="util clfix">
+        <li><a href="#">김 관리</a></li>
+        <li><a href="#">내 정보 관리</a></li>
+        <li><a href="#">로그아웃</a></li>
+    </ul>
+</header>
+<div class="wrap clfix">
+    <nav>
+        <ul class="lnb">
+            <li><a href="">공공 언어 지원</a>
+                <ul>
+                    <li><a href="">공공 언어 지원 현황</a></li>
+                    <li><a href="">공공 언어 지원 현황 관리</a></li>
+                </ul>
+            </li>
+            <li><a href="">공공 용어 번역</a>
+                <ul>
+                    <li><a href="">공공 용어 번역 현황</a></li>
+                    <li><a href="">번역 통합 데이터 관리</a></li>
+                    <li><a href="">공공 용어 번역 요청</a></li>
+                    <li><a href="">기관 수집 DB 관리</a></li>
+                </ul>
+            </li>
+            <li><a href="">우리말 다듬기</a>
+                <ul>
+                    <li><a href="">다듬고 싶은 말 관리</a></li>
+                    <li><a href="">공모전 관리</a></li>
+                    <li><a href="">우리말 다듬기 회원관리</a></li>
+                </ul>
+            </li>
+            <li><a href="">개선 시민 제보 관리</a></li>
+            <li><a href="">자료
+				실 관리</a></li>
+            <li><a href="">알립니다. 관리</a></li>
+            <li><a href="">통계 관리</a></li>
+            <li><a href="">관리 계정 관리</a></li>
+        </ul>
+    </nav>
+    <section id="contents" class="sub">
+        <div class="rel-pos clfix">
+              <h2>공공 언어 지원 현황 관리</h2>
+            <ul class="location">
+                <li><a href="#">
+                    <span class="hide-text">home</span>
+                </a></li>
+                <li><a href="#">공공 언어 지원</a></li>
+                <li><a href="#">공공 언어 지원 현황 관리</a></li>
+            </ul>
+        </div>
+        <table class="tbl1">
+
+            <col style="width:20%">
+            <col style="width:auto;">
+
+            <tr>
+                <th class="bdln">찾을대상</th>
+                <td class="txtal">
+                    <span class="search-wrap"><select name="" class="form-width1">
+                        <option value="">월별</option>
+                        <option value="">월별</option>
+                        <option value="">월별</option>
+                    </select> <input type="text" class="form-width2"><a class="btn1">검색</a><a href="#" class="btn3 on">
+                        <span class="hide-text">닫기</span>
+                    </a>
+                    </span>
+                </td>
+            </tr>
+        </table>
+        <div class="rel-pos mb1 clfix">
+            <span class="comment fl">모두 <strong>24,410</strong>건의 결과가 있습니다.</span>
+        </div>
+            
+		<table class="tbl1">
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:40%">
+				<col style="width:10%">
+				<col style="width:10%">
+				<col style="width:13%">
+				<col style="width:auto">
+			</colgroup>
+
+			<tbody>
+				<tr>
+					<th class="bdln">구분</th>
+					<th>제목</th>
+					<th>글쓴이</th>
+					<th>구분</th>
+					<th>쓴 날짜</th>
+					<th>처리상태</th>
+				</tr>
+				<tr>
+					<th class="bdln ">제목</th>
+					<td class="txtal">문화재 안내판 문장 감수</td>
+					<td>홍길동</td>
+					<td>낱말</td>
+					<td>20160611</td>
+					<td>접수</td>
+				</tr>
+				<tr>
+					<th class="bdln "></th>
+					<td class="txtal"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="bdln "></th>
+					<td class="txtal"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="bdln "></th>
+					<td class="txtal"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="paging">
+            <span class="inner_paging">
+                <a href="#" class="btn_paging btn_fst"><span class="ico_corp">맨 처음</span></a>
+                <a href="#" class="btn_paging btn_prev"><span class="ico_corp">이전</span></a>
+                <a href="#" class="link_page on">1</a> <a href="#" class="link_page">2</a>
+                <a href="#" class="link_page">3</a> <a href="#" class="link_page">4</a>
+                <a href="#" class="link_page">5</a> <a href="#" class="link_page">6</a>
+                <a href="#" class="link_page">7</a> <a href="#" class="link_page">8</a>
+                <a href="#" class="link_page">9</a> <a href="#" class="link_page">10</a>
+                <a href="#" class="btn_paging btn_next"><span class="ico_corp">다음</span></a>
+                <a href="#" class="btn_paging btn_lst"><span class="ico_corp">맨 마지막</span></a>
+            </span>
+        </div>
+
+		<table class="tbl1">
+            <colgroup>
+                <col style="width:20%">
+                <col style="width:auto">
+            </colgroup>
+
+            <tbody>
+                <tr>
+                    <th class="bdln">구분</th>
+                    <td class="txtal">
+                        <span class="form-g1"><input type="radio" id="c1" name="cc"/> <label for="c1">
+                            <span></span>
+                            전체</label> <input type="radio" id="c2" name="cc"/> <label for="c2">
+                            <span></span>
+                            낱말</label> <input type="radio" id="c3" name="cc"/> <label for="c3">
+                            <span></span>
+                            문장</label> <input type="radio" id="c4" name="cc"/> <label for="c4">
+                            <span></span>
+                            그 밖</label></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="bdln">처리상태</th>
+                    <td class="txtal">
+                        <span class="form-g1">
+						<input type="checkbox" id="r1" name="rr"/> <label for="r1">
+						<span></span> 전체</label> 
+						<input type="checkbox" id="r2" name="rr"/> <label for="r2">
+						<span></span>접수</label> 
+						<input type="checkbox" id="r3" name="rr"/> <label for="r3">
+						<span></span>처리 중</label> 
+						<input type="checkbox" id="r4" name="rr"/> <label for="r4">
+						<span></span>완료</label></span>
+                    </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="bdln">요청일</th>
+                    <td class="txtal">
+                        <span class="calendar-wrap"><input type="text" class="datepicker1 form-width1">
+                            <span>~</span>
+                            <input type="text" class="datepicker1 form-width1"></span>
+                        <a class="btn1 ml1" href="#">조회</a>
+                    </td>
+                </tr>
+            </tbody>
+
+            <tr>
+                <th class="bdln">찾을대상</th>
+                <td class="txtal">
+                    <span class="search-wrap"><select name="" class="form-width1">
+                        <option value="">월별</option>
+                        <option value="">월별</option>
+                        <option value="">월별</option>
+                    </select> <input type="text" class="form-width2"><a class="btn1">검색</a><a href="#" class="btn3">
+                        <span class="hide-text">닫기</span>
+                    </a>
+                    </span>
+                </td>
+            </tr>
+        </table>
+        <div class="rel-pos mb1 clfix">
+            <span class="comment fl">모두 <strong>24,410</strong>건의 결과가 있습니다.</span>
+            <span class="fr">
+                <span class="util1">
+                    <a href="#" class="btn5">개별 등록</a>
+                </span>
+            </span>
+        </div>
+        <table class="tbl1">
+			<colgroup>
+				<col style="width:10%">
+				<col style="width:40%">
+				<col style="width:10%">
+				<col style="width:10%">
+				<col style="width:13%">
+				<col style="width:auto">
+			</colgroup>
+
+			<tbody>
+				<tr>
+					<th class="bdln">구분</th>
+					<th>제목</th>
+					<th>글쓴이</th>
+					<th>구분</th>
+					<th>쓴 날짜</th>
+					<th>처리상태</th>
+				</tr>
+				<tr>
+					<th class="bdln ">제목</th>
+					<td class="txtal">문화제 안내판 문장 감수</td>
+					<td>홍길동</td>
+					<td>낱말</td>
+					<td>20160611</td>
+					<td>접수</td>
+				</tr>
+				<tr>
+					<th class="bdln "></th>
+					<td class="txtal"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="bdln "></th>
+					<td class="txtal"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th class="bdln "></th>
+					<td class="txtal"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="paging">
+			<span class="inner_paging">
+				<a href="#" class="btn_paging btn_fst"><span class="ico_corp">맨 처음</span></a>
+				<a href="#" class="btn_paging btn_prev"><span class="ico_corp">이전</span></a>
+				<a href="#" class="link_page on">1</a> <a href="#" class="link_page">2</a>
+				<a href="#" class="link_page">3</a> <a href="#" class="link_page">4</a>
+				<a href="#" class="link_page">5</a> <a href="#" class="link_page">6</a>
+				<a href="#" class="link_page">7</a> <a href="#" class="link_page">8</a>
+				<a href="#" class="link_page">9</a> <a href="#" class="link_page">10</a>
+				<a href="#" class="btn_paging btn_next"><span class="ico_corp">다음</span></a>
+				<a href="#" class="btn_paging btn_lst"><span class="ico_corp">맨 마지막</span></a>
+			</span>
+		</div>
+
+		 <div class="rel-pos mb1 clfix">
+            <span class="comment fl">공공 언어 지원 요청 사항</span>
+        </div>
+        <table class="tbl1">
+			<colgroup>
+				<col style="width:20%">
+				<col style="width:30%">
+				<col style="width:20%">
+				<col style="width:auto">
+			</colgroup>
+
+			<tbody>
+				<tr>
+					<th class="bdln">제목</th>
+					<td colspan="3" class="txtal">문화재 안내판 문장 감수</td>
+				</tr>
+				<tr>
+					<th class="bdln">글쓴이</th>
+					<td class="txtal">홍길동</td>
+					<th>요청일시</th>
+					<td>2016. 4. 30.  21:10</td>
+				</tr>
+				<tr>
+					<th class="bdln">소속</th>
+					<td class="txtal">영암군청</td>
+					<th>전화번호</td>
+					<td>010-9876-5432
+					</td>
+				</tr>
+				<tr>
+					<th class="bdln">전자우편</th>
+					<td class="txtal">hgd@naver.com</td>
+					<th>공개여부</th>
+					<td>비 공개</td>
+				</tr>
+				<tr>
+					<th class="bdln">구분</th>
+					<td class="txtal">낱말</td>
+					<th>요청 방식</td>
+					<td>온라인 접수</td>
+				</tr>
+				<tr>
+					<th class="bdln">파일붙임</th>
+					<td colspan="3" class="txtal"><a href="#" class="attach-name">영암군청.hwp (25k)</a></td>
+				</tr>
+				<tr>
+					<th class="bdln">파일붙임</th>
+					<td colspan="3" class="txtal">전남 영암군청 문화관광체육과 홍길동입니다.
+						앞전에 보내주신 감수 용에 깊이  감사드립니다
+						우리군에서 추가로 3개를 더 교체하기로 했습니다
+						더운데 일감만 드려 죄송합니다.
+						다시 한번 감사드리고 부탁드립니다. 
+						</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+		 <div class="rel-pos mb1 clfix">
+            <span class="comment fl">답변</span>
+        </div>
+        <table class="tbl1">
+            <colgroup>
+				<col style="width:20%">
+				<col style="width:30%">
+				<col style="width:20%">
+				<col style="width:30%">
+			</colgroup>
+
+            <tbody>
+                <tr>
+                    <th class="bdln">담당자</th>
+                    <td class="txtal"><input type="text" class="form-width1"></td>
+                    <th>담당부서</th>
+                    <td class="txtal"><input type="text" class="form-width1"></td>
+                </tr>
+                <tr>
+                    <th class="bdln">전자우편</th>
+                    <td class="txtal"><input type="text" class="form-width1"></td>
+                    <th>전화번호</th>
+                    <td class="txtal"><input type="text" class="form-width1"></td>
+                </tr>
+				 <tr>
+                    <th class="bdln">처리상태</th>
+                    <td class="txtal">
+						<select name="" class="form-width1">
+							<option value="">접수</option>
+							<option value="">접수</option>
+							<option value="">접수</option>
+						</select>
+					</td>
+                    <th>처리결과</th>
+                    <td class="txtal">
+						<select name="" class="form-width1">
+							<option value="">선택</option>
+							<option value="">선택</option>
+							<option value="">선택</option>
+						</select>
+					</td>
+                </tr>
+				 <tr>
+                    <th class="bdln">분류구분</th>
+                    <td class="txtal">
+						<select name="" class="form-width1">
+							<option value="">선택</option>
+							<option value="">선택</option>
+							<option value="">선택</option>
+						</select>
+					</td>
+                    <th>기관구분</th>
+                    <td class="txtal">
+						<select name="" class="form-width1">
+							<option value="">선택</option>
+							<option value="">선택</option>
+							<option value="">선택</option>
+						</select>
+					</td>
+                </tr>
+				<tr>
+                    <th class="bdln">분량<br><span class="s-txt">(200자 원고지)</span></th>
+                    <td class="txtal"><input type="text"  value="장" class="form-width1 txtar"></td>
+                    <th>용어개수</th>
+                    <td class="txtal"><input type="text" value="개" class="form-width1 txtar"></td>
+                </tr>
+                <tr>
+                    <th class="bdln">지원내용</th>
+                    <td colspan="3" class="txtal">
+                         <textarea draggable="false fl" class="ta1 txtbox1"> </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="bdln">파일붙임</th>
+                    <td class="txtal" colspan="3">
+                        <span class="add-wrap">
+                            <input type="text" class="form-width2"><a href="#" class="btn12">
+                            <span class="hide-text">추가</span>
+                        </a>
+                        </span>
+                        <br>
+                        <span class="ml2">[총 0개] 0KB/50M</span>
+                    </td>
+                </tr>
+            </tbody>            
+        </table>
+
+		<div class="btn-wrap">
+            <a class="btn11" href="#">취소</a> <a class="btn11 conform" href="#">답변등록</a>
+        </div>
+
+
+		<div class="rel-pos mb1 clfix">
+            <span class="comment fl">요청사항</span>
+        </div>
+        <table class="tbl1">
+            <colgroup>
+				<col style="width:20%">
+				<col style="width:30%">
+				<col style="width:20%">
+				<col style="width:30%">
+			</colgroup>
+
+            <tbody>
+                <tr>
+                    <th class="bdln">제목</th>
+                    <td class="txtal"  colspan="3"><input type="text" class="form-width2"></td>
+
+                </tr>
+                <tr>
+                    <th class="bdln">글쓴이</th>
+                    <td class="txtal"><input type="text" class="form-width1"></td>
+                    <th>요청일시</th>
+                    <td class="txtal">2016.4.30 21:10</td>
+                </tr>
+				 <tr>
+                    <th class="bdln">소속</th>
+                    <td class="txtal"><input type="text" class="form-width1"></td>
+                    <th>전화번호</th>
+                    <td class="txtal"><input type="text" class="form-width1"></td>
+                </tr>
+				 <tr>
+                    <th class="bdln">전자우편</th>
+                    <td class="txtal"><input type="text" class="form-width1 s-txt" placeholder="ID123@korea.kr"></td>
+                    <th>공개여부</th>
+                    <td class="txtal">
+						<select name="" class="form-width1">
+							<option value="">선택</option>
+							<option value="">선택</option>
+							<option value="">선택</option>
+						</select>
+					</td>
+                </tr>
+				 <tr>
+                    <th class="bdln">구분</th>
+                    <td class="txtal">
+						<select name="" class="form-width1">
+							<option value="">선택</option>
+							<option value="">선택</option>
+							<option value="">선택</option>
+						</select>
+					</td>
+                    <th>요청방식</th>
+                    <td class="txtal">오프라인 등록</td>
+                </tr>				     
+				 <tr>
+                    <th class="bdln">파일붙임</th>
+                    <td class="txtal" colspan="3">
+                        <span class="add-wrap">
+                            <input type="text" class="form-width2"><a href="#" class="btn12">
+                            <span class="hide-text">추가</span>
+                        </a>
+                        </span>
+                        <br>
+                        <span class="ml2">[총 0개] 0KB/50M</span>
+                    </td>
+                </tr>		
+				<tr>
+                    <th class="bdln">요청내용</th>
+                    <td colspan="3" class="txtal">
+                         <textarea draggable="false fl" class="ta1 txtbox1"> </textarea>
+                    </td>
+                </tr>    
+            </tbody>            
+        </table>
+		
+		
+		
+		<div class="rel-pos mb1 clfix">
+            <span class="comment fl">처리현황</span>
+        </div>
+        <table class="tbl1">
+            <colgroup>
+				<col style="width:20%">
+				<col style="width:30%">
+				<col style="width:20%">
+				<col style="width:30%">
+			</colgroup>
+
+            <tbody>
+                <tr>
+                    <th class="bdln">담당자</th>
+                    <td class="txtal"><input type="text" class="form-width1"></td>
+                    <th>담당부서</th>
+                    <td class="txtal"><input type="text" class="form-width1"></td>
+                </tr>
+                <tr>
+                    <th class="bdln">전자우편</th>
+                    <td class="txtal"><input type="text" class="form-width1 s-txt" placeholder="ID123@korea.kr"	></td>
+                    <th>전화번호</th>
+                    <td class="txtal"><input type="text" class="form-width1"></td>
+                </tr>
+                 <tr>
+                    <th class="bdln">처리상태</th>
+                    <td class="txtal">
+						<select name="" class="form-width1">
+							<option value="">접수</option>
+							<option value="">접수</option>
+							<option value="">접수</option>
+						</select>
+					</td>
+                    <th>처리결과</th>
+                    <td class="txtal">
+						<select name="" class="form-width1">
+							<option value="">선택</option>
+							<option value="">선택</option>
+							<option value="">선택</option>
+						</select>
+					</td>
+                </tr>
+                 <tr>
+                    <th class="bdln">분류구분</th>
+                    <td class="txtal">
+						<select name="" class="form-width1">
+							<option value="">선택</option>
+							<option value="">선택</option>
+							<option value="">선택</option>
+						</select>
+					</td>
+                    <th>기관구분</th>
+                    <td class="txtal">
+						<select name="" class="form-width1">
+							<option value="">선택</option>
+							<option value="">선택</option>
+							<option value="">선택</option>
+						</select>
+					</td>
+                </tr>
+				 <tr>
+                    <th class="bdln">분량<br><span class="s-txt">(200자 원고지)</span></th>
+                    <td class="txtal"><input type="text"  value="장" class="form-width1 txtar"></td>
+                    <th>용어개수</th>
+                    <td class="txtal"><input type="text" value="개" class="form-width1 txtar"></td>
+                </tr>
+				 <tr>
+                    <th class="bdln">지원내용</th>
+                    <td colspan="3" class="txtal">
+                         <textarea draggable="false fl" class="ta1 txtbox1"></textarea>
+                    </td>
+                </tr>
+				 <tr>
+                    <th class="bdln">파일붙임</th>
+                    <td class="txtal" colspan="3">
+                        <span class="add-wrap">
+                            <input type="text" class="form-width2"><a href="#" class="btn12">
+                            <span class="hide-text">추가</span>
+                        </a>
+                        </span>
+                        <br>
+                        <span class="ml2">[총 0개] 0KB/50M</span>
+                    </td>
+                </tr>
+	          </tbody>            
+        </table>
+
+
+		
+		<div class="btn-wrap">
+            <a class="btn11" href="#">취소</a> <a class="btn11 conform" href="#">저장</a>
+        </div>
+
+
+
+
+
+
+    </section>
+</div><!-- wrap -->
+
+
+
+
+
+
+
+
+
+<footer class="clfix">
+    <div class="foot-mark">
+        <span class="hide-text">국어원</span>
+    </div>
+    <address>
+        우) 07511 서울특별시 강서구 금낭화로 154(방화3동 827) | 대표전화 02-2669-9775 | 전송 02-2669-9727<br> 이 누리집의 저작권은 국립국어원에 있습니다.
+    </address>
+</footer>
+
+
+<div class="remodal modal5" data-remodal-id="modal" id="pop">
+    <div class="pop-head">
+        <h2>번역 통합 데이터 검색</h2>
+        <a data-remodal-action="close" class="remodal-close" href="#">
+            <span class="hide-text">닫기</span>
+        </a>
+    </div>
+    <div id="pop-content">
+        <span class="input-wrap2">
+            <input type="text">
+            <a href="#" class="btn1 wo">번역 여부 확인</a>
+        </span>
+        <table class="tbl2">
+            <tr>
+                <th>번호</th>
+                <th>한글명칭</th>
+                <th>번역어</th>
+                <th>분류</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class="fb">도봉산</td>
+                <td class="fb txtal">Dobongsan</td>
+                <td>인공지명> 교통</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="fb">도봉산</td>
+                <td class="fb txtal">Dobongsan Mountain</td>
+                <td>자연지명> 자연관광</td>
+            </tr>
+        </table>
+    </div>
+    <div class="pop-ft">
+        <a href="#" class="btn1" data-remodal-action="cancel">취소</a>
+        <a href="#" class="btn1 upload" data-remodal-action="confirm">확인</a>
+    </div>
+</div><!-- wrap -->
+
+<div class="remodal modal6" data-remodal-id="modal6" id="pop">
+    <div class="pop-head">
+        <h2>번역 통합 데이터 검색</h2>
+        <a data-remodal-action="close" class="remodal-close" href="#">
+            <span class="hide-text">닫기</span>
+        </a>
+    </div>
+    <div id="pop-content">
+
+        <p class="text3">
+            한글 명칭<em>'도봉산'</em>은 현재<strong>2건</strong>의 등록 데이터가 있습니다. <br> <br> <a class="link2">번역 통합 데이터 관리에서 확인하기</a>
+        </p>
+    </div>
+    <div class="pop-ft">
+        <a href="#" class="btn1" data-remodal-action="cancel">취소</a>
+        <a href="#" class="btn1 upload" data-remodal-action="confirm">확인</a>
+    </div>
+</div>
+
+<script>
+    $(document).on('opening', '.remodal', function () {
+        console.log('opening');
+    });
+
+    $(document).on('opened', '.remodal', function () {
+        console.log('opened');
+    });
+
+    $(document).on('closing', '.remodal', function (e) {
+        console.log('closing' + (e.reason ? ', reason: ' + e.reason : ''));
+    });
+
+    $(document).on('closed', '.remodal', function (e) {
+        console.log('closed' + (e.reason ? ', reason: ' + e.reason : ''));
+    });
+
+    $(document).on('confirmation', '.remodal', function () {
+        console.log('confirmation');
+    });
+
+    $(document).on('cancellation', '.remodal', function () {
+        console.log('cancellation');
+    });
+
+    $(function () {
+
+        // In this case the initialization function returns the already created instance
+        var inst = $('[data-remodal-id=modal6]').remodal();
+
+//        inst.open();
+//    inst.close();
+//    inst.getState();
+//    inst.destroy();
+    });
+
+    //  The second way to initialize:
+    $('[data-remodal-id=modal2]').remodal({
+        modifier: 'with-red-theme'
+    });
+
+
+</script>
+</body>
+</html>

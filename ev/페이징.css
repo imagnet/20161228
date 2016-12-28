@@ -1,0 +1,22 @@
+/* ∆‰¿Ã¬° */
+.paging {width:100%;margin-top:15px;text-align:center;vertical-align:top;}
+.paging .inner_paging {display:table;display:inline-block;margin:0 auto;}
+.paging .link_page {float:left;width:31px;margin:0 2px;border:solid 1px #ddd;color:#999;line-height:31px;text-decoration:none;font-family:NanumGothic;}
+.paging .on, .paging a.link_page:hover {width:31px;border:0 none;color:#002b5c;line-height:31px;border:solid 1px #002b5c;font-family:NanumGothicBold;}
+.paging .btn_paging {float:left;width:31px;height:31px;background:#fafafa;border:1px solid #ddd;}
+.paging span.btn_paging ,.paging a.btn_paging:hover {width:31px;height:31px;border:0 none;border:solid 1px #002b5c;}
+.paging .btn_fst {margin-right:4px}
+.paging .btn_lst {margin-left:4px}
+.paging .btn_prev {margin-right:8px}
+.paging .btn_next {margin-left:8px}
+
+.ico_corp {display:inline-block;overflow:hidden;background:url(../images/icon_paging.png) no-repeat 0 0;font-size:0;line-height:0;text-indent:-9999px;vertical-align:top;} 
+.paging .btn_paging .ico_corp {display:block;width:18px;height:18px;margin:6px auto 0;}
+.paging .btn_fst .ico_corp {background-position:0 0px;}
+.paging .btn_lst .ico_corp {background-position:0 -25px}
+.paging .btn_prev .ico_corp {background-position:0 -50px}
+.paging .btn_next .ico_corp {background-position:0 -75px}
+.paging span.btn_fst .ico_corp,.paging .btn_fst:hover .ico_corp {background-position:0 -100px}
+.paging span.btn_lst .ico_corp,.paging .btn_lst:hover .ico_corp  {background-position:0 -125px}
+.paging span.btn_prev .ico_corp,.paging .btn_prev:hover .ico_corp  {background-position:0 -150px}
+.paging span.btn_next .ico_corp,.paging .btn_next:hover .ico_corp  {background-position:0 -175px}

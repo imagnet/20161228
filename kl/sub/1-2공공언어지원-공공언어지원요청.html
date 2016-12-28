@@ -1,0 +1,384 @@
+<!DOCTYPE HTML><!--[if lte IE 8]>
+<html class="no-js ie8" lang="ko"> <![endif]--><!--[if IE 9]>
+<html class="no-js ie9" lang="ko"> <![endif]--><!--[if gt IE 9]><!-->
+<html class="no-js" lang="ko"> <!--<![endif]-->
+<head>
+    <title>국어원 공공용터 통합 운영 서비스</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/common2.css"/>
+    <link href="../css/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script>
+        $(function () {
+            $(".datepicker1").datepicker({
+                showOn: "button",
+                buttonImage: "../image/jquery_ui/calendar.gif",
+                buttonImageOnly: true,
+                buttonText: "Select date"
+            });
+        });
+    </script>
+</head>
+<body class="u-sub">
+<header class="clfix">
+    <div class="col">
+        <div class="clfix">
+            <ul class="top-util fr">
+                <li><a href="#">
+                    <span class="hide-text">홈</span>
+                </a></li>
+                <li><a href="#">누리집안내지도</a></li>
+            </ul>
+        </div>
+
+        <div class="clfix">
+            <h1 class="logo">
+                <a href="#">
+                    <span class="hide-text">국립국어 원공공언어 지원</span>
+                </a>
+            </h1>
+
+
+            <ul class="gnb">
+                <li class=""><a href="#">공공 언어 지원</a>
+                    <ul>
+                        <li><a href="#">공공 언어 지원 현황</a></li>
+                        <li><a href="#">공공 언어 지원 요청</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">공공 용어 번역</a>
+                    <ul>
+                        <li><a href="#">공공 용어 번역 <br>통합 데이터</a></li>
+                        <li><a href="#">공공 용어 <br>번역 요청</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">우리말 다듬기</a>
+                    <ul>
+                        <li><a href="#">다듬고 싶은 말</a></li>
+                        <li><a href="#">어떻게 바꿀까요?</a></li>
+                        <li><a href="#">이렇게 바꿨어요!</a></li>
+                        <li><a href="#">말다듬기 <br>위원회 소개</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">시민 제보</a></li>
+                <li><a href="#">자료실</a></li>
+                <li><a href="#">알립니다</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="wrap">
+    <section id="contents">
+        <h2>공공 언어 지원 요청</h2>
+        
+	    <div class="box3">
+            다듬기 요청은
+            <strong>공공기관에 근무하는 사람</strong>이 행정 용어나 정책 용어 순화 등 공공 언어를 다듬고자 할 때 작성하여 주십시오. 빠른 시일 안에 처리하여 알려 드리겠습니다.
+        </div>
+
+        
+        <table class="tbl1 blrn">
+            <tr>
+                <th>개인인증</th>
+                <td class="txtal">
+                    <span class="form-g5">
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>공공 I-PIN</label>
+                        <input type="radio" id="c3" name="cc"> <label for="c3"><span></span>휴대폰 본인인증</label>
+                    </span>
+                    <a href="#" class="btn1 ml3">확인</a>
+                </td>
+            </tr>
+            <tr>
+                <th>작성자</th>
+                <td class="txtal">
+                    <input type="text" class="form-width2">
+                </td>
+            </tr>
+            <tr>
+                <th>소속 기관</th>
+                <td class="txtal">
+                    <input type="text" class="form-width2">
+                </td>
+            </tr>
+            <tr>
+                <th>전화번호</th>
+                <td class="txtal">
+                    <span class="control3"><input type="text" class="form-width1" title="전화번호 첫째자리"><span>-</span>
+                    <input type="text" class="form-width1" title="전화번호 둘째자리"><span>-</span>
+                    <input type="text" class="form-width1" title="전화번호 세째자리"></span>
+                </td>
+            </tr>
+            <tr>
+                <th>전자우편</th>
+                <td class="txtal">
+                    <span class="control3"><input type="text" class="form-width5" title="이메일 아이디"><span>@</span>
+                    <input type="text" class="form-width5" title="이메일 주소"></span>
+                    <select name="" class="form-width5">
+                        <option value="">이메일 직접입력</option>
+                        <option value="">이메일 직접입력</option>
+                        <option value="">이메일 직접입력</option>
+                        <option value="">이메일 직접입력</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>붙임</th>
+                <td class="txtal">
+                    <span class="filebox bs3-primary add-wrap">
+                        <input class="upload-name form-width2" value="참고할 사진이나 파일을 덧붙여 주세요." disabled=""><a href="#" class="btn18"><span class="hide-text">지우기</span></a><label class="btn12" for="ex_filename"><span class="hide-text">추가</span></label>
+                        <input type="file" id="ex_filename" class="upload-hidden">
+                    </span>
+                    <br>
+                    <span class="ml2 mb8 ib">[총 0개] 0KB/50M</span>
+                    <br>
+                    <span class="ib mb8">* 요청 내용 많을 경우 해당 파일 및 ‘요청 서식’을 작성하여 첨부해 주시기 바랍니다.</span>
+                    <br> <a href="#" class="btn14 big">요청 서식 내려 받기</a>
+                </td>
+            </tr>
+        </table>
+        <div class="paging">
+            <span class="inner_paging">
+                <a href="#" class="btn_paging btn_fst"><span class="ico_corp">맨 처음</span></a>
+                <a href="#" class="btn_paging btn_prev"><span class="ico_corp">이전</span></a>
+                <a href="#" class="link_page on">1</a> <a href="#" class="link_page">2</a>
+                <a href="#" class="link_page">3</a> <a href="#" class="link_page">4</a>
+                <a href="#" class="link_page">5</a> <a href="#" class="link_page">6</a>
+                <a href="#" class="link_page">7</a> <a href="#" class="link_page">8</a>
+                <a href="#" class="link_page">9</a> <a href="#" class="link_page">10</a>
+                <a href="#" class="btn_paging btn_next"><span class="ico_corp">다음</span></a>
+                <a href="#" class="btn_paging btn_lst"><span class="ico_corp">맨 마지막</span></a>
+            </span>
+        </div>
+        <div class="btn-wrap">
+            <a class="btn11" href="#">취소</a> <a class="btn11 conform" href="#">요청하기</a>
+        </div>
+
+        <table class="tbl1 txtal">
+            <caption>문화재 안내판 문장 감수 표</caption>
+            <col style="width: 25%">
+            <col style="width: auto">
+            <col style="width: 25%">
+            <col style="width: 25%">
+            <tr>
+                <th colspan="4" class="txtal bdln">
+                    문화재 안내판 문장 감수
+                    <span class="date1 fr">2016-09-09 21:10</span>
+                </th>
+            </tr>
+            <tbody>
+                <tr>
+                    <th class="bdln bgn">작성자</th>
+                    <td class="bgn">홍길동</td>
+                    <th class="bgn">소속기관</th>
+                    <td>전남 영암군청</td>
+                </tr>
+                <tr>
+                    <th class="bdln bgn">전화번호</th>
+                    <td>010-9876-5432</td>
+                    <th class="bgn">전자우편</th>
+                    <td>hgd@naver.com</td>
+                </tr>
+                <tr>
+                    <th class="bdln bgn">공개유무</th>
+                    <td>비공개</td>
+                    <th class="bgn">구분</th>
+                    <td>낱말</td>
+                </tr>
+                <tr>
+                    <th class="bdln bgn">붙임</th>
+                    <td colspan="3">영암군청.hwp (25k)</td>
+                </tr>
+                <tr>
+                    <td class="text5 bdln" colspan="4">전남 영암군청 문화관광체육과 홍길동입니다.<br> 앞전에 보내주신 감수 용에 깊이 감사드립니다<br> 우리군에서 추가로 3개를 더 교체하기로 했습니다<br> 더운데 일감만 드려 죄송합니다.<br> 다시 한번 감사드리고 부탁드립니다.
+                    </td>
+                </tr>
+				<tr>
+                    <th class="bdln bgn">처리 상태</th>
+                    <td>접수</td>
+                    <th class="bgn">처리 일자</th>
+                    <td>2016-04-30</td>
+                </tr>
+                <tr>
+                    <th class="bdln bgn">분량</th>
+                    <td colspan="3">원고지 10장 분량</td>
+
+                </tr>
+                <tr>
+                    <th class="bdln bgn">지원 내용</th>
+                    <td colspan="3">안내 문서 감수</td>
+                </tr>
+            </tbody>
+        </table>
+
+		
+        <div class="btn-wrap">
+            <a class="btn11" href="#">목록</a> <a class="btn11 conform" href="#">고치기</a>
+        </div>
+
+        
+		<table class="tbl1 txtal">
+            <caption>문화재 안내판 문장 감수 표</caption>
+            <col style="width: 25%">
+            <col style="width: auto">
+            <col style="width: 25%">
+            <col style="width: 25%">
+            <tr>
+                <th colspan="4" class="txtal bdln">
+                    문화재 안내판 문장 감수
+                    <span class="date1 fr">2016-09-09 21:10</span>
+                </th>
+            </tr>
+            <tbody>
+                <tr>
+                    <th class="bdln bgn">작성자</th>
+                    <td class="bgn">홍길동</td>
+                    <th class="bgn">소속기관</th>
+                    <td>전남 영암군청</td>
+                </tr>
+				 <tr>
+                    <th class="bdln bgn">전화번호</th>
+                    <td><input type="text" class="form-width5" title="전화번호" placeholder="010-9876-5432"></td>
+                    <th class="bgn">전자우편</th>
+                    <td><input type="text" class="form-width5" title="이메일 주소" placeholder="hgd@naver.com"></td>
+                </tr>
+				<tr>
+                    <th class="bdln bgn">공개유무</th>
+                    <td><span class="form-g4">
+                            <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>공개</label>
+                            <input type="radio" id="c3" name="cc"> <label for="c3"><span></span>비공개</label>
+							<input type="text" class="form-width8">
+						</span>
+					</td>
+                    <th class="bgn">구분</th>
+                    <td>
+						<span class="form-g4">
+                            <input type="radio" id="c4" name="cc"> <label for="c4"><span></span>낱말</label>
+                            <input type="radio" id="c5" name="cc"> <label for="c5"><span></span>문장</label>
+                            <input type="radio" id="c6" name="cc"> <label for="c6"><span></span>그밖</label>
+						</span>
+					</td>
+                </tr>			   
+			    <tr>
+                    <th class="bdln bgn">붙임</th>
+                    <td colspan="3">
+						 <span class="filebox bs3-primary mbn add-wrap ">
+                        <input class="upload-name form-width2" value="참고할 사진이나 파일을 덧붙여 주세요." disabled=""><a href="#" class="btn18"><span class="hide-text">지우기</span></a><label class="btn12" for="ex_filename"><span class="hide-text">추가</span></label>
+                        <input type="file" id="ex_filename" class="upload-hidden">
+						</span>
+						<a href="#" class="btn14 big">요청 서식 내려 받기</a>
+					</td>
+                </tr>
+				<tr>
+                    <td class="text5 bdln" colspan="4">
+                        <textarea class="ta2">전남 영암군청 문화관광체육과 홍길동입니다.
+앞전에 보내주신 감수 용에 깊이 감사드립니다
+우리군에서 추가로 3개를 더 교체하기로 했습니다
+더운데 일감만 드려 죄송합니다..
+다시 한번 감사드리고 부탁드립니다.
+                        </textarea></td>
+                </tr>
+                <tr>
+                    <th class="bdln bgn">처리 상태</th>
+                    <td>접수</td>
+                    <th class="bgn">처리 일자</th>
+                    <td>2016-04-30</td>
+                </tr>
+                <tr>
+                    <th class="bdln bgn">분량</th>
+                    <td colspan="3">원고지 10장 분량</td>
+
+                </tr>
+                <tr>
+                    <th class="bdln bgn">지원 내용</th>
+                    <td colspan="3">안내 문서 감수</td>
+                </tr>
+            </tbody>
+        </table>
+		
+        <div class="btn-wrap">
+            <a class="btn11" href="#">취소</a> <a class="btn11 conform" href="#">저장</a>
+        </div>
+
+
+		<table class="tbl1 txtal">
+            <caption>문화재 안내판 문장 감수 표</caption>
+            <col style="width: 25%">
+            <col style="width: auto">
+            <col style="width: 25%">
+            <col style="width: 25%">
+            <tr>
+                <th colspan="4" class="txtal bdln">
+                    문화재 안내판 문장 감수
+                    <span class="date1 fr">2016-09-09 21:10</span>
+                </th>
+            </tr>
+            <tbody>
+                <tr>
+                    <th class="bdln bgn">작성자</th>
+                    <td class="bgn" colspan="3">홍길동</td>
+                </tr>
+                <tr>
+                    <th class="bdln bgn">구분</th>
+                    <td colspan="3">낱말</td>
+                </tr>
+                <tr>
+                    <th class="bdln bgn">붙임</th>
+                    <td colspan="3">영암군청.hwp (25k)</td>
+                </tr>
+                <tr>
+                    <td class="text5 bdln" colspan="4">전남 영암군청 문화관광체육과 홍길동입니다.<br> 앞전에 보내주신 감수내용에 깊이 감사드립니다<br> 우리군에서 추가로 3개를 더 교체하기로 했습니다<br> 더운데 일감만 드려 죄송합니다.<br> 다시 한번 감사드리고 부탁드립니다.
+                    </td>
+                </tr>
+				<tr>
+                    <th class="bdln bgn">처리 상태</th>
+                    <td>접수</td>
+                    <th class="bgn">처리 일자</th>
+                    <td>2016-04-30</td>
+                </tr>
+			</tbody>
+        </table>
+		
+        <div class="btn-wrap">
+            <a class="btn11" href="#">목록</a> 
+        </div>       
+
+    </section>
+</div>
+<footer class="clfix">
+    <div class="col">
+        <div class="foot-mark">
+            <span class="hide-text">국어원</span>
+        </div>
+        <address>
+            우) 07511 서울특별시 강서구 금낭화로 154(방화3동 827) | 대표전화 02-2669-9775 | 전송 02-2669-9727<br> 이 누리집의 저작권은 국립국어원에 있습니다.
+        </address>
+    </div>
+</footer>
+
+
+<div class="remodal modal6" data-remodal-id="modal6">
+    <div class="pop-head">
+        <h2>비밀번호 확인</h2>
+        <a data-remodal-action="close" class="remodal-close" href="#">
+            <span class="hide-text">닫기</span>
+        </a>
+    </div>
+    <div class="pop-content txtac">
+        <p class="text3 mb2 txtal">
+            비 공개 글입니다.<br> 작성 하실 때 입력하신 비밀번호를 입력하세요. </p>
+        <input type="text" class="form-width7 mb2">
+    </div>
+    <div class="pop-ft">
+        <a href="#" class="btn1" data-remodal-action="cancel">취소</a>
+        <a href="#" class="btn1 upload" data-remodal-action="confirm">확인</a>
+    </div>
+</div>
+
+</body>
+</html>

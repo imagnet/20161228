@@ -1,0 +1,307 @@
+<!DOCTYPE HTML><!--[if lte IE 8]>
+<html class="no-js ie8" lang="ko"> <![endif]--><!--[if IE 9]>
+<html class="no-js ie9" lang="ko"> <![endif]--><!--[if gt IE 9]><!-->
+<html class="no-js" lang="ko"> <!--<![endif]-->
+<head>
+    <title>국어원 관리자 시스템</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link href="../css/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+
+    <script src="../js/jquery.bxslider.js"></script>
+    <script>
+        $(function () {
+            $(".datepicker1").datepicker({
+                showOn: "button",
+                buttonImage: "../image/jquery_ui/calendar.gif",
+                buttonImageOnly: true,
+                buttonText: "Select date"
+            });
+        });
+    </script>
+    <!--<script type="text/javascript" src="../js/common.js"></script>-->
+    <!--    <script>
+            $(document).ready(function() {
+                $('.wrap').on( 'keyup', 'textarea', function (e){
+                    $(this).css('height', 'auto' );
+                    $(this).height( this.scrollHeight );
+                });
+                $('.wrap').find( 'textarea' ).keyup();
+            });
+        </script>-->
+
+</head>
+<body>
+<header class="clfix">
+    <h1 class="logo">
+        <a href="#">
+            <span class="hide-text">국립국어 원공공언어 지원</span>
+        </a>
+        <span class="title"><strong>관리자</strong> 시스템</span>
+    </h1>
+    <ul class="util clfix">
+        <li><a href="#">김 관리</a></li>
+        <li><a href="#">내 정보 관리</a></li>
+        <li><a href="#">로그아웃</a></li>
+    </ul>
+</header>
+<div class="wrap clfix">
+    <nav>
+        <ul class="lnb">
+            <li><a href="">공공 언어 지원</a>
+                <ul>
+                    <li><a href="">공공 언어 지원 현황</a></li>
+                    <li><a href="">공공 언어 지원 현황 관리</a></li>
+                </ul>
+            </li>
+            <li><a href="">공공 용어 번역</a>
+                <ul>
+                    <li><a href="">공공 용어 번역 현황</a></li>
+                    <li><a href="">번역 통합 데이터 관리</a></li>
+                    <li><a href="">공공 용어 번역 요청</a></li>
+                    <li><a href="">기관 수집 DB 관리</a></li>
+                </ul>
+            </li>
+            <li><a href="">우리말 다듬기</a>
+                <ul>
+                    <li><a href="">다듬고 싶은 말 관리</a></li>
+                    <li><a href="">공모전 관리</a></li>
+                    <li><a href="">우리말 다듬기 회원관리</a></li>
+                </ul>
+            </li>
+            <li><a href="">개선 시민 제보 관리</a></li>
+            <li><a href="">자료
+				실 관리</a></li>
+            <li><a href="">알립니다. 관리</a></li>
+            <li><a href="">통계 관리</a></li>
+            <li><a href="">관리 계정 관리</a></li>
+        </ul>
+    </nav>
+    <section id="contents" class="sub">
+        <div class="rel-pos clfix">
+            <h2>공공 용어 번역 현황</h2>
+            <ul class="location">
+                <li><a href="#">
+                    <span class="hide-text">home</span>
+                </a></li>
+                <li><a href="#">공공 용어 번역</a></li>
+                <li><a href="#">공공 용어 번역 현황</a></li>
+            </ul>
+        </div>
+        <table class="tbl1">
+
+            <col style="width:20%">
+            <col style="width:auto;">
+
+            <tr>
+                <th class="bdln">산정 기간</th>
+                <td class="txtal">
+
+                    <select name="" class="form-width1">
+                        <option value="">월별</option>
+                        <option value="">월별</option>
+                        <option value="">월별</option>
+                    </select>
+                    <span class="calendar-wrap"><input type="text" class="datepicker1 form-width1">
+                        <span>~</span>
+                        <input type="text" class="datepicker1 form-width1"></span>
+                    <a class="btn1 ml1" data-remodal-target="modal">조회</a>
+                </td>
+            </tr>
+        </table>
+        <div class="tab1">
+            <span class="util1"><a href="#" class="btn4">데이터등록</a> <a href="#" class="btn2">내려받기</a></span>
+
+            <ul>
+                <li><a href="#" class="on">언어별보기</a></li>
+                <li><a href="#">상태별보기</a></li>
+                <li><a href="#">출처별보기</a></li>
+            </ul>
+            <div>
+                <div class="graph">graph1</div>
+                <table class="tbl1">
+                    <tr>
+                        <th class="bdln" rowspan="2">분류</th>
+                        <th rowspan="2">합계</th>
+                        <th colspan="4">분류</th>
+                    </tr>
+                    <tr>
+                        <th>자연지명</th>
+                        <th>인공지명</th>
+                        <th>도로명/행정구역</th>
+                        <th>문화관광</th>
+                    </tr>
+                    <tr>
+                        <td class="bdln back1">합계</td>
+                        <th class="back1 link2"><a href="">1,354</a></th>
+                        <th class="back1">800</th>
+                        <th class="back1">300</th>
+                        <th class="back1">200</th>
+                        <th class="back1">54</th>       
+                    </tr>
+                    <tr>
+                        <td class="bdln">영어</td>
+                        <td class="link2"><a href="">891</a></td>
+                        <td>400</td>
+                        <td>100</td>
+                        <td>80</td>
+                        <td>14</td> 
+                    </tr>
+                    <tr>
+                        <td class="bdln">중국어</td>
+                        <td class="link2"><a href="">181</a></td>
+                        <td>200</td>
+                        <td>50</td>
+                        <td>20</td>
+                        <td>20</td> 
+                    </tr>
+                    <tr>
+                        <td class="bdln">일본어</td>
+                        <td class="link2"><a href="">130</a></td>
+                        <td>200</td>
+                        <td>50</td>
+                        <td>50</td>
+                        <td>10</td> 
+                    </tr>
+                    <tr>
+                        <td class="bdln">한자</td>
+                        <td class="link2"><a href="">152</a></td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>50</td>
+                        <td>10</td> 
+                    </tr>
+                </table>
+                
+            </div>
+        </div>        
+    </section>
+</div>
+<footer class="clfix">
+    <div class="foot-mark">
+        <span class="hide-text">국어원</span>
+    </div>
+    <address>
+        우) 07511 서울특별시 강서구 금낭화로 154(방화3동 827) | 대표전화 02-2669-9775 | 전송 02-2669-9727<br> 이 누리집의 저작권은 국립국어원에 있습니다.
+    </address>
+</footer>
+
+
+<div class="remodal modal5" data-remodal-id="modal" id="pop">
+    <div class="pop-head">
+        <h2>번역 통합 데이터 검색</h2>
+        <a data-remodal-action="close" class="remodal-close" href="#">
+            <span class="hide-text">닫기</span>
+        </a>
+    </div>
+    <div id="pop-content">
+        <span class="input-wrap2">
+            <input type="text">
+            <a href="#" class="btn1 wo">번역 여부 확인</a>
+        </span>
+        <table class="tbl2">
+            <tr>
+                <th>번호</th>
+                <th>한글명칭</th>
+                <th>번역어</th>
+                <th>분류</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class="fb">도봉산</td>
+                <td class="fb txtal">Dobongsan</td>
+                <td>인공지명> 교통</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="fb">도봉산</td>
+                <td class="fb txtal">Dobongsan Mountain</td>
+                <td>자연지명> 자연관광</td>
+            </tr>
+        </table>
+    </div>
+    <div class="pop-ft">
+        <a href="#" class="btn1" data-remodal-action="cancel">취소</a>
+        <a href="#" class="btn1 upload" data-remodal-action="confirm">확인</a>
+    </div>
+</div>
+
+<div class="remodal modal5" data-remodal-id="modal6" id="pop">
+    <div class="pop-head">
+        <h2>데이터등록</h2>
+        <a data-remodal-action="close" class="remodal-close" href="#">
+            <span class="hide-text">닫기</span>
+        </a>
+    </div>
+    <div id="pop-content">
+		<div id="" class="talc mb2">
+			<p class="text3">
+				업데이트 할 데이터의 파일을 찾아 올려 주세요.		
+			</p>
+			<span class="add-wrap mb2">
+				<input type="text" class="form-width2"><a href="#" class="btn12">
+				<span class="hide-text">추가</span>
+			</a>
+			</span>
+				<span class="util1"><a href="#" class="btn4 nobg">데이터서식 내려받기</a></span>
+		</div>
+    </div>
+    <div class="pop-ft">
+        <a href="#" class="btn1" data-remodal-action="cancel">취소</a>
+        <a href="#" class="btn1 upload" data-remodal-action="confirm">확인</a>
+    </div>
+</div>
+
+<script>
+    $(document).on('opening', '.remodal', function () {
+        console.log('opening');
+    });
+
+    $(document).on('opened', '.remodal', function () {
+        console.log('opened');
+    });
+
+    $(document).on('closing', '.remodal', function (e) {
+        console.log('closing' + (e.reason ? ', reason: ' + e.reason : ''));
+    });
+
+    $(document).on('closed', '.remodal', function (e) {
+        console.log('closed' + (e.reason ? ', reason: ' + e.reason : ''));
+    });
+
+    $(document).on('confirmation', '.remodal', function () {
+        console.log('confirmation');
+    });
+
+    $(document).on('cancellation', '.remodal', function () {
+        console.log('cancellation');
+    });
+
+    $(function () {
+
+        // In this case the initialization function returns the already created instance
+        var inst = $('[data-remodal-id=modal6]').remodal();
+
+//        inst.open();
+//    inst.close();
+//    inst.getState();
+//    inst.destroy();
+    });
+
+    //  The second way to initialize:
+    $('[data-remodal-id=modal2]').remodal({
+        modifier: 'with-red-theme'
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,763 @@
+<!DOCTYPE HTML><!--[if lte IE 8]>
+<html class="no-js ie8" lang="ko"> <![endif]--><!--[if IE 9]>
+<html class="no-js ie9" lang="ko"> <![endif]--><!--[if gt IE 9]><!-->
+<html class="no-js" lang="ko"> <!--<![endif]-->
+<head>
+    <title>국어원 관리자 시스템</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/common2.css"/>
+    <link href="../css/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+
+    <script src="../js/jquery.bxslider.js"></script>
+    <script>
+        $(function () {
+            $(".datepicker1").datepicker({
+                showOn: "button",
+                buttonImage: "../image/jquery_ui/calendar.gif",
+                buttonImageOnly: true,
+                buttonText: "Select date"
+            });
+        });
+    </script>
+    <!--<script type="text/javascript" src="../js/common.js"></script>-->
+    <!--    <script>
+            $(document).ready(function() {
+                $('.wrap').on( 'keyup', 'textarea', function (e){
+                    $(this).css('height', 'auto' );
+                    $(this).height( this.scrollHeight );
+                });
+                $('.wrap').find( 'textarea' ).keyup();
+            });
+        </script>-->
+
+</head>
+<body>
+<header class="clfix">
+    <h1 class="logo">
+        <a href="#">
+            <span class="hide-text">국립국어 원공공언어 지원</span>
+        </a>
+        <span class="title"><strong>관리자</strong> 시스템</span>
+    </h1>
+    <ul class="util clfix">
+        <li><a href="#">김 관리</a></li>
+        <li><a href="#">내 정보 관리</a></li>
+        <li><a href="#">로그아웃</a></li>
+    </ul>
+</header>
+<div class="wrap clfix">
+    <nav>
+        <ul class="lnb">
+            <li><a href="">공공 언어 지원</a>
+                <ul>
+                    <li><a href="">공공 언어 지원 현황</a></li>
+                    <li><a href="">공공 언어 지원 현황 관리</a></li>
+                </ul>
+            </li>
+            <li><a href="">공공 용어 번역</a>
+                <ul>
+                    <li><a href="">공공 용어 번역 현황</a></li>
+                    <li><a href="">번역 통합 데이터 관리</a></li>
+                    <li><a href="">공공 용어 번역 요청</a></li>
+                    <li><a href="">기관 수집 DB 관리</a></li>
+                </ul>
+            </li>
+            <li><a href="">우리말 다듬기</a>
+                <ul>
+                    <li><a href="">다듬고 싶은 말 관리</a></li>
+                    <li><a href="">공모전 관리</a></li>
+                    <li><a href="">우리말 다듬기 회원관리</a></li>
+                </ul>
+            </li>
+            <li><a href="">개선 시민 제보 관리</a></li>
+            <li><a href="">자료
+				실 관리</a></li>
+            <li><a href="">알립니다. 관리</a></li>
+            <li><a href="">통계 관리</a></li>
+            <li><a href="">관리 계정 관리</a></li>
+        </ul>
+    </nav>
+    <section id="contents" class="sub">
+        <div class="rel-pos clfix">
+              <h2>공모전 관리</h2>
+            <ul class="location">
+                <li><a href="#">
+                    <span class="hide-text">home</span>
+                </a></li>
+                <li><a href="#">우리말 다듬기</a></li>
+                <li><a href="#">공모전 관리</a></li>
+            </ul>
+        </div>
+        <table class="tbl1">
+
+            <col style="width:20%">
+            <col style="width:auto;">
+
+                <th class="bdln">찾을대상</th>
+                <td class="txtal">
+                    <span class="search-wrap"><select name="" class="form-width1">
+                        <option value="">전체</option>
+                        <option value="">월별</option>
+                        <option value="">월별</option>
+                    </select> <input type="text" class="form-width2"><a class="btn1">검색</a><a href="#" class="btn3 on">
+                        <span class="hide-text">닫기</span>
+                    </a>
+                    </span>
+                </td>
+            </tr>
+        </table>
+       <div class="rel-pos mb1 clfix">
+            <span class="comment fl">모두 <strong>1,202</strong>건의 결과가 있습니다.</span>
+			<span class="fr">
+                <span class="util2">
+                    <a href="#">내림차순</a>
+                    <a href="#">오름차 순</a>
+                    <a class="on" href="#">최신 순</a>
+                </span>
+				 <span class="util1">
+					<a href="#" class="btn2">내려받기</a>
+					<a href="#" class="btn4 nobg">공모전등록</a>
+				</span>
+			</span>
+        </div>
+            
+		<table class="tbl1">
+			<colgroup>
+				<col style="width:7%">
+				<col style="width:15%">
+				<col style="width:7%">
+				<col style="width:30%">
+				<col style="width:9%">
+				<col style="width:14%">
+				<col style="width:9%">
+				<col style="width:auto">
+			</colgroup>
+
+			<tbody>
+				<tr>
+					<th class="bdln">번호</th>
+					<th>메뉴</th>
+					<th>메인</th>
+					<th>제목</th>
+					<th>상태</th>
+					<th>기간</th>
+					<th>추천수</th>
+					<th>조회수</th>
+				</tr>
+				<tr>
+					<td class="bdln ">10</td>
+					<td class="txtal">어떻게바꿀까요?</td>
+					<td><a href="#">Y</a></td>
+					<td class="txtal">노키즈존(No kids zone)</td>
+					<td>진행중</td>
+					<td>2016.06.27 ~ 2016.07.15</td>
+					<td>12</td>
+					<td>56</td>
+				</tr>
+				<tr>
+					<td class="bdln ">10</td>
+					<td class="txtal">이렇게바꿨어요!</td>
+					<td><a href="#">Y</a></td>
+					<td class="txtal">‘노키즈존(No kids zone)’은 ‘어린이 제한…
+					<span class="left">
+                        <a href="#" class="btn15"><span class="hide-text">저장</span></a>
+					</span>
+					</td>
+					<td>진행중</td>
+					<td>2016.06.27 ~ 2016.07.15</td>
+					<td>12</td>
+					<td>56</td>
+				</tr>
+				
+			</tbody>
+		</table>
+		<div class="paging">
+            <span class="inner_paging">
+                <a href="#" class="btn_paging btn_fst"><span class="ico_corp">맨 처음</span></a>
+                <a href="#" class="btn_paging btn_prev"><span class="ico_corp">이전</span></a>
+                <a href="#" class="link_page on">1</a> <a href="#" class="link_page">2</a>
+                <a href="#" class="link_page">3</a> <a href="#" class="link_page">4</a>
+                <a href="#" class="link_page">5</a> <a href="#" class="link_page">6</a>
+                <a href="#" class="link_page">7</a> <a href="#" class="link_page">8</a>
+                <a href="#" class="link_page">9</a> <a href="#" class="link_page">10</a>
+                <a href="#" class="btn_paging btn_next"><span class="ico_corp">다음</span></a>
+                <a href="#" class="btn_paging btn_lst"><span class="ico_corp">맨 마지막</span></a>
+            </span>
+        </div>
+
+		
+	
+		<table class="tbl1 txtal mb1">
+            <col style="width: 10%">
+            <col style="width: 25%">
+            <col style="width: 10%">
+            <col style="width: 25%">
+            <tr>
+                <th class="txtal bdln"> 다듬고 싶은 말</th>
+				<td  colspan="3" class="txtal"><strong>쿡톱(cook top)</strong></td>
+            </tr>
+			 <tr>
+                <th class="txtal bdln">공모전 기간</th>
+				<td  colspan="3" class="txtal"><strong>2016.06.27 ~ 2016.07.15</strong></td>
+            </tr>
+
+            <tbody>
+                <tr>
+                    <th class="bdln">상태</th>
+                    <td class="bgn"><strong>진행중</strong></td>
+                    <th>현재 노출 메뉴</th>
+                    <td><strong>어떻게 바꿀까요?</strong></td>
+                </tr>
+				<tr>
+                    <th class="bdln">추천수</th>
+                    <td class="bgn"><strong>1234</strong></td>
+                    <th>조회수</th>
+                    <td><strong>2314</strong></td>
+                </tr>
+				<tr>
+                    <th class="bdln">메인노출</th>
+                    <td class="bgn"><strong>N</strong></td>
+                    <th>댓글관리</th>
+                    <td><strong>23</strong>
+						<span class="util4 fr">
+						 <a href="#" class="btn10" data-remodal-target="modal3">댓글보기</a>
+						</span>
+					</td>
+                </tr>
+				<tr>
+                    <th class="bdln">상태</th>
+                    <td class="bgn"><strong>진행중</strong></td>
+                    <th>현재 노출 메뉴</th>
+                    <td><strong>어떻게 바꿀까요?</strong></td>
+                </tr>
+                
+            </tbody>
+        </table>
+<!--20161228 add-->
+        <table class="tbl1 txtal mb1">
+            <col style="width: 10%">
+            <col style="width: 25%">
+            <col style="width: 10%">
+            <col style="width: 25%">
+            <tr>
+                <th class="txtal bdln"> 다듬고 싶은 말</th>
+                <td  colspan="3" class="txtal"><input type="text" class="form-width3"></td>
+            </tr>
+            <tr>
+                <th class="txtal bdln">공모전 기간</th>
+                <td  colspan="3" class="txtal">
+                    <span class="calendar-wrap">
+                        <input type="text" class="datepicker1 form-width1"><span>~</span><input type="text" class="datepicker1 form-width1">
+                    </span>
+                </td>
+            </tr>
+
+            <tbody>
+                <tr>
+                    <th class="bdln">상태</th>
+                    <td class="bgn">
+                        <select name="" class="form-width1">
+                            <option value="">진행중</option>
+                            <option value="">진행중</option>
+                            <option value="">진행중</option>
+                        </select>
+                    </td>
+                    <th>현재 노출 메뉴</th>
+                    <td>
+                        <select name="" class="form-width1">
+                            <option value="">어떻게 바꿀까요?</option>
+                            <option value="">어떻게 바꿀까요?</option>
+                            <option value="">어떻게 바꿀까요?</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="bdln">추천수</th>
+                    <td class="bgn"><strong>1234</strong></td>
+                    <th>조회수</th>
+                    <td><strong>2314</strong></td>
+                </tr>
+                <tr>
+                    <th class="bdln">메인노출</th>
+                    <td class="bgn"><strong>N</strong></td>
+                    <th>제안어 관리</th>
+                    <td><strong>23</strong>
+                        <span class="util4 fr">
+						 <a href="#" class="btn10" data-remodal-target="modal3">제안어 보기</a>
+						</span>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+
+        <div class="tab2">
+            <ul>
+                <li><a href="#" class="on">어떻게 바꿀까요?</a></li>
+                <li><a href="#">이렇게 바꿨어요!</a></li>
+                <li><a href="#">축하합니다./ 관련보도자료 보기</a></li>
+            </ul>
+            <div>
+                <table class="tbl1 txtal">
+				<col style="width: 15%">
+				<col style="width: auto">
+                    <tr>
+                        <th class="bdln">제목</th>
+                        <td><strong>‘쿡톱(cook top)’을 대신할 우리말을 찾아 주세요!</strong></td>
+                    </tr>
+                     <tr>
+                        <th class="bdln">내용</th>
+                        <td>
+							<span class="">
+							보기 1) 전기 쿡톱은 불이 아니라 전기를 사용해 화재 위험이 낮을 뿐만 아니라 직접 가열이 아니기 때문에 유해가스 배출이 없어 주방 환경에도 도움이 된다<br>
+							(보기 2) ○○아파트는 주방에 가스 쿡톱과 음식물 처리기를 갖추고 있다. <br>
+							(보기 3) ○○ 전자는 국내 최초로 가스레인지와 전기 쿡톱을 결합한 복합형 쿡톱을 개발했다
+							<br><br>
+							 쿡톱은 영어 ‘쿠킹 톱(cooking top)’에서 유래한 말로 음식을 데우거나 끓이는 기구를 가리키는 말입니다. 쿡톱에는 가스를 이용하거나 전기를 이용하는 등 다양한 종류가 있습니다. 대체로 열이 나는 상판 위에 가열이 가능한 용기를 올려 가열하는 조리 기구를 쿡톱이라고 부릅니다.
+							<br><br>
+							쿡톱을 대신할 우리말로는 어떤 것이 좋을까요? 더 알기 쉽고 부르기 쉬운 우리말을 제안해 주십시오.<br>
+							&#9830; 제안어 공모 기간: 2016년 5월 9일부터 2016년 5월 19일까지<br>
+							&#9830; 쿡톱의 최종 다듬은 말 발표일:  2016년 6월 27일(예정)<br>
+							&#9830; 다음번 다듬을 말 발표일: 2016년 6월 27일(예정)<br>
+							<br>
+							<span class="txt-blue">*주의: 제안어는 반드시 ‘제안어 칸’에 입력을 해 주셔야 정상적으로 등록됩니다.</span>
+
+							</span>
+						
+						</td>
+                    </tr>
+                </table>
+
+				<div class="btn-wrap">
+					<a class="btn11 line" href="#">목록</a> 
+					<a class="btn11 line" href="#">지우기</a>
+					<a class="btn11" href="#">고치기</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab2">
+			<ul>
+				<li><a href="#">어떻게 바꿀까요?</a></li>
+				<li><a href="#" class="on">이렇게 바꿨어요!</a></li>
+				<li><a href="#">축하합니다./ 관련보도자료 보기</a></li>
+			</ul>
+			<div>
+				<table class="tbl1 txtal">
+				<col style="width: 15%">
+				<col style="width: auto">
+					<tr>
+						<th class="bdln">제목</th>
+						<td><strong>‘쿡톱(cook top)’은 ‘가열대’로</strong></td>
+					</tr>
+					 <tr>
+						<th class="bdln">내용</th>
+						<td>
+							<span class="">
+							국립국어원의 ‘모두가 함께하는 우리말 다듬기’에서는 ‘쿡톱(cook top)’의 다듬은 말로 ‘가열대’를 최종 선정하였습니다. ‘쿡톱’은 ‘음식을 데우거나 끓이는 기구’를 가리키는 말입니다.
+							<br><br>
+							 지난 2016년 5월 9일부터 5월 19일까지 ‘쿡톱’을 갈음해 쓸 우리말을 공모한 결과 120건의 제안이 들어왔습니다.
+							<br><br>
+							국립국어원의 말다듬기위원회에서는 누리꾼이 제안한 말들 가운데 의미의 적합성, 조어 방식, 간결성 등을 검토한 결과, ‘가열대’를 다듬은 말로 선정하였습니다.
+							<br><br>
+							'쿡톱'은 주방 조리 시설의 하나로 음식을 데우거나 끓일 때, 즉 가열을 할 때 사용하는 것이기 때문에 개수대, 조리대처럼 '가열대'로 갈음할 것을 최종 결정하였습니다.
+							<br><br>
+							<br>
+							&#60;관련 예문&#62;<br>
+							(1) 전기 가열대(←쿡톱)는 불이 아니라 전기를 사용해 화재 위험이 낮을 뿐만 아니라 직접 가열을 하지 않기 때문에 유해가스 배출이 없어 주방 환경에도 도움이 된다.<br>
+							(2)  ○○아파트는 주방에 가스 가열대(←쿡톱)과 음식물 처리기를 갖추고 있다. <br>
+							</span>
+						
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div class="tab2">
+			<ul>
+				<li><a href="#">어떻게 바꿀까요?</a></li>
+				<li><a href="#">이렇게 바꿨어요!</a></li>
+				<li><a href="#" class="on">축하합니다./ 관련보도자료 보기</a></li>
+			</ul>
+			<div>
+				<table class="tbl1 txtal">
+				<col style="width: 15%">
+				<col style="width: auto">
+					<tr>
+						<th class="bdln">제목</th>
+						<td><strong>‘쿡톱(cook top)’은 ‘가열대’로</strong></td>
+					</tr>
+					 <tr>
+						<th class="bdln">내용</th>
+						<td>
+							<span class="">
+							국립국어원의 ‘모두가 함께하는 우리말 다듬기’에서는 ‘쿡톱(cook top)’의 다듬은 말로 ‘가열대’를 최종 선정하였습니다.
+							<br><br>
+							확정한 다듬은 말(순화어)을 공모 기간에 첫 번째로 제안하신 분께는 10만 원, 두 번째로 제안하신 분께는 5만 원의 문화 상품권을 드립니다. 확정된 순화어 제안자 명단은 아래와 같습니다. 
+							<br><br>
+							<span class="fb">첫 번째 제안자(문화 상품권 10만 원)<br>
+							황호성(실비7)</span>
+
+							<br><br>
+							우리말 다듬기에 참여해 주신 분들께 감사의 말씀을 드립니다. 앞으로도 우리말 다듬기에 계속 관심을 기울여 주시기 바랍니다.
+							<br><br>
+							※ 더 많은 분들이 혜택을 받으실 수 있도록 한 번에 받은 금액과 상관없이 한 분에게 1년에 다섯 번까지만 문화 상품권을 드립니다. <br>
+							</span>
+						
+						</td>
+					</tr>
+					<tr>
+						<th class="bdln">관련 보도 자료</th>
+						<td><strong><a href="#" class="link2 txt-blue">우리말 다듬기 ‘쿡톱’ 관련하여 공모전이 있었습니다.</a></strong></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+
+		<div class="tab2">
+            <ul>
+                <li><a href="#" class="on">어떻게 바꿀까요?</a></li>
+                <li><a href="#">이렇게 바꿨어요!</a></li>
+                <li><a href="#">축하합니다./ 관련보도자료 보기</a></li>
+            </ul>
+            <div>
+                <table class="tbl1 txtal">
+				<col style="width: 15%">
+				<col style="width: auto">
+                    <tr>
+                        <th class="bdln">제목</th>
+                        <td><strong>‘쿡톱(cook top)’을 대신할 우리말을 찾아 주세요!</strong></td>
+                    </tr>
+                     <tr>
+                        <th class="bdln">내용</th>
+                        <td>
+							에디터 삽입영역
+						</td>
+                    </tr>
+                </table>
+			</div>
+		</div>
+		
+		<div class="tab2">
+            <ul>
+                <li><a href="#">어떻게 바꿀까요?</a></li>
+                <li><a href="#"  class="on">이렇게 바꿨어요!</a></li>
+                <li><a href="#">축하합니다./ 관련보도자료 보기</a></li>
+            </ul>
+            <div>
+                <table class="tbl1 txtal">
+				<col style="width: 15%">
+				<col style="width: auto">
+                    <tr>
+                        <th class="bdln">제목</th>
+                        <td><strong>‘쿡톱(cook top)’을 대신할 우리말을 찾아 주세요!</strong></td>
+                    </tr>
+                     <tr>
+                        <th class="bdln">내용</th>
+                        <td>
+							에디터 삽입영역
+						</td>
+                    </tr>
+                </table>
+			</div>
+		</div>
+
+		<div class="tab2">
+			<ul>
+				<li><a href="#">어떻게 바꿀까요?</a></li>
+				<li><a href="#">이렇게 바꿨어요!</a></li>
+				<li><a href="#" class="on">축하합니다./ 관련보도자료 보기</a></li>
+			</ul>
+			<div>
+				<table class="tbl1 txtal">
+				<col style="width: 15%">
+				<col style="width: auto">
+					<tr>
+						<th class="bdln">제목</th>
+						<td><strong>‘쿡톱(cook top)’은 ‘가열대’로</strong></td>
+					</tr>
+					 <tr>
+						 <th class="bdln">내용</th>
+						 <td>에디터 삽입 영역</td>
+					</tr>
+					<tr>
+						<th class="bdln">관련 보도 자료</th>
+						<td>
+						<span class="form-g3"><input type="text" class="form-width3"><a href="#" class="btn1" data-remodal-target="modal4">보도자료등록</a></a></span>
+         				</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div class="btn-wrap">
+            <a class="btn11" href="#">취소</a> <a class="btn11 conform" href="#">저장하기</a>
+        </div>
+
+
+
+      
+
+    </section>
+</div><!-- wrap -->
+
+
+
+
+
+
+
+
+
+<footer class="clfix">
+    <div class="foot-mark">
+        <span class="hide-text">국어원</span>
+    </div>
+    <address>
+        우) 07511 서울특별시 강서구 금낭화로 154(방화3동 827) | 대표전화 02-2669-9775 | 전송 02-2669-9727<br> 이 누리집의 저작권은 국립국어원에 있습니다.
+    </address>
+</footer>
+
+
+<div class="remodal modal1" data-remodal-id="modal3" id="pop">
+    <div class="pop-head">
+        <h2>공모전 보기 - 댓글 보기</h2>
+        <a data-remodal-action="close" class="remodal-close" href="#">
+            <span class="hide-text">닫기</span>
+        </a>
+    </div>
+    <div id="pop-content">
+		<div class="rel-pos mb1 clfix">
+		<span class="comment fl">다듬고 싶은 말 : 쿡톱(cook top) </span>
+		</div>
+		<div class="rel-pos mb1 clfix">
+			 <span class="search-wrap fl" >
+				 <select name="" class="form-width1">
+					<option value="">전체</option>
+					<option value="">전체</option>
+					<option value="">전체</option>
+				</select> 
+				<input type="text" class="form-width1">
+				<a href="#" class="btn1">검색</a>
+			</span>
+			 <span class="fr">
+				<span class="util4">
+					<a href="#" class="btn4 nobg">전체</a>
+					<a href="#" class="btn9 nobg">제안만 보기</a>
+				</span>
+			</span>
+		</div>
+         <div class="reply-box">
+            <div class="form-g2 clfix colorbox-gr">
+                <textarea draggable="false fl">댓글 내용을 입력하세요. 댓글은 300자까지 입력하실 수 있습니다.
+				</textarea> <a href="#" class="btn13 fr">댓글등록</a>
+                <p class="text2">* 관리자 페이지에서 등록한 댓글은 이용자용 페이지에 ＇관리자’라고 표기 됩니다</p>
+            </div>
+            <ul class="ul1">
+                <li class="clfix">
+                    <span class="left">
+                        <strong class="name"><a href="#" class="btn14 suggestion">제안</a> 의적</strong>
+                        <span class="copy">웹르라우저 순화 제안결과가 궁금합니다.
+                            <a href="#" class="btn14 modify">수정</a>
+                            <a href="#" class="btn14 del">삭제</a>
+                        </span>
+                    </span>
+                    <span class="right">
+                        <span class="date1">2016.09.10.  12:32</span>
+                        <span class="recommend2"><a href="#" class="link2">추천</a> 0</span>
+                    </span>
+                </li>
+                <li class="clfix">
+                    <span class="left">
+                        <strong class="name"> <a href="#" class="btn14 confirm">제안확정</a> 우리말지킴이</strong>
+                        <span class="copy">웹브라우저 순화 할 수 있는 우리말이 있을까요?
+                            <a href="#" class="btn14 modify">제안확정</a>
+                            <a href="#" class="btn14 del">관리자삭제</a>
+                            <a href="#" class="btn14">제안헤제</a>
+                        </span>
+                    </span>
+                    <span class="right">
+                        <span class="date1">2016.09.10.  12:32</span>
+						<span class="recommend2"><a href="#" class="link2">추천</a> 1</span>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="paging">
+            <span class="inner_paging">
+                <a href="#" class="btn_paging btn_fst"><span class="ico_corp">맨 처음</span></a>
+                <a href="#" class="btn_paging btn_prev"><span class="ico_corp">이전</span></a>
+                <a href="#" class="link_page on">1</a> <a href="#" class="link_page">2</a>
+                <a href="#" class="link_page">3</a> <a href="#" class="link_page">4</a>
+                <a href="#" class="link_page">5</a> <a href="#" class="link_page">6</a>
+                <a href="#" class="link_page">7</a> <a href="#" class="link_page">8</a>
+                <a href="#" class="link_page">9</a> <a href="#" class="link_page">10</a>
+                <a href="#" class="btn_paging btn_next"><span class="ico_corp">다음</span></a>
+                <a href="#" class="btn_paging btn_lst"><span class="ico_corp">맨 마지막</span></a>
+            </span>
+        </div>
+    </div>
+    <div class="pop-ft">
+        <a href="#" class="btn1 upload" data-remodal-action="confirm">확인</a>
+    </div>
+</div>
+
+
+<div class="remodal modal1" data-remodal-id="modal4" id="pop">
+    <div class="pop-head">
+        <h2>보도자료 등록</h2>
+        <a data-remodal-action="close" class="remodal-close" href="#">
+            <span class="hide-text">닫기</span>
+        </a>
+    </div>
+    <div id="pop-content">
+		<div class="rel-pos mb1 clfix">
+		<span class="comment">등록하고자 하는 보도자료를 선택하여 주십시오. 새로운 보도자료를 올리고자 하실 때는 자료실에서 새로운 보도자료를 등록 후에 선택하여 주십시오.</span>
+		</div>
+		<div class="rel-pos mb1 clfix">
+			 <span class="search-wrap fl" >
+				 <select name="" class="form-width1">
+					<option value="">전체</option>
+					<option value="">전체</option>
+					<option value="">전체</option>
+				</select> 
+				<input type="text" class="">
+				<a href="#" class="btn1">검색</a>
+			</span>
+		 </div>
+         <table class="tbl2">
+			<col style="width:10%">
+            <col style="width:5%">
+            <col style="width:auto">
+            <col style="width:10%">
+            <col style="width:20%">
+
+            <tr>
+                <th>번호</th>
+                <th><input type="checkbox" id="r1" name="rr"/> <label for="r1">
+                        <span></span><span class="hide-text">선택</span></th>
+                <th>제목</th>
+                <th>글쓴이</th>
+                <th>작성일자</th>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><input type="checkbox" id="r1" name="rr"/> <label for="r1">
+                        <span></span><span class="hide-text">선택</span></td>
+                <td class="txtal">우리말 다듬기 ‘쿡톱’ 관련하여 공모전이 있었습니다.</td>
+                <td>김관리</td>
+                <td>2016. 6. 18 18:52</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td class="fb"><input type="checkbox" id="r1" name="rr"/> <label for="r1">
+                        <span></span><span class="hide-text">선택</span></td>
+                <td class="txtal">`핀테크` 대신에 `금융기술`로 바꿔 쓰세요(뉴스1)</td>
+                <td>이관리</td>
+				<td>2016. 6. 18 18:52</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td class="fb"><input type="checkbox" id="r1" name="rr"/> <label for="r1">
+                        <span></span><span class="hide-text">선택</span></td>
+                <td class="txtal">'프리퀄' 대신 '전사편'(前史篇) 어때요? (뉴시스)</td>
+                <td>박관리</td>
+				<td>2016. 6. 18 18:52</td>
+            </tr>
+        </table>
+        <div class="paging">
+            <span class="inner_paging">
+                <a href="#" class="btn_paging btn_fst"><span class="ico_corp">맨 처음</span></a>
+                <a href="#" class="btn_paging btn_prev"><span class="ico_corp">이전</span></a>
+                <a href="#" class="link_page on">1</a> <a href="#" class="link_page">2</a>
+                <a href="#" class="link_page">3</a> <a href="#" class="link_page">4</a>
+                <a href="#" class="link_page">5</a> <a href="#" class="link_page">6</a>
+                <a href="#" class="link_page">7</a> <a href="#" class="link_page">8</a>
+                <a href="#" class="link_page">9</a> <a href="#" class="link_page">10</a>
+                <a href="#" class="btn_paging btn_next"><span class="ico_corp">다음</span></a>
+                <a href="#" class="btn_paging btn_lst"><span class="ico_corp">맨 마지막</span></a>
+            </span>
+        </div>
+    </div>
+    <div class="pop-ft">
+        <a href="#" class="btn1" data-remodal-action="cancel">취소</a>
+		<a href="#" class="btn1 upload" data-remodal-action="confirm">업로드</a>
+    </div>
+</div>
+
+<div class="remodal modal6" data-remodal-id="modal6" id="pop">
+    <div class="pop-head">
+        <h2>번역 통합 데이터 검색</h2>
+        <a data-remodal-action="close" class="remodal-close" href="#">
+            <span class="hide-text">닫기</span>
+        </a>
+    </div>
+    <div id="pop-content">
+
+        <p class="text3">
+            한글 명칭<em>'도봉산'</em>은 현재<strong>2건</strong>의 등록 데이터가 있습니다. <br> <br> <a class="link2">번역 통합 데이터 관리에서 확인하기</a>
+        </p>
+    </div>
+    <div class="pop-ft">
+        <a href="#" class="btn1" data-remodal-action="cancel">취소</a>
+        <a href="#" class="btn1 upload" data-remodal-action="confirm">확인</a>
+    </div>
+</div>><!-- wrap -->
+
+<script>
+    $(document).on('opening', '.remodal', function () {
+        console.log('opening');
+    });
+
+    $(document).on('opened', '.remodal', function () {
+        console.log('opened');
+    });
+
+    $(document).on('closing', '.remodal', function (e) {
+        console.log('closing' + (e.reason ? ', reason: ' + e.reason : ''));
+    });
+
+    $(document).on('closed', '.remodal', function (e) {
+        console.log('closed' + (e.reason ? ', reason: ' + e.reason : ''));
+    });
+
+    $(document).on('confirmation', '.remodal', function () {
+        console.log('confirmation');
+    });
+
+    $(document).on('cancellation', '.remodal', function () {
+        console.log('cancellation');
+    });
+
+    $(function () {
+
+        // In this case the initialization function returns the already created instance
+        var inst = $('[data-remodal-id=modal6]').remodal();
+
+//        inst.open();
+//    inst.close();
+//    inst.getState();
+//    inst.destroy();
+    });
+
+    //  The second way to initialize:
+    $('[data-remodal-id=modal2]').remodal({
+        modifier: 'with-red-theme'
+    });
+
+
+</script>
+</body>
+</html>

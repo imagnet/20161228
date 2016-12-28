@@ -1,0 +1,156 @@
+var browserMode, IS_WEB = 0, IS_MOBILE = 1, myScroll, mainBannerSlide;
+
+$(function () {
+    // 미디어쿼리캐치
+    // var browserMode, IS_WEB = 0, IS_MOBILE = 1;
+
+
+    function getMedia() {
+        var rwdColor = $('#overLayer').css('color').replace(/ /gi, '');
+        if (rwdColor == 'rgb(0,0,255)') {
+            browserMode = IS_WEB;
+            gnb();
+        } else if (rwdColor == 'rgb(255,0,0)') {
+            browserMode = IS_MOBILE;
+            gnb();
+        }
+    }
+
+//드롭다운해제 함수(공통)
+    function noneOthers(selector, fn) {
+        $(document).on('click.noneArea', function (e) {
+            if ($(e.target).closest(selector).length <= 0 && $.isFunction(fn)) {
+                fn();
+            }
+        }).on('keydown', function (e) {
+            if (e.keyCode == 27) {
+                if ($.isFunction(fn)) {
+                    fn();
+                }
+            }
+        });
+    }
+
+// 바디클릭 이벤트 해제(공통)
+    function offNoneOthers() {
+        $('body').off('.noneArea');
+    }
+
+// init event
+    function initEventBind() {
+        $('.depth1 > li > a').off('click').on('click', function () {
+            $('.depth1 > li > a').removeClass('on');
+            $(this).addClass('on')
+            $('nav').addClass('on');
+        });
+        noneOthers('.depth1 a, .gnb-back', function () {
+            $('nav, .depth1 > li > a').removeClass('on');
+        });
+        offNoneOthers();
+    }
+
+
+// gnb
+    function gnb() {
+
+
+        if (browserMode == IS_WEB) {
+            if (myScroll) {
+                myScroll.destroy();
+                myScroll = null;
+            }
+            initEventBind();
+            $('body, .gnb-wrap, .m-gnb-close').removeAttr('style');
+            $('body').removeAttr('style');
+            $('.dim').stop().fadeOut('fast')
+
+
+        } else if (browserMode == IS_MOBILE) {
+            if (!myScroll) {
+
+                myScroll = new IScroll(".gnb-wrap", {
+                    scrollX: false,
+                    scrollY: true,
+                    scrollbars: false
+                });
+
+            }
+            $('nav').removeClass('on');
+            $('nav, .depth1 > li > a').off("click").removeClass('on');
+            openMgnb();
+
+
+        }
+    }
+
+// off screen state
+    function offScreenOn() {
+        $('.gnb-wrap').stop().animate({'left': '0%', 'right': '0%'}).scrollTop(0);
+        $('.m-gnb-close').stop().animate({'left': '0%', 'right': '0%'});
+        $('.dim').show();
+        $('body').css({'overflow': 'hidden', 'position': 'fixed'});
+
+    }
+
+    function offScreenOff() {
+        $('.gnb-wrap').stop().animate({'left': '100%', 'right': '-100%'});
+        $('.m-gnb-close').stop().animate({'left': '100%', 'right': '-100%'});
+        $('.dim').stop().fadeOut('fast');
+        $('body').css({'overflow': '', 'position': ''});
+        myScroll.scrollTo(0, 0);
+    }
+
+
+    function openMgnb() {
+        $('.dim').on('scroll touchmove mousewheel', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+        }).on('click', function () {
+            offScreenOff();
+        });
+        $('.m-gnb-open').on('click', function (e) {
+            offScreenOn();
+        });
+        $('.m-gnb-close').on('click', function (e) {
+            offScreenOff();
+        });
+        return false;
+    }
+
+
+    mainBannerSlide = $('.main-banner-slide').bxSlider({
+        auto: true,
+        pause: 4000,
+        slideWidth: 160,
+        minSlides: 2,
+        maxSlides: 7,
+        moveSlides: 1,
+        pager: false,
+        nextSelector: $(".main-banner-next"),
+        prevSelector: $(".main-banner-prev")
+    });
+
+    getMedia();
+    $(window).off("resize").on('resize', function () {
+        getMedia();
+        if ($(".main-banner-prev").hasClass("main-banner-prev")) {
+            mainBannerSlide.reloadSlider();
+        }
+
+    });
+
+    // tab
+    $('body').on('click', '.tab1 a', function () {
+
+    })
+
+});
+
+function loaderStart(){
+	$('body').append('<div class="loader"><div class="centerLoader"><img class="centerLoaderImg" alt="" src="../image/common/ajax_loader_blue_64.gif" /></div></div>');
+}
+
+function loaderStop(){
+	$('body').find('.loader').remove();
+}

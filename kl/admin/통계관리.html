@@ -1,0 +1,417 @@
+<!DOCTYPE HTML><!--[if lte IE 8]>
+<html class="no-js ie8" lang="ko"> <![endif]--><!--[if IE 9]>
+<html class="no-js ie9" lang="ko"> <![endif]--><!--[if gt IE 9]><!-->
+<html class="no-js" lang="ko"> <!--<![endif]-->
+<head>
+    <title>국어원 관리자 시스템</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/common2.css"/>
+    <link href="../css/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+
+    <script src="../js/jquery.bxslider.js"></script>
+    <script>
+        $(function () {
+            $(".datepicker1").datepicker({
+                showOn: "button",
+                buttonImage: "../image/jquery_ui/calendar.gif",
+                buttonImageOnly: true,
+                buttonText: "Select date"
+            });
+        });
+    </script>
+    <!--<script type="text/javascript" src="../js/common.js"></script>-->
+    <!--    <script>
+            $(document).ready(function() {
+                $('.wrap').on( 'keyup', 'textarea', function (e){
+                    $(this).css('height', 'auto' );
+                    $(this).height( this.scrollHeight );
+                });
+                $('.wrap').find( 'textarea' ).keyup();
+            });
+        </script>-->
+
+</head>
+<body>
+<header class="clfix">
+    <h1 class="logo">
+        <a href="#">
+            <span class="hide-text">국립국어 원공공언어 지원</span>
+        </a>
+        <span class="title"><strong>관리자</strong> 시스템</span>
+    </h1>
+    <ul class="util clfix">
+        <li><a href="#">김 관리</a></li>
+        <li><a href="#">내 정보 관리</a></li>
+        <li><a href="#">로그아웃</a></li>
+    </ul>
+</header>
+<div class="wrap clfix">
+    <nav>
+        <ul class="lnb">
+            <li><a href="">공공 언어 지원</a>
+                <ul>
+                    <li><a href="">공공 언어 지원 현황</a></li>
+                    <li><a href="">공공 언어 지원 현황 관리</a></li>
+                </ul>
+            </li>
+            <li><a href="">공공 용어 번역</a>
+                <ul>
+                    <li><a href="">공공 용어 번역 현황</a></li>
+                    <li><a href="">번역 통합 데이터 관리</a></li>
+                    <li><a href="">공공 용어 번역 요청</a></li>
+                    <li><a href="">기관 수집 DB 관리</a></li>
+                </ul>
+            </li>
+            <li><a href="">우리말 다듬기</a>
+                <ul>
+                    <li><a href="">다듬고 싶은 말 관리</a></li>
+                    <li><a href="">공모전 관리</a></li>
+                    <li><a href="">우리말 다듬기 회원관리</a></li>
+                </ul>
+            </li>
+            <li><a href="">개선 시민 제보 관리</a></li>
+            <li><a href="">자료실 관리</a></li>
+            <li><a href="">알립니다. 관리</a></li>
+            <li><a href="">통계 관리</a></li>
+            <li><a href="">관리 계정 관리</a></li>
+        </ul>
+    </nav>
+    <section id="contents" class="sub">
+        <div class="rel-pos clfix">
+              <h2>통계 관리</h2>
+            <ul class="location">
+                <li><a href="#">
+                    <span class="hide-text">home</span>
+                </a></li>
+                <li><a href="#">통계 관리</a></li>
+            </ul>
+        </div>
+		<div class="tab2">
+            <ul>
+                <li><a href="#" class="on">전체</a></li>
+                <li><a href="#">공공 언어 지원</a></li>
+                <li><a href="#">공공 용어 번역</a></li>
+                <li><a href="#">우리말 다듬기</a></li>
+                <li><a href="#">개선 시민 제보</a></li>
+                <li><a href="#">자료실</a></li>
+                <li><a href="#">알립니다</a></li>
+            </ul>
+			  <div>
+				<table class="tbl1 mb5">
+				<colgroup>
+					<col style="">
+					<col style="width:20%">					
+				</colgroup>
+				 <tr>
+					<td class="txtal bdln pl0">
+						<span class="calendar-wrap"><input type="text" class="datepicker1 form-width1">
+							<span>~</span>
+							<input type="text" class="datepicker1 form-width1"></span>
+							<a class="btn1 ml1" href="#">검색</a>
+					</td>
+					<td class="txtar bdln pr0"><a href="#" class="btn2">내려받기</a></td>
+					</tr>
+				</table>
+				<table class="tbl5">
+				<colgroup>
+					<col style="width:6%">
+					<col style="width:12%">
+					<col style="">
+					<col style="">
+					<col style="">
+					<col style="">
+					<col style="">
+					<col style="">
+					<col style="">
+					<col style="">
+					<col style="">
+					<col style="">
+					<col style="">
+					<col style="">
+					<col style="">
+					<col style="">
+					<col style="">
+					<col style="">
+				</colgroup>
+				<tr>
+					<th rowspan="2" class="bdln">번호</th>
+					<th rowspan="2">메뉴명</th>
+					<th colspan="2">합계</th>
+					<th colspan="2">0711</th>
+					<th colspan="2">0712</th>
+					<th colspan="2">0713</th>
+					<th colspan="2">0714</th>
+					<th colspan="2">0715</th>
+					<th colspan="2">0716</th>
+					<th colspan="2">0717</th>
+				</tr>
+				<tr>
+					<th>PV</th>
+					<th>UV</th>
+					<td>PV</td>
+					<td>UV</td>
+					<td>PV</td>
+					<td>UV</td>
+					<td>PV</td>
+					<td>UV</td>
+					<td>PV</td>
+					<td>UV</td>
+					<td>PV</td>
+					<td>UV</td>
+					<td>PV</td>
+					<td>UV</td>
+					<td>PV</td>
+					<td>UV</td>
+				</tr>
+				<tr>
+					<td class="bdln">06</td>
+					<td class="fb">공공언어지원</td>
+					<td class="back1">12,355</td>
+					<td class="back1">12,355</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+				</tr>
+				<tr>
+					<td class="bdln">05</td>
+					<td class="fb">공공용어번역</td>
+					<td class="back1">12,355</td>
+					<td class="back1">12,355</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+				</tr>
+				<tr>
+					<td class="bdln">04</td>
+					<td class="fb">우리말 다듬기</td>
+					<td class="back1">12,355</td>
+					<td class="back1">12,355</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+				</tr>
+				<tr>
+					<td class="bdln">03</td>
+					<td class="fb">개선시민제보</td>
+					<td class="back1">12,355</td>
+					<td class="back1">12,355</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+				</tr>
+			</table>
+	            
+			</div>
+		</div>
+
+
+		<div class="tab2">
+            <ul>
+                <li><a href="#">전체</a></li>
+                <li><a href="#">공공 언어 지원</a></li>
+                <li><a href="#">공공 용어 번역</a></li>
+                <li><a href="#">우리말 다듬기</a></li>
+                <li><a href="#" class="on">개선 시민 제보</a></li>
+                <li><a href="#">자료실</a></li>
+                <li><a href="#">알립니다</a></li>
+            </ul>
+			  <div>
+				<table class="tbl1 mb5">
+				<colgroup>
+					<col style="">
+					<col style="width:20%">
+				</colgroup>
+				 <tr>
+						<td class="txtal bdln pl0">
+							<span class="calendar-wrap"><input type="text" class="datepicker1 form-width1">
+								<span>~</span>
+								<input type="text" class="datepicker1 form-width1"></span>
+								<a class="btn1 ml1" href="#">검색</a>
+						</td>
+						<td class="txtar bdln pr0"><a href="#" class="btn2">내려받기</a></td>
+					</tr>
+				</table>
+				<table class="tbl5">
+				<colgroup>
+					<col style="width:6%">
+					<col style="width:40%">
+					<col style="width:6%">
+					<col style="width:6%">
+					<col style="width:6%">
+					<col style="width:6%">
+					<col style="width:6%">
+					<col style="width:6%">
+					<col style="width:9%">
+					<col style="width:9%">
+				</colgroup>
+				<tr>
+					<th rowspan="2" class="bdln">번호</th>
+					<th rowspan="2">제목</th>
+					<th colspan="2">0711</th>
+					<th colspan="2">0712</th>
+					<th colspan="2">0713</th>
+					<th colspan="2">합계</th>
+				</tr>
+				<tr>
+					<td>PV</td>
+					<td>UV</td>
+					<td>PV</td>
+					<td>UV</td>
+					<td>PV</td>
+					<td>UV</td>
+					<td>PV</td>
+					<td>UV</td>
+				</tr>
+				<tr class="back2">
+					<td class="bdln back1" colspan="2">개선시민제보 합계</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>12,355</td>
+					<td>12,355</td>
+				</tr>
+				<tr>
+					<td class="bdln">09</td>
+					<td class="txtal pl1">높임말 1분 교실 원고 감수</td>
+					<td>123</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+				</tr>
+				<tr>
+					<td class="bdln">09</td>
+					<td class="txtal pl1">문화재 안내판 문안 감수</td>
+					<td>123</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+					<td>456</td>
+					<td>789</td>
+					<td>123</td>
+				</tr>
+			</table>
+
+	            
+			</div>
+		</div>
+    </section>
+</div>><!-- wrap -->
+
+<footer class="clfix">
+    <div class="foot-mark">
+        <span class="hide-text">국어원</span>
+    </div>
+    <address>
+        우) 07511 서울특별시 강서구 금낭화로 154(방화3동 827) | 대표전화 02-2669-9775 | 전송 02-2669-9727<br> 이 누리집의 저작권은 국립국어원에 있습니다.
+    </address>
+</footer>
+
+
+
+
+<script>
+    $(document).on('opening', '.remodal', function () {
+        console.log('opening');
+    });
+
+    $(document).on('opened', '.remodal', function () {
+        console.log('opened');
+    });
+
+    $(document).on('closing', '.remodal', function (e) {
+        console.log('closing' + (e.reason ? ', reason: ' + e.reason : ''));
+    });
+
+    $(document).on('closed', '.remodal', function (e) {
+        console.log('closed' + (e.reason ? ', reason: ' + e.reason : ''));
+    });
+
+    $(document).on('confirmation', '.remodal', function () {
+        console.log('confirmation');
+    });
+
+    $(document).on('cancellation', '.remodal', function () {
+        console.log('cancellation');
+    });
+
+    $(function () {
+
+        // In this case the initialization function returns the already created instance
+        var inst = $('[data-remodal-id=modal6]').remodal();
+
+//        inst.open();
+//    inst.close();
+//    inst.getState();
+//    inst.destroy();
+    });
+
+    //  The second way to initialize:
+    $('[data-remodal-id=modal2]').remodal({
+        modifier: 'with-red-theme'
+    });
+
+
+</script>
+</body>
+</html>

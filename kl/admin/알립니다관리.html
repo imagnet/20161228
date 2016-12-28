@@ -1,0 +1,587 @@
+<!DOCTYPE HTML><!--[if lte IE 8]>
+<html class="no-js ie8" lang="ko"> <![endif]--><!--[if IE 9]>
+<html class="no-js ie9" lang="ko"> <![endif]--><!--[if gt IE 9]><!-->
+<html class="no-js" lang="ko"> <!--<![endif]-->
+<head>
+    <title>국어원 관리자 시스템</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/common2.css"/>
+    <link href="../css/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+
+    <script src="../js/jquery.bxslider.js"></script>
+    <script>
+        $(function () {
+            $(".datepicker1").datepicker({
+                showOn: "button",
+                buttonImage: "../image/jquery_ui/calendar.gif",
+                buttonImageOnly: true,
+                buttonText: "Select date"
+            });
+        });
+    </script>
+    <!--<script type="text/javascript" src="../js/common.js"></script>-->
+    <!--    <script>
+            $(document).ready(function() {
+                $('.wrap').on( 'keyup', 'textarea', function (e){
+                    $(this).css('height', 'auto' );
+                    $(this).height( this.scrollHeight );
+                });
+                $('.wrap').find( 'textarea' ).keyup();
+            });
+        </script>-->
+
+</head>
+<body>
+<header class="clfix">
+    <h1 class="logo">
+        <a href="#">
+            <span class="hide-text">국립국어 원공공언어 지원</span>
+        </a>
+        <span class="title"><strong>관리자</strong> 시스템</span>
+    </h1>
+    <ul class="util clfix">
+        <li><a href="#">김 관리</a></li>
+        <li><a href="#">내 정보 관리</a></li>
+        <li><a href="#">로그아웃</a></li>
+    </ul>
+</header>
+<div class="wrap clfix">
+    <nav>
+        <ul class="lnb">
+            <li><a href="">공공 언어 지원</a>
+                <ul>
+                    <li><a href="">공공 언어 지원 현황</a></li>
+                    <li><a href="">공공 언어 지원 현황 관리</a></li>
+                </ul>
+            </li>
+            <li><a href="">공공 용어 번역</a>
+                <ul>
+                    <li><a href="">공공 용어 번역 현황</a></li>
+                    <li><a href="">번역 통합 데이터 관리</a></li>
+                    <li><a href="">공공 용어 번역 요청</a></li>
+                    <li><a href="">기관 수집 DB 관리</a></li>
+                </ul>
+            </li>
+            <li><a href="">우리말 다듬기</a>
+                <ul>
+                    <li><a href="">다듬고 싶은 말 관리</a></li>
+                    <li><a href="">공모전 관리</a></li>
+                    <li><a href="">우리말 다듬기 회원관리</a></li>
+                </ul>
+            </li>
+            <li><a href="">개선 시민 제보 관리</a></li>
+            <li><a href="">자료
+				실 관리</a></li>
+            <li><a href="">알립니다. 관리</a></li>
+            <li><a href="">통계 관리</a></li>
+            <li><a href="">관리 계정 관리</a></li>
+        </ul>
+    </nav>
+    <section id="contents" class="sub">
+        <div class="rel-pos clfix">
+              <h2>알립니다 관리</h2>
+            <ul class="location">
+                <li><a href="#">
+                    <span class="hide-text">home</span>
+                </a></li>
+                <li><a href="#">알립니다 관리</a></li>
+            </ul>
+        </div>
+        <table class="tbl1">
+
+            <col style="width:20%">
+            <col style="width:auto;">
+
+                <th class="bdln">찾을대상</th>
+                <td class="txtal">
+                    <span class="search-wrap"><select name="" class="form-width1">
+                        <option value="">전체</option>
+                        <option value="">월별</option>
+                        <option value="">월별</option>
+                    </select> <input type="text" class="form-width2"><a class="btn1">검색</a><a href="#" class="btn3 on">
+                        <span class="hide-text">닫기</span>
+                    </a>
+                    </span>
+                </td>
+            </tr>
+        </table>
+       <div class="rel-pos mb1 clfix">
+            <span class="comment fl">모두 <strong>1,000</strong>건의 결과가 있습니다.</span>
+			<span class="fr">
+                <span class="util2">
+                    <a href="#">내림차순</a>
+                    <a href="#">오름차 순</a>
+                    <a class="on" href="#">최신 순</a>
+                </span>
+				 <span class="util1">
+					<a href="#" class="btn4 nobg">새 글 쓰기</a>
+				</span>
+			</span>
+        </div>
+		<table class="tbl1">
+			<colgroup>
+				<col style="width:7%">
+				<col style="width:7%">
+				<col style="width:auto">
+				<col style="width:7%">
+				<col style="width:10%">
+				<col style="width:13%">
+				<col style="width:7%">
+			</colgroup>
+
+			<tbody>
+				<tr>
+					<th class="bdln">번호</th>
+					<th>사용</th>
+					<th>제목</th>
+					<th>첨부</th>
+					<th>글쓴이</th>
+					<th>작성일자</th>
+					<th>조회</th>
+				</tr>
+				<tr>
+					<td class="bdln ">10</td>
+					<td>Y</td>
+					<td class="txtal">공공아이핀 일제 정비 실시 안내</td>
+					<td><a href="#" class="btn15"><span class="hide-text">저장</span></a></td>
+					<td>김관리</td>
+					<td>2016.06.18 18:52</td>
+					<td>987</td>
+				</tr>
+				<tr>
+					<td class="bdln ">09</td>
+					<td>Y</td>
+					<td class="txtal">공공언어 감수 대상 문서 기준</td>
+					<td><a href="#" class="btn15"><span class="hide-text">저장</span></a></td>
+					<td>이관리</td>
+					<td>2016.06.18 18:52</td>
+					<td>987</td>
+				</tr>
+				<tr>
+					<td class="bdln ">08</td>
+					<td>Y</td>
+					<td class="txtal">공공아이핀 일제 정리 안내.hwp
+</td>
+					<td><a href="#" class="btn15"><span class="hide-text">저장</span></a></td>
+					<td>이관리</td>
+					<td>2016.06.18 18:52</td>
+					<td>987</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="paging">
+            <span class="inner_paging">
+                <a href="#" class="btn_paging btn_fst"><span class="ico_corp">맨 처음</span></a>
+                <a href="#" class="btn_paging btn_prev"><span class="ico_corp">이전</span></a>
+                <a href="#" class="link_page on">1</a> <a href="#" class="link_page">2</a>
+                <a href="#" class="link_page">3</a> <a href="#" class="link_page">4</a>
+                <a href="#" class="link_page">5</a> <a href="#" class="link_page">6</a>
+                <a href="#" class="link_page">7</a> <a href="#" class="link_page">8</a>
+                <a href="#" class="link_page">9</a> <a href="#" class="link_page">10</a>
+                <a href="#" class="btn_paging btn_next"><span class="ico_corp">다음</span></a>
+                <a href="#" class="btn_paging btn_lst"><span class="ico_corp">맨 마지막</span></a>
+            </span>
+        </div>
+
+
+		<table class="tbl1 txtal mb1">
+            <col style="width: 15%">
+            <col style="width: auto">
+            <col style="width: 25%">
+            <col style="width: 20%">
+            <tr>
+                <th colspan="4" class="txtal bdln">
+                  공공아이핀 일제 정비 실시 안내
+				  <span class="date1 fr">2016-09-09 21:10</span>
+                </th>
+            </tr>
+            <tbody>
+                <tr>
+                    <th class="bdln bgn">작성자</th>
+                    <td class="bgn" colspan="2"><strong>관리자</strong></td>
+                    <td class="bgn bdln txtar" >조회수 <span class="fb">23</span></td>
+                </tr>
+                <tr>
+                    <th class="bdln bgn">붙임</th>
+                    <td colspan="3"><a href="#" class="link2">공공아이핀 일제 정리 안내.hwp</a></td>
+                </tr>
+                <tr>
+                    <td class="bdln" colspan="4">안녕하십니까?<br>
+					안전한 공공아이핀 이용 환경 조성 및 보안 강화를 위하여 공공아이핀 일제 정비를 다음과 같이 실시하니 협조 부탁드립니다.
+					<br>
+					[이하생략]<br>
+					</td>
+                </tr>
+				<tr>
+                    <th class="bdln bgn">공공누리 저작권</th>
+                    <td colspan="3">1유형 : 출처 표시(상업적 이용 및 변경 가능)</td>
+                </tr>
+				<tr>
+                    <th class="bdln bgn">저작권 설명</th>
+                    <td colspan="3">공공저작물 자유이용허락 표시 기준(공공누리, KOGL) 제 1유형 조건에 따라 저작물의                                     
+                          출처를 구체적으로 표시한 후 이용할 수 있습니다.</td>
+                </tr>
+            </tbody>
+        </table>
+
+		<div class="btn-wrap">
+            <a class="btn11 line" href="#">목록</a> <a class="btn11 line" href="#">지우기</a>
+            <a class="btn11" href="#">고치기</a>
+        </div>
+
+		<table class="tbl1 txtal">
+            <colgroup>
+				<col style="width:20%">
+				<col style="width:30%">
+				<col style="width:20%">
+				<col style="width:30%">
+			</colgroup>
+
+            <tbody>
+                <tr>
+                    <th class="bdln">제목</th>
+                    <td colspan="3"><input type="text" class="form-width3"></td>
+                </tr>
+                <tr>
+                    <th class="bdln">작성자</th>
+                    <td>김관리</td>
+                    <th>사용여부</th>
+                    <td class="txtal">
+						<select name="" class="form-width1">
+							<option value="">사용</option>
+							<option value="">사용</option>
+							<option value="">사용</option>
+						</select>
+					</td>
+                </tr>
+				 <tr>
+                    <th class="bdln">구분</th>
+                    <td colspan="3">
+						<select name="" class="form-width1">
+							<option value="">선택</option>
+							<option value="">선택</option>
+							<option value="">선택</option>
+						</select>
+					</td>
+				</tr>
+				 <tr>
+                    <th class="bdln">내용</th>
+                    <td colspan="3"></td>
+				</tr>
+				<tr>
+                    <th class="bdln">공공누리 저작권</th>
+                    <td colspan="3">
+                        <table class="tbl4">
+                            <col style="width: 2%">
+                            <col style="width: 8%">
+                            <col style="width: auto">
+                            <tr>
+                                <td><input type="radio" id="d1" name="dd"/> <label for="d1">
+                                    <span></span>
+                                </label></td>
+                                <td>없음</td>
+                                <td class="fb"><input type="radio" id="d2" name="dd"/> <label for="d2">
+                                    <span></span></label>제 1유형 : 출처표시</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" id="d2" name="dd"/> <label for="d2">
+                                    <span></span>
+                                </label></td>
+                                <td>제2유형</td>
+                                <td>: 출처 표시+상업적 이용 금지</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" id="d2" name="dd"/> <label for="d2">
+                                    <span></span>
+                                </label></td>
+                                <td>제3유형</td>
+                                <td>: 출처 표시+변경금지</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" id="d2" name="dd"/> <label for="d2">
+                                    <span></span>
+                                </label></td>
+                                <td>제4유형</td>
+                                <td>: 출처 표시+상업적 이용 금지+변경금지</td>
+                            </tr>
+					   </table>
+                    </td>
+                </tr>
+				<tr>
+                    <th class="bdln">저작권 설명</th>
+                    <td colspan="3">
+						<textarea draggable="false fl" class="ta1"> 공공저작물 자유이용허락 표시기준(공공누리, KOGL) 제1유형 조건에 따라 저작물의 출처를 구체적으로 표시 한 후 이용할 수 있습니다.</textarea>
+                      </td>
+                </tr>
+				<tr>
+                    <th class="bdln">파일붙임</th>
+                    <td colspan="3">
+						<span class="add-wrap">		
+							<input type="text" class="form-width2"><a href="#" class="btn12">
+                            <span class="hide-text">추가</span>
+							</a>
+                        </span>
+						<br>
+						<span class="ml2">[총 0개] 0KB/50M</span>
+					</td>
+                </tr>
+            </tbody>            
+        </table>
+
+		<div class="btn-wrap">
+            <a class="btn11" href="#">취소</a> <a class="btn11 conform" href="#">저장</a>
+        </div>
+        
+    </section>
+</div><!-- wrap -->
+
+
+<footer class="clfix">
+    <div class="foot-mark">
+        <span class="hide-text">국어원</span>
+    </div>
+    <address>
+        우) 07511 서울특별시 강서구 금낭화로 154(방화3동 827) | 대표전화 02-2669-9775 | 전송 02-2669-9727<br> 이 누리집의 저작권은 국립국어원에 있습니다.
+    </address>
+</footer>
+
+
+<div class="remodal modal1" data-remodal-id="modal5" id="pop">
+    <div class="pop-head">
+        <h2>공모전 보기 - 댓글 보기</h2>
+        <a data-remodal-action="close" class="remodal-close" href="#">
+            <span class="hide-text">닫기</span>
+        </a>
+    </div>
+    <div id="pop-content">
+		<div class="rel-pos mb1 clfix">
+		<span class="comment fl">다듬고 싶은 말 : 쿡톱(cook top) </span>
+		</div>
+		<div class="rel-pos mb1 clfix">
+			 <span class="search-wrap fl" >
+				 <select name="" class="form-width1">
+					<option value="">전체</option>
+					<option value="">전체</option>
+					<option value="">전체</option>
+				</select> 
+				<input type="text" class="form-width1">
+				<a href="#" class="btn1">검색</a>
+			</span>
+			 <span class="fr">
+				<span class="util4">
+					<a href="#" class="btn4 nobg">전체</a>
+					<a href="#" class="btn9 nobg">제안만 보기</a>
+				</span>
+			</span>
+		</div>
+         <div class="reply-box">
+            <div class="form-g2 clfix colorbox-gr">
+                <textarea draggable="false fl">댓글 내용을 입력하세요. 댓글은 300자까지 입력하실 수 있습니다.
+				</textarea> <a href="#" class="btn13 fr">댓글등록</a>
+                <p class="text2">* 관리자 페이지에서 등록한 댓글은 이용자용 페이지에 ＇관리자’라고 표기 됩니다</p>
+            </div>
+            <ul class="ul1">
+                <li class="clfix">
+                    <span class="left">
+                        <strong class="name"><a href="#" class="btn14 suggestion">제안</a> 의적</strong>
+                        <span class="copy">웹르라우저 순화 제안결과가 궁금합니다.
+                            <a href="#" class="btn14 modify">수정</a>
+                            <a href="#" class="btn14 del">삭제</a>
+                        </span>
+                    </span>
+                    <span class="right">
+                        <span class="date1">2016.09.10.  12:32</span>
+                        <span class="recommend2"><a href="#" class="link2">추천</a> 0</span>
+                    </span>
+                </li>
+                <li class="clfix">
+                    <span class="left">
+                        <strong class="name"> <a href="#" class="btn14 confirm">제안확정</a> 우리말지킴이</strong>
+                        <span class="copy">웹브라우저 순화 할 수 있는 우리말이 있을까요?
+                            <a href="#" class="btn14 modify">제안확정</a>
+                            <a href="#" class="btn14 del">관리자삭제</a>
+                            <a href="#" class="btn14">제안헤제</a>
+                        </span>
+                    </span>
+                    <span class="right">
+                        <span class="date1">2016.09.10.  12:32</span>
+						<span class="recommend2"><a href="#" class="link2">추천</a> 1</span>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="paging">
+            <span class="inner_paging">
+                <a href="#" class="btn_paging btn_fst"><span class="ico_corp">맨 처음</span></a>
+                <a href="#" class="btn_paging btn_prev"><span class="ico_corp">이전</span></a>
+                <a href="#" class="link_page on">1</a> <a href="#" class="link_page">2</a>
+                <a href="#" class="link_page">3</a> <a href="#" class="link_page">4</a>
+                <a href="#" class="link_page">5</a> <a href="#" class="link_page">6</a>
+                <a href="#" class="link_page">7</a> <a href="#" class="link_page">8</a>
+                <a href="#" class="link_page">9</a> <a href="#" class="link_page">10</a>
+                <a href="#" class="btn_paging btn_next"><span class="ico_corp">다음</span></a>
+                <a href="#" class="btn_paging btn_lst"><span class="ico_corp">맨 마지막</span></a>
+            </span>
+        </div>
+    </div>
+    <div class="pop-ft">
+        <a href="#" class="btn1 upload" data-remodal-action="confirm">확인</a>
+    </div>
+</div>
+
+
+<div class="remodal modal1" data-remodal-id="modal4" id="pop">
+    <div class="pop-head">
+        <h2>보도자료 등록</h2>
+        <a data-remodal-action="close" class="remodal-close" href="#">
+            <span class="hide-text">닫기</span>
+        </a>
+    </div>
+    <div id="pop-content">
+		<div class="rel-pos mb1 clfix">
+		<span class="comment">등록하고자 하는 보도자료를 선택하여 주십시오. 새로운 보도자료를 올리고자 하실 때는 자료실에서 새로운 보도자료를 등록 후에 선택하여 주십시오.</span>
+		</div>
+		<div class="rel-pos mb1 clfix">
+			 <span class="search-wrap fl" >
+				 <select name="" class="form-width1">
+					<option value="">전체</option>
+					<option value="">전체</option>
+					<option value="">전체</option>
+				</select> 
+				<input type="text" class="form-width1">
+				<a href="#" class="btn1">검색</a>
+			</span>
+		 </div>
+         <table class="tbl2">
+			<col style="width:10%">
+            <col style="width:5%">
+            <col style="width:auto">
+            <col style="width:10%">
+            <col style="width:20%">
+
+            <tr>
+                <th>번호</th>
+                <th><input type="checkbox" id="r1" name="rr"/> <label for="r1">
+                        <span></span><span class="hide-text">선택</span></th>
+                <th>제목</th>
+                <th>글쓴이</th>
+                <th>작성일자</th>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><input type="checkbox" id="r1" name="rr"/> <label for="r1">
+                        <span></span><span class="hide-text">선택</span></td>
+                <td class="txtal">우리말 다듬기 ‘쿡톱’ 관련하여 공모전이 있었습니다.</td>
+                <td>김관리</td>
+                <td>2016. 6. 18 18:52</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td class="fb"><input type="checkbox" id="r1" name="rr"/> <label for="r1">
+                        <span></span><span class="hide-text">선택</span></td>
+                <td class="txtal">`핀테크` 대신에 `금융기술`로 바꿔 쓰세요(뉴스1)</td>
+                <td>이관리</td>
+				<td>2016. 6. 18 18:52</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td class="fb"><input type="checkbox" id="r1" name="rr"/> <label for="r1">
+                        <span></span><span class="hide-text">선택</span></td>
+                <td class="txtal">'프리퀄' 대신 '전사편'(前史篇) 어때요? (뉴시스)</td>
+                <td>박관리</td>
+				<td>2016. 6. 18 18:52</td>
+            </tr>
+        </table>
+        <div class="paging">
+            <span class="inner_paging">
+                <a href="#" class="btn_paging btn_fst"><span class="ico_corp">맨 처음</span></a>
+                <a href="#" class="btn_paging btn_prev"><span class="ico_corp">이전</span></a>
+                <a href="#" class="link_page on">1</a> <a href="#" class="link_page">2</a>
+                <a href="#" class="link_page">3</a> <a href="#" class="link_page">4</a>
+                <a href="#" class="link_page">5</a> <a href="#" class="link_page">6</a>
+                <a href="#" class="link_page">7</a> <a href="#" class="link_page">8</a>
+                <a href="#" class="link_page">9</a> <a href="#" class="link_page">10</a>
+                <a href="#" class="btn_paging btn_next"><span class="ico_corp">다음</span></a>
+                <a href="#" class="btn_paging btn_lst"><span class="ico_corp">맨 마지막</span></a>
+            </span>
+        </div>
+    </div>
+    <div class="pop-ft">
+        <a href="#" class="btn1" data-remodal-action="cancel">취소</a>
+		<a href="#" class="btn1 upload" data-remodal-action="confirm">업로드</a>
+    </div>
+</div>
+
+<div class="remodal modal6" data-remodal-id="modal6" id="pop">
+    <div class="pop-head">
+        <h2>번역 통합 데이터 검색</h2>
+        <a data-remodal-action="close" class="remodal-close" href="#">
+            <span class="hide-text">닫기</span>
+        </a>
+    </div>
+    <div id="pop-content">
+
+        <p class="text3">
+            한글 명칭<em>'도봉산'</em>은 현재<strong>2건</strong>의 등록 데이터가 있습니다. <br> <br> <a class="link2">번역 통합 데이터 관리에서 확인하기</a>
+        </p>
+    </div>
+    <div class="pop-ft">
+        <a href="#" class="btn1" data-remodal-action="cancel">취소</a>
+        <a href="#" class="btn1 upload" data-remodal-action="confirm">확인</a>
+    </div>
+</div>><!-- wrap -->
+
+<script>
+    $(document).on('opening', '.remodal', function () {
+        console.log('opening');
+    });
+
+    $(document).on('opened', '.remodal', function () {
+        console.log('opened');
+    });
+
+    $(document).on('closing', '.remodal', function (e) {
+        console.log('closing' + (e.reason ? ', reason: ' + e.reason : ''));
+    });
+
+    $(document).on('closed', '.remodal', function (e) {
+        console.log('closed' + (e.reason ? ', reason: ' + e.reason : ''));
+    });
+
+    $(document).on('confirmation', '.remodal', function () {
+        console.log('confirmation');
+    });
+
+    $(document).on('cancellation', '.remodal', function () {
+        console.log('cancellation');
+    });
+
+    $(function () {
+
+        // In this case the initialization function returns the already created instance
+        var inst = $('[data-remodal-id=modal6]').remodal();
+
+//        inst.open();
+//    inst.close();
+//    inst.getState();
+//    inst.destroy();
+    });
+
+    //  The second way to initialize:
+    $('[data-remodal-id=modal2]').remodal({
+        modifier: 'with-red-theme'
+    });
+
+
+</script>
+</body>
+</html>

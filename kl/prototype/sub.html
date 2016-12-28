@@ -1,0 +1,950 @@
+<!DOCTYPE HTML><!--[if lte IE 8]>
+<html class="no-js ie8" lang="ko"> <![endif]--><!--[if IE 9]>
+<html class="no-js ie9" lang="ko"> <![endif]--><!--[if gt IE 9]><!-->
+<html class="no-js" lang="ko"> <!--<![endif]-->
+<head>
+    <title>국어원 관리자 시스템</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link href="../css/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script>
+        $(function () {
+            $(".datepicker1").datepicker({
+                showOn: "button",
+                buttonImage: "../image/jquery_ui/calendar.gif",
+                buttonImageOnly: true,
+                buttonText: "Select date"
+            });
+        });
+    </script>
+</head>
+<body class="u-sub">
+<header class="clfix">
+    <div class="col">
+        <div class="clfix">
+            <ul class="top-util fr">
+                <li><a href="#">
+                    <span class="hide-text">홈</span>
+                </a></li>
+                <li><a href="#">누리집안내지도</a></li>
+            </ul>
+        </div>
+
+        <div class="clfix">
+            <h1 class="logo">
+                <a href="#">
+                    <span class="hide-text">국립국어 원공공언어 지원</span>
+                </a>
+            </h1>
+
+
+            <ul class="gnb">
+                <li class=""><a href="#">공공 언어 지원</a>
+                    <ul>
+                        <li><a href="#">공공 언어 지원 현황</a></li>
+                        <li><a href="#">공공 언어 지원 요청</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">공공 용어 번역</a>
+                    <ul>
+                        <li><a href="#">공공 용어 번역 <br>통합 데이터</a></li>
+                        <li><a href="#">공공 용어 <br>번역 요청</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">우리말 다듬기</a>
+                    <ul>
+                        <li><a href="#">다듬고 싶은 말</a></li>
+                        <li><a href="#">어떻게 바꿀까요?</a></li>
+                        <li><a href="#">이렇게 바꿨어요!</a></li>
+                        <li><a href="#">말다듬기 <br>위원회 소개</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">시민 제보</a></li>
+                <li><a href="#">자료실</a></li>
+                <li><a href="#">알립니다</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="wrap">
+    <section id="contents">
+        <h2>공공 언어 지원 현황</h2>
+        <div class="control-g1 clfix">
+            <span class="control1 fl">
+                <select name="" class="form-width4">
+                    <option value="">전체</option>
+                    <option value="">전체</option>
+                    <option value="">전체</option>
+                </select>
+                <input type="text" class="form-width5"><a href="#" class="btn21">검색</a>
+                <a href="#" class="btn19">상세검색</a>
+            </span>
+            <span class="control2 fr">
+                <span>전체</span> <strong>1,000건</strong> <a href="#" class="btn20">요청하기</a><a href="#" class="btn28">내려받기</a><a href="#" class="btn29">제보하기</a>
+            </span>
+        </div>
+        <div class="box3">
+            다듬기 요청은
+            <strong>공공기관에 근무하는 사람</strong>이 행정 용어나 정책 용어 순화 등 공공 언어를 다듬고자 할 때 작성하여 주십시오. 빠른 시일 안에 처리하여 알려 드리겠습니다.
+        </div>
+        <div class="box2">
+            <a href="#" class="btn22">
+                <span class="hide-text">닫기</span>
+            </a>
+            <table class="tbl4 user">
+                <caption>
+                    구분,처리상태,요청일 표
+                </caption>
+                <col style="width: 100px">
+                <col>
+                <tr>
+                    <th>구분</th>
+                    <td>
+                        <span class="form-g5">
+                            <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>낱말</label>
+                            <input type="radio" id="c3" name="cc"> <label for="c3"><span></span>문장</label>
+                            <input type="radio" id="c4" name="cc"> <label for="c4"><span></span>그 밖</label>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>처리상태</th>
+                    <td>
+                        <span class="form-g5">
+                            <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>전체</label>
+                            <input type="radio" id="c3" name="cc"> <label for="c3"><span></span>접수</label>
+                            <input type="radio" id="c4" name="cc"> <label for="c4"><span></span>처리중</label>
+                            <input type="radio" id="c4" name="cc"> <label for="c4"><span></span>완료</label>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>요청일</th>
+                    <td>
+                        <span class="calendar-wrap"><input type="text" class="datepicker1 form-width1">
+                        <span>~</span>
+                        <input type="text" class="datepicker1 form-width1"></span>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th>찾을대상</th>
+                    <td class="txtal">
+                    <span class="search-wrap"><select name="" class="form-width1">
+                        <option value="">제목</option>
+                        <option value="">제목</option>
+                        <option value="">제목</option>
+                    </select> <input type="text" class="form-width2"><a href="#" class="btn1 search" data-remodal-target="modal6">검색</a>
+                    </span>
+                    </td>
+                </tr>
+
+
+            </table>
+        </div>
+
+        <table class="tbl1 blrn">
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>글쓴이</th>
+                <th>구분</th>
+                <th>쓴 날짜</th>
+                <th>처리 상태</th>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td class="txtal">문화재 안내판 문장 감수 <a href="#" class="btn14 public">공개</a> <a href="#" class="btn14">비공개</a></td>
+                <td>홍길동</td>
+                <td>낱말</td>
+                <td>20160611</td>
+                <td>
+                    <span class="ok">접수</span>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td class="txtal">문화재 안내판 문장 감수 <a href="#" class="btn14 public">공개</a> <a href="#" class="btn14 public">공개</a></td>
+                <td>홍길동</td>
+                <td>낱말</td>
+                <td>20160611</td>
+                <td>
+                    <span class="complete">완료</span>
+                </td>
+            </tr>
+        </table>
+        <table class="tbl1 blrn">
+            <tr>
+                <th>개인인증</th>
+                <td class="txtal">
+                    <span class="form-g5">
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>공공 I-PIN</label>
+                        <input type="radio" id="c3" name="cc"> <label for="c3"><span></span>휴대폰 본인인증</label>
+                    </span>
+                    <a href="#" class="btn1 ml3">확인</a>
+                </td>
+            </tr>
+            <tr>
+                <th>작성자</th>
+                <td class="txtal">
+                    <input type="text" class="form-width2">
+                </td>
+            </tr>
+            <tr>
+                <th>소속 기관</th>
+                <td class="txtal">
+                    <input type="text" class="form-width2">
+                </td>
+            </tr>
+            <tr>
+                <th>전화번호</th>
+                <td class="txtal">
+                    <span class="control3"><input type="text" class="form-width1" title="전화번호 첫째자리"><span>-</span>
+                    <input type="text" class="form-width1" title="전화번호 둘째자리"><span>-</span>
+                    <input type="text" class="form-width1" title="전화번호 세째자리"></span>
+                </td>
+            </tr>
+            <tr>
+                <th>전자우편</th>
+                <td class="txtal">
+                    <span class="control3"><input type="text" class="form-width5" title="이메일 아이디"><span>@</span>
+                    <input type="text" class="form-width5" title="이메일 주소"></span>
+                    <select name="" class="form-width5">
+                        <option value="">이메일 직접입력</option>
+                        <option value="">이메일 직접입력</option>
+                        <option value="">이메일 직접입력</option>
+                        <option value="">이메일 직접입력</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>붙임</th>
+                <td class="txtal">
+                    <span class="filebox bs3-primary add-wrap">
+                        <input class="upload-name form-width2" value="참고할 사진이나 파일을 덧붙여 주세요." disabled=""><a href="#" class="btn18"><span class="hide-text">지우기</span></a><label class="btn12" for="ex_filename"><span class="hide-text">추가</span></label>
+                        <input type="file" id="ex_filename" class="upload-hidden">
+                    </span>
+                    <br>
+                    <span class="ml2 mb8 ib">[총 0개] 0KB/50M</span>
+                    <br>
+                    <span class="ib mb8">* 요청 내용 많을 경우 해당 파일 및 ‘요청 서식’을 작성하여 첨부해 주시기 바랍니다.</span>
+                    <br> <a href="#" class="btn14 big">요청 서식 내려 받기</a>
+                </td>
+            </tr>
+        </table>
+        <div class="paging">
+            <span class="inner_paging">
+                <a href="#" class="btn_paging btn_fst"><span class="ico_corp">맨 처음</span></a>
+                <a href="#" class="btn_paging btn_prev"><span class="ico_corp">이전</span></a>
+                <a href="#" class="link_page on">1</a> <a href="#" class="link_page">2</a>
+                <a href="#" class="link_page">3</a> <a href="#" class="link_page">4</a>
+                <a href="#" class="link_page">5</a> <a href="#" class="link_page">6</a>
+                <a href="#" class="link_page">7</a> <a href="#" class="link_page">8</a>
+                <a href="#" class="link_page">9</a> <a href="#" class="link_page">10</a>
+                <a href="#" class="btn_paging btn_next"><span class="ico_corp">다음</span></a>
+                <a href="#" class="btn_paging btn_lst"><span class="ico_corp">맨 마지막</span></a>
+            </span>
+        </div>
+        <div class="btn-wrap">
+            <a class="btn11" href="#">취소</a> <a class="btn11 conform" href="#">요청하기</a>
+        </div>
+
+        <table class="tbl1 txtal">
+            <caption>문화재 안내판 문장 감수 표</caption>
+            <col style="width: 25%">
+            <col style="width: auto">
+            <col style="width: 25%">
+            <col style="width: 25%">
+            <tr>
+                <th colspan="4" class="txtal bdln">
+                    문화재 안내판 문장 감수
+                    <span class="date1 fr">2016-09-09 21:10</span>
+                </th>
+            </tr>
+            <tbody>
+                <tr>
+                    <th class="bdln bgn">작성자</th>
+                    <td class="bgn">홍길동</td>
+                    <th class="bgn">소속기관</th>
+                    <td>전남 영암군청</td>
+                </tr>
+                <tr>
+                    <th class="bdln bgn">전화번호</th>
+                    <td>010-9876-5432</td>
+                    <th class="bgn">hgd@naver.com</th>
+                    <td>링크 정보가 없습니다.</td>
+                </tr>
+                <tr>
+                    <th class="bdln bgn">붙임</th>
+                    <td colspan="3">영암군청.hwp (25k)</td>
+                </tr>
+                <tr>
+                    <td class="text5 bdln" colspan="4">전남 영암군청 문화관광체육과 홍길동입니다.<br> 앞전에 보내주신 감수 용에 깊이 감사드립니다<br> 우리군에서 추가로 3개를 더 교체하기로 했습니다<br> 더운데 일감만 드려 죄송합니다.<br> 다시 한번 감사드리고 부탁드립니다.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text5 bdln" colspan="4">
+                        <textarea class="ta2">전남 영암군청 문화관광체육과 홍길동입니다.
+앞전에 보내주신 감수 용에 깊이 감사드립니다
+우리군에서 추가로 3개를 더 교체하기로 했습니다
+더운데 일감만 드려 죄송합니다.
+다시 한번 감사드리고 부탁드립니다.
+                        </textarea></td>
+                </tr>
+                <tr>
+                    <td class="sam-img1 bdln" colspan="4"><img src="../image/common/sample_img.jpg" alt=""><br>
+                        <br>
+                        Daegyo vs gyo  하나로 통일해서 표기했으면 좋겠어요.</td>
+                </tr>
+                <tr>
+                <td class="sam-img2 bdln" colspan="4">
+                    바르고 쉬운 공공언어, 공공언어 향상을 위한 공무원 특별 과정 교재
+                    국어문화학교 특별 과정 중 하나인 2013년 ‘공공언어 향상을 위한 공무원 대상 특별 과정’을 위한 강의 교재<br><br>
+
+                    <ul class="ul6">
+                        <li>국립국어원 소개</li>
+                        <li>국어문화학교 소개</li>
+                    </ul>
+                    <span class="text11">제 4유형 : 출처표시 + 상업적 이용금지 + 변경금지<br>
+                    - 출처표시<br>
+                    - 비상업적 이용만 가능<br>
+                    - 변형 등 2차적 저작물 작성 금지</span>
+
+                </td>
+                </tr>
+                <tr>
+                    <th class="bdln bgn">처리 상태</th>
+                    <td>접수</td>
+                    <th class="bgn">처리 일자</th>
+                    <td>2016-04-30</td>
+                </tr>
+                <tr>
+                    <th class="bdln bgn">분량</th>
+                    <td colspan="3">원고지 10장 분량</td>
+
+                </tr>
+                <tr>
+                    <th class="bdln bgn">지원 내용</th>
+                    <td colspan="3">안내 문서 감수</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <div class="btn-wrap">
+            <a class="btn11" href="#">목록</a> <a class="btn11 conform" href="#">고치기</a>
+        </div>
+
+
+        <div class="box3 pd2 txtac mb2">
+            <ul class="ul3">
+                <li><a href="#" class="on">영어</a></li>
+                <li><a href="#">중국어</a></li>
+                <li><a href="#">일본어</a></li>
+                <li><a href="#">한자</a></li>
+            </ul>
+            <br>
+            <span class="control4"><input type="text" placeholder="찾고자 하는 공공 용어를 입력하세요."><a href="#" class="btn11 conform ml4">통합 데이터 찾기</a></span>
+
+        </div>
+        <div class="box4">
+            <ul class="ul4 clfix">
+                <li><a href="#">
+                    <span class="icon1"></span>
+                    <br>
+                    <span class="text">전체</span>
+                </a></li>
+                <li><a href="#" class="on">
+                    <span class="icon1"></span>
+                    <br>
+                    <span class="text">자연지명</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon1"></span>
+                    <br>
+                    <span class="text">인공지명</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon1"></span>
+                    <br>
+                    <span class="text">도로명/행정구역</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon1"></span>
+                    <br>
+                    <span class="text">문화/관광</span>
+                </a></li>
+                <li><a href="#" class="on">
+                    <span class="icon1"></span>
+                    <br>
+                    <span class="text">문화재명</span>
+                    <div class="tooltip1">
+                        <div class="arrow-left"></div>
+                        문화재명은 <strong>문화재청</strong><br> <strong>사이트</strong>에서 보다 정확한 자료를 확인 할 수 있습니다.
+                    </div>
+                </a></li>
+            </ul>
+
+        </div>
+        <div class="rel-pos mb1 clfix">
+            <span class="comment fl">일치 검색 결과</span>
+            <span class="fr">
+                <span class="util2">
+                    <a href="#" class="on">분류순</a>
+                    <a href="#">오름차 순</a>
+                    <a class="on" href="#">내림차순</a>
+                </span>
+
+            </span>
+        </div>
+        <div class="rel-pos mb1 clfix">
+            <span class="comment2 fl"><strong>전체</strong> 내 검색 결과 <strong>‘도봉산’</strong> <span class="ok">관련 검색</span>이 8건 있습니다.</span>
+            <span class="fr">
+                <span class="util2">
+                    <a href="#" class="on">분류순</a>
+                    <a href="#">오름차 순</a>
+                    <a class="on" href="#">내림차순</a>
+                </span>
+
+            </span>
+        </div>
+        <table class="tbl1 blrn">
+            <caption>일치 검색 결과 표</caption>
+            <tr>
+                <th>번호</th>
+                <th>출처</th>
+                <th>번역어</th>
+                <th>분류</th>
+
+            </tr>
+            <tr>
+                <td>
+                    <a href="#" class="btn23">
+                        <span class="hide-text">검색</span>
+                        <div class="tooltip2">
+                            <div class="arrow-left"></div>
+                            해당 한글 명칭으로<br> 검색 할 수 있습니다.
+                        </div>
+                    </a>
+                </td>
+                <td><a href="#" class="btn30"><span class="hide-text">복사</span></a></td>
+                <td><a href="#" class="btn31"><span class="hide-text">지우기</span></a></td>
+                <td></td>
+
+            </tr>
+
+        </table>
+        <a href="#" class="link4">로마자 표기법 용례 찾기</a>
+        <dl class="dl1 clfix">
+            <dt>데이터 제공</dt>
+            <dd><img src="../image/common/s_logo1.gif" alt="한국관광공사"></dd>
+            <dd><img src="../image/common/s_logo2.gif" alt="서울특별시"></dd>
+        </dl>
+        <div class="rel-pos">
+            <h2>우리말 다듬기</h2>
+            <span class="control5"><a href="#" class="btn24">순화어 검색</a><a href="#" class="link5"><strong>의적</strong> <span>님</span></a> <a href="#" class="btn25"><span class="hide-text">회원가입</span></a><span class="rel-pos">
+                    <a href="#" class="btn26 on"><span class="hide-text">나가기</span></a>
+                    <span class="tooltip3">
+                        <span class="arr"></span>
+                        <input type="text" placeholder="사용자 별명" class="mb8">
+                        <input type="password" placeholder="비밀번호" class="mb3">
+                        <a href="#" class="btn11 conform small mb5">들어가기</a><br>
+                        <a href="#" class="link6">사용자 별명</a>/<a href="#" class="link6">비밀번호 찾기</a>
+                    </span>
+                </span>
+            </span>
+        </div>
+        <ul class="slider clfix">
+            <li class="slider-bb1">
+                <div><a href="#" class="s-btn1">완료</a>
+                    <span class="ml4"><a href="#" class="link5">2016.06.27 ~ 2016.07.15</a></span>
+                </div>
+                <div class="txtac mb2"><h3>
+                    <img src="../image/common/slide_title1.jpg" alt="노키즈존(No kids zone)대신할 우리말을 찾아 주세요!"></h3>
+                </div>
+
+                <div class="clfix util-box2">
+                    <ul class="util5">
+                        <li><a href="#" class="recommend">
+                            <span class="hide-text">추천</span>
+                        </a>
+                            <span>12</span>
+                        </li>
+                        <li class="wrap1">
+                            <a href="#" class="sharing">
+                                <span class="hide-text">공유</span>
+                            </a>
+                            <span class="tooltip">
+                                <a href="#" class="facebook"><span class="hide-text">페이스북</span></a>
+                                <a href="#" class="twitter"><span class="hide-text">트위터</span></a>
+                                <a href="#" class="email"><span class="hide-text">이메일</span></a>
+                                </span>
+                            <span>12</span>
+                        </li>
+                        <li><a href="#" class="reply">
+                            <span class="hide-text">댓글</span>
+                        </a>
+                            <span>12</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="text6">
+                    <strong>(보기 1)</strong> 영유아 동반 출입을 제한하는 노키즈존 업소가 늘어나고 있는 가운데 이를 둘러싼 찬반 의견이 팽팽하다.<br>
+                    <strong>(보기 2)</strong> ‘5세 미만 아동의 출입을 금지합니다.’ 최근 노키즈존을 선언한 ○○구의 한 식당이 입구에 내건 안내 문구입니다.<br>
+                    <strong>(보기 3)</strong> 아이의 소란스러운 행동과 이를 방치하는 부모의 행동이 노키즈존 확산의 주된 원인이지만 매장에서 발생한 안전사고의 책임은 업주에게
+                    있다는 최근 법원의 판결도 주요 이유 중 하나이다.<br><br>
+
+                    노키즈존(No kids zone)은 영유아를 동반한 부모의 출입을 금지하는 매장을 뜻하는 말입니다. 최근 노키즈존을 선언하는 업소가 많아지면서 이에 대한
+                    찬반 논란이 있습니다. 아이들의 안전 문제와 매장을 이용하는 다른 손님들의 불만을 이유로 노키즈존을 찬성하는 사람들이 있는 반면 아동을 키우는
+                    부모들은 노키즈존이 아동의 인권을 침해하는 것이며 아이를 키운다는 이유로 서비스를 이용하지 못하게 하는 것은 차별이라고 주장하고 있습니다.<br><br>
+
+                    노키즈존을 대신할 우리말로는 어떤 것이 좋을까요? <a href="#" class="link6">더 알기 쉽고 부르기 쉬운 우리말을 제안해 주십시오.</a><br><br>
+
+                    <strong>&middot; 제안어 공모 기간</strong> : 2016년 6월 27일부터 2016년 7월 15일까지<br>
+                    <strong>&middot; 노키즈존의 최종 다듬은 말 발표일</strong> : 2016년 9월 28일(예정)<br>
+                    <strong>&middot; 다음번 다듬을 말 발표일</strong> : 2016년 9월(예정)
+                </p>
+                <div class="btn-wrap3">
+                    <a href="#" class="btn27">제안어 입력하기</a>
+                    <a href="#" class="btn27 type2">제안어 입력하기</a>
+                </div>
+                <a href="#" class="s-prev"><span class="hide-text">이전 슬라이드</span></a>
+                <a href="#" class="s-next"><span class="hide-text">다음 슬라이드</span></a>
+
+            </li>
+        </ul>
+        <div class="sub-m-banner clfix">
+            <dl tabindex="0">
+                <dt>다듬고 싶은 말</dt>
+                <dd>알기 쉽고 쓰기 쉬운 우리말, 우리
+                    모두 함께 가꾸어 갑시다.</dd>
+            </dl>
+            <dl tabindex="0">
+                <dt>어떻게 바꿀까요?</dt>
+                <dd>쉽고 아름다운 우리말을 제안하는
+                곳입니다.</dd>
+            </dl>
+            <dl tabindex="0">
+                <dt>이렇게 바꿨어요!</dt>
+                <dd>다듬은 우리말이 더 널리 쓰일 수
+                    있도록 우리 모두 노력합시다.</dd>
+            </dl>
+        </div>
+        <div class="sub-m-banner2">
+            <a href="#"><img src="../image/common/banner1.jpg" alt="언론보도 모음 언론에서 순화어를 보도한 자료들 입니다."></a>
+            <a href="#"><img src="../image/common/banner2.jpg" alt="말다듬기 위원회를 소개합니다! 국립국어원에서는 우리말다듬기위원회(이하 ‘말다듬기위원회’라고 약칭함)를 2011년 11월에 처음 구성하여 운영해 오고 있습니다. "></a>
+        </div>
+        <p class="text7">
+            국립국어원에서는 문인, 언론인, 학자 등의 전문가들을 중심으로 우리말다듬기위원회(이하 ‘말다듬기위원회’라고 약칭함)를 2011년 11월에 처음 구성하여 현재까지
+            운영해 오고 있습니다.
+        </p>
+        <div class="box5">
+            <h3>역대 위원 명단(가나다순)</h3>
+            <ul class="ul5 clfix">
+                <li><a href="" class="text8">2016년 1월~2016년 12월</a></li>
+                <li><a href="">2015년 1월 ~ 2015년 12월</a></li>
+                <li><a href="">2014년 1월 ~ 2014년 12월</a></li>
+                <li><a href="">2013년 1월 ~ 2013년 12월</a></li>
+                <li><a href="">2011년 11월 ~ 2012년 12월</a></li>
+            </ul>
+            <div class="row clfix">
+                <table class="tbl6">
+                <caption>명단 표</caption>
+                <col style="width: 25%">
+                <col style="width: 75%">
+                <tr>
+                    <th>강재형</th>
+                    <td>문화방송(MBC) 아나운서</td>
+                </tr>
+                <tr>
+                    <th>강재형</th>
+                    <td>문화방송(MBC) 아나운서</td>
+                </tr>
+                <tr>
+                    <th>강재형</th>
+                    <td>문화방송(MBC) 아나운서</td>
+                </tr>
+                <tr>
+                    <th>강재형</th>
+                    <td>문화방송(MBC) 아나운서</td>
+                </tr>
+                <tr>
+                    <th>강재형</th>
+                    <td>문화방송(MBC) 아나운서</td>
+                </tr>
+                <tr>
+                    <th>강재형</th>
+                    <td>문화방송(MBC) 아나운서</td>
+                </tr>
+                </table>
+                <table class="tbl6">
+                    <caption>명단 표</caption>
+                    <col style="width: 25%">
+                    <col style="width: 75%">
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                </table>
+                <table class="tbl6">
+                    <caption>명단 표</caption>
+                    <col style="width: 25%">
+                    <col style="width: 75%">
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="row clfix mb0">
+                <table class="tbl6">
+                    <caption>명단 표</caption>
+                    <col style="width: 25%">
+                    <col style="width: 75%">
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                </table>
+                <table class="tbl6">
+                    <caption>명단 표</caption>
+                    <col style="width: 25%">
+                    <col style="width: 75%">
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                </table>
+                <table class="tbl6">
+                    <caption>명단 표</caption>
+                    <col style="width: 25%">
+                    <col style="width: 75%">
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                    <tr>
+                        <th>강재형</th>
+                        <td>문화방송(MBC) 아나운서</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <p class="text9">말터에서는 2011년 11월까지는 누리꾼(네티즌)들이 순화어를 제안하고 국립국어원이 그 가운데 네댓 개를 추려서 올리면 다시 누리꾼들이 투표해 가장 많은 지지를 얻은
+        말을 순화어로 뽑았습니다. 그러던 것을 2011년 12월부터는 누리꾼들이 투표하지 않고 말다듬기위원회에서 순화어를 결정하기로 했습니다. 본래의 말이 지닌 의미를
+        잘 전달하지 못하는 말이나 조어가 부적절하여 다수 국민의 언어 의식과 거리가 있는 말이 투표에서 가장 많은 지지를 받기도 하여 결국 말다듬기가 실효를 거두지 못한
+        경우가 종종 있었기 때문입니다.</p>
+
+        <p class="text9">말다듬기위원회에서는 누리꾼들이 제안하거나 국립국어원에서 직접 발굴한 순화 대상어 중 순화가 필요하다고 판단되는 말을 결정합니다. 그리고 누리꾼이 제안한
+        순화어 후보와 말다듬기위원들이 제안한 순화어 후보를 아울러 검토하여 그중에서 순화어를 확정하게 됩니다. 말터 사이트에서는 2012년 1월부터 한 달에 한 개씩
+        확정된 순화어를 발표해 오다가 2013년부터는 매월 3~5개의 순화어를 결정하여 발표해 오고 있습니다. 2012년 이후 다듬은 말 중에서 비교적 널리 쓰이는 말로는
+        다음과 같은 것들이 있습니다.</p>
+
+        <p class="text9">포장 구매/포장 판매(←테이크아웃), 깜짝출연(자)(←카메오), 대정전(←블랙아웃), 뜨는곳/인기 명소(←핫플레이스), 전자 금융 사기(←피싱), 쳐내기/쳐내다(←펀칭(하다)),
+        대형(갖추기)/진형(갖추기)(←포메이션), (팀)전담의사/(팀)전속의사/팀주치의(←팀닥터), 코치진(←코칭스태프), 주훈련장/근거지(←베이스캠프), 황금시간(←골든타임),
+        해독(요법)(←디톡스), 벼룩시장(←플리마켓), 몸싸움/집단 몸싸움/선수단 몸싸움(←벤치클리어링), 범죄 분석(←프로파일링), 명품 조연(←신스틸러), 일회용 비밀번호
+        (←오티피(OTP/O.T.P.)), 전면 지붕창(←파노라마 선루프) 등</p>
+
+        <p class="text9">말다듬기위원회의 위원들은 평소 우리말을 아끼고 사랑하는 데 앞장서 왔으며 우리말을 더 쉽고 윤택하게 쓰는 사회 분위기를 만드는 일에 뜻을 함께하고 있습니다.
+        물밀 듯이 밀려드는 낯설고 어려운 외국어를 대신하여 우리말로 우리 문화를 가꾸어 나가는 길에는 국민의 지지와 성원이 절실히 필요합니다. 우리 언어문화를 바람직하고
+        풍성하게 가꾸는 원동력은 바로 국민 여러분에게 있습니다. 국민 모두가 우리말 다듬기에 관심을 가지고 적극적으로 다듬고 싶은 말을 제안하고 대안을 찾는 데에 지혜를
+        모을 때 우리말 다듬기 사업이 더욱 큰 성과를 낼 수 있습니다.</p>
+
+        <div class="reply-box">
+            <p class="title-box1">댓글 달기</p>
+            <div class="form-g2 clfix">
+                <textarea class="ta3" draggable="false"></textarea> <a href="#" class="btn13 fr">댓글등록</a>
+                <p class="text2">* 관리자 페이지에서 등록한 댓글은 이용자용 페이지에 ＇관리자’라고 표기 됩니다</p>
+            </div>
+            <ul class="ul1">
+                <li class="clfix">
+                    <span class="left">
+                        <strong class="name">의적</strong>
+                        <span class="copy">웹르라우저 순화 제안결과가 궁금합니다.
+                            <a href="#" class="btn14 modify">수정</a>
+                            <a href="#" class="btn14 del">삭제</a>
+                        </span>
+                    </span>
+                    <span class="right">
+                        <span class="date1">2016.09.10.  12:32</span>
+                        <span class="recommend2"><a href="#" class="link2">추천</a> 0</span>
+                    </span>
+                </li>
+                <li class="clfix">
+                    <span class="left">
+                        <strong class="name"><a href="#" class="btn14 suggestion">제안</a> 의적</strong>
+                        <span class="copy">
+                            <textarea class="ta4">노키즈즌을 대신할 우리말이 있으면 정말 좋겠어요.</textarea>
+                        </span>
+                    </span>
+                    <span class="right">
+                        <span class="date1 mb3">2016.09.10.  12:32</span>
+                        <span class="recommend2"><a href="#" class="btn14 modify">수정</a>
+                            <a href="#" class="btn14 del">삭제</a></span>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="box3">
+            * 만약 위 방법으로 사용자명과 비밀번호를 찾을 수 없을 경우, 신분증 사본 등 본인 확인 절차를 거친 후 안내해 드립니다<br><br>
+
+            <div class="box6 clfix">
+            <dl class="dl2">
+                <dt><strong>* 문의</strong></dt>
+                <dd>전자우편 malteo@korea.kr</dd>
+                <dd>전화 (02) 2669-9653</dd>
+            </dl>
+
+            <dl class="dl2">
+                <dt>문의 예시)</dt>
+                <dd>제목 : 사용자명 분실</dd>
+                <dd>내용 : [이름, 안내 받으실 전화번호, 수신 가능한 전자우편 주소, 본인 확인이 가능한 신분증 사본 첨부</dd>
+            </dl>
+            </div>
+
+
+            - 문의 주실 때 위의 예시처럼 연락 받으실 회원 정보를 빠짐없이 정확하게 작성 후 문의 주시면 본인 확인 후 즉시 처리해 드립니다.<br>
+            - 회원님의 정보는 본인 확인을 위한 용도로만 사용되며 비밀번호와 같은 중요 정보는 운영자도 알 수 없도록 암호화되어 처리됩니다.
+
+
+        </div>
+
+    </section>
+</div>
+<footer class="clfix">
+    <div class="col">
+        <div class="foot-mark">
+            <span class="hide-text">국어원</span>
+        </div>
+        <address>
+            우) 07511 서울특별시 강서구 금낭화로 154(방화3동 827) | 대표전화 02-2669-9775 | 전송 02-2669-9727<br> 이 누리집의 저작권은 국립국어원에 있습니다.
+        </address>
+    </div>
+</footer>
+
+
+<div class="remodal modal6" data-remodal-id="modal6">
+    <div class="pop-head">
+        <h2>비밀번호 확인</h2>
+        <a data-remodal-action="close" class="remodal-close" href="#">
+            <span class="hide-text">닫기</span>
+        </a>
+    </div>
+    <div class="pop-content txtac">
+        <p class="text3 mb2">
+            비 공개 글입니다.<br> 작성 하실 때 입력하신 비밀번호를 입력하세요. </p>
+        <input type="text" class="form-width7 mb2">
+    </div>
+    <div class="pop-ft">
+        <a href="#" class="btn1" data-remodal-action="cancel">취소</a>
+        <a href="#" class="btn1 upload" data-remodal-action="confirm">확인</a>
+    </div>
+</div>
+
+<div class="remodal modal7" data-remodal-id="modal7">
+    <div class="pop-head">
+        <h2>우편번호 검색</h2>
+        <a data-remodal-action="close" class="remodal-close" href="#">
+            <span class="hide-text">닫기</span>
+        </a>
+    </div>
+    <div class="pop-content">
+
+        <div class="box3 mb2">
+            <strong class="mb5">정확한 주소를 입력해 주세요.<br>
+            (도로명+ 건물번호 또는 읍/면/동/리+ 지번)</strong>
+            <div class="control6 mb5"><input type="text" class="form-width9"><a href="#" class="btn1 ml4">검색</a></div>
+            <p class="text10">* 정확한 주소를 모르시는 경우 시/군/구+도로명, 동명 또는 건물명을 입력해
+            주세요.</p>
+        </div>
+        <div class="rel-pos mb1 clfix">
+            <span class="comment2 fl"><strong>전체</strong> 내 검색 결과 <strong>‘도봉산’</strong> <span class="ok">관련 검색</span>이 8건 있습니다.</span>
+        </div>
+        <table class="tbl1 mb2">
+            <col style="width: 20%">
+            <col>
+            <tr>
+                <th class="bdln">우편번호</th>
+                <th>주소</th>
+            </tr>
+            <tr>
+                <td class="bdln">08327</td>
+                <td class="txtal">서울특별시 구로구 가마산로 77 (구로동)
+                    서울특별시 구로구 구로동 703-3</td>
+            </tr>
+        </table>
+        <div class="paging mb6">
+            <span class="inner_paging">
+                <a href="#" class="btn_paging btn_fst"><span class="ico_corp">맨 처음</span></a>
+                <a href="#" class="btn_paging btn_prev"><span class="ico_corp">이전</span></a>
+                <a href="#" class="link_page on">1</a> <a href="#" class="link_page">2</a>
+                <a href="#" class="link_page">3</a> <a href="#" class="link_page">4</a>
+                <a href="#" class="link_page">5</a>
+                <a href="#" class="btn_paging btn_next"><span class="ico_corp">다음</span></a>
+                <a href="#" class="btn_paging btn_lst"><span class="ico_corp">맨 마지막</span></a>
+            </span>
+        </div>
+    </div>
+    <div class="pop-ft">
+        <a href="#" class="btn1" data-remodal-action="cancel">취소</a>
+        <a href="#" class="btn1 upload" data-remodal-action="confirm">확인</a>
+    </div>
+</div>
+<div class="remodal modal7" data-remodal-id="modal8">
+    <div class="pop-head">
+        <h2>번역 여부 확인</h2>
+        <a data-remodal-action="close" class="remodal-close" href="#">
+            <span class="hide-text">닫기</span>
+        </a>
+    </div>
+    <div class="pop-content">
+
+        <div class="box3 mb2">
+            <p class="mb5">요청하고자 하는 한글 명칭이 이미 번역 되어 있는지 확인하시기 바랍니다.
+            새로운 번역어가 필요한 경우에는 ‘요청어 추가’버튼을 눌러 주세요.</p>
+            <div class="control6 mb5"><input type="text" class="form-width10"><a href="#" class="btn1 wa ml4">번역 여부 확인</a></div>
+        </div>
+        <div class="rel-pos mb1 clfix">
+            <span class="comment2 fl"><strong>전체</strong> 내 검색 결과 <strong>‘도봉산’</strong> <span class="ok">관련 검색</span>이 8건 있습니다.</span>
+        </div>
+        <table class="tbl1 mb2">
+            <tr>
+                <th class="bdln">번호</th>
+                <th>한글명칭</th>
+                <th>번역어</th>
+                <th>분류</th>
+            </tr>
+            <tr>
+                <td class="bdln">1</td>
+                <td>도봉산</td>
+                <td class="fb">Dobongsan</td>
+                <td>인공지명> 교통</td>
+            </tr>
+        </table>
+
+    </div>
+    <div class="pop-ft">
+        <a href="#" class="btn1" data-remodal-action="cancel">취소</a>
+        <a href="#" class="btn1 upload" data-remodal-action="confirm">요청어 추가</a>
+    </div>
+</div>
+<script>
+    $(function () {
+
+
+        var inst = $('[data-remodal-id=modal8]').remodal();
+
+        inst.open();
+//    inst.close();
+//    inst.getState();
+//    inst.destroy();
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE HTML><!--[if lte IE 8]>
+<html class="no-js ie8" lang="ko"> <![endif]--><!--[if IE 9]>
+<html class="no-js ie9" lang="ko"> <![endif]--><!--[if gt IE 9]><!-->
+<html class="no-js" lang="ko"> <!--<![endif]-->
+<head>
+    <title>국어원 관리자 시스템</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link href="../css/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script>
+        $(function () {
+            $(".datepicker1").datepicker({
+                showOn: "button",
+                buttonImage: "../image/jquery_ui/calendar.gif",
+                buttonImageOnly: true,
+                buttonText: "Select date"
+            });
+        });
+    </script>
+</head>
+<body class="u-sub">
+<header class="clfix">
+    <div class="col">
+        <div class="clfix">
+            <ul class="top-util fr">
+                <li><a href="#">
+                    <span class="hide-text">홈</span>
+                </a></li>
+                <li><a href="#">누리집안내지도</a></li>
+            </ul>
+        </div>
+
+        <div class="clfix">
+            <h1 class="logo">
+                <a href="#">
+                    <span class="hide-text">국립국어 원공공언어 지원</span>
+                </a>
+            </h1>
+
+
+            <ul class="gnb">
+                <li class=""><a href="#">공공 언어 지원</a>
+                    <ul>
+                        <li><a href="#">공공 언어 지원 현황</a></li>
+                        <li><a href="#">공공 언어 지원 요청</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">공공 용어 번역</a>
+                    <ul>
+                        <li><a href="#">공공 용어 번역 <br>통합 데이터</a></li>
+                        <li><a href="#">공공 용어 <br>번역 요청</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">우리말 다듬기</a>
+                    <ul>
+                        <li><a href="#">다듬고 싶은 말</a></li>
+                        <li><a href="#">어떻게 바꿀까요?</a></li>
+                        <li><a href="#">이렇게 바꿨어요!</a></li>
+                        <li><a href="#">말다듬기 <br>위원회 소개</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">시민 제보</a></li>
+                <li><a href="#">자료실</a></li>
+                <li><a href="#">알립니다</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="wrap">
+    <section id="contents">
+        <h2>공공 언어 개선 시민 제보</h2>
+        <div class="control-g1 clfix">
+            <span class="control1 fl">
+                <select name="" class="form-width4">
+                    <option value="">전체</option>
+                    <option value="">전체</option>
+                    <option value="">전체</option>
+                </select>
+                <input type="text" class="form-width5"><a href="#" class="btn21">검색</a>
+                <a href="#" class="btn19">상세검색</a>
+            </span>
+            <span class="control2 fr">
+                <span>전체</span> <strong>1,000건</strong> <a href="#" class="btn29">제보하기</a>
+            </span>
+        </div>
+
+        <table class="tbl1 blrn tblf">
+            <col style="width: 7%">
+            <col style="width: 33%">
+            <col style="width: 10%">
+            <col style="width: 10%">
+            <col style="width: 10%">
+            <col style="width: 7%">
+            <col style="width: 13%">
+            <col style="width: 10%">
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>공개여부</th>
+                <th>글쓴이</th>
+                <th>분야</th>
+                <th>구분</th>
+                <th>쓴 날짜</th>
+                <th>처리 상태</th>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td class="ellipsis">안녕하세요 방송 실무에 쓰이는 외래어를 바로 잡으려고안녕하세요 방송 실무에 쓰이는 외래어를 바로 잡으려고</td>
+                <td><a href="#" class="btn14">비공개</a></td>
+                <td>홍길동</td>
+                <td>신문/방송</td>
+                <td>낱말</td>
+                <td>20160611</td>
+                <td>처리 전</td>
+
+            </tr>
+
+        </table>
+        <div class="paging mb6">
+            <span class="inner_paging">
+                <a href="#" class="btn_paging btn_fst"><span class="ico_corp">맨 처음</span></a>
+                <a href="#" class="btn_paging btn_prev"><span class="ico_corp">이전</span></a>
+                <a href="#" class="link_page on">1</a> <a href="#" class="link_page">2</a>
+                <a href="#" class="link_page">3</a> <a href="#" class="link_page">4</a>
+                <a href="#" class="link_page">5</a>
+                <a href="#" class="btn_paging btn_next"><span class="ico_corp">다음</span></a>
+                <a href="#" class="btn_paging btn_lst"><span class="ico_corp">맨 마지막</span></a>
+            </span>
+        </div>
+
+        <div class="box3">
+            다듬기 요청은
+            <strong>공공기관에 근무하는 사람</strong>이 행정 용어나 정책 용어 순화 등 공공 언어를 다듬고자 할 때 작성하여 주십시오. 빠른 시일 안에 처리하여 알려 드리겠습니다.
+        </div>
+        <table class="tbl1">
+            <col style="width: 20%">
+            <col style="width: 80%">
+            <tr>
+                <th class="bdln">개인인증</th>
+                <td class="txtal">
+                    <span class="form-g5">
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>공공 I-PIN</label>
+                        <input type="radio" id="c3" name="cc"> <label for="c3"><span></span>휴대폰 본인인증</label>
+                    </span>
+                    <a href="#" class="btn1 ml3">확인</a>
+                </td>
+            </tr>
+            <tr>
+                <th class="bdln">작성자</th>
+                <td class="txtal">
+                    <input type="text" class="form-width2">
+                </td>
+            </tr>
+            <tr>
+                <th class="bdln">소속 기관</th>
+                <td class="txtal">
+                    <input type="text" class="form-width2">
+                </td>
+            </tr>
+            <tr>
+                <th class="bdln">전화번호</th>
+                <td class="txtal">
+                    <span class="control3"><input type="text" class="form-width1" title="전화번호 첫째자리"><span>-</span>
+                    <input type="text" class="form-width1" title="전화번호 둘째자리"><span>-</span>
+                    <input type="text" class="form-width1" title="전화번호 세째자리"></span>
+                </td>
+            </tr>
+            <tr>
+                <th class="bdln">전자우편</th>
+                <td class="txtal">
+                    <span class="control3"><input type="text" class="form-width5" title="이메일 아이디"><span>@</span>
+                    <input type="text" class="form-width5" title="이메일 주소"></span>
+                    <select name="" class="form-width5">
+                        <option value="">이메일 직접입력</option>
+                        <option value="">이메일 직접입력</option>
+                        <option value="">이메일 직접입력</option>
+                        <option value="">이메일 직접입력</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th class="bdln">결과수신</th>
+                <td class="txtal">
+                    <span class="form-g5">
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>전자우편</label>
+                        <input type="radio" id="c3" name="cc"> <label for="c3"><span></span>전화/문자메세지</label>
+                        <input type="radio" id="c4" name="cc"> <label for="c4"><span></span>수신을 원하지 않음</label>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th class="bdln">제목</th>
+                <td class="txtal"><input type="text" class="form-width2"></td>
+            </tr>
+            <tr>
+                <th class="bdln">공개유무</th>
+                <td class="txtal"><span class="form-g5">
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>공개</label>
+                        <input type="radio" id="c4" name="cc"> <label for="c4"><span></span>수신을 원하지 않음</label></span>
+                    <input type="password" class="form-width5 ml4" placeholder="비밀번호입력"></td>
+            </tr>
+            <tr>
+                <th class="bdln">구분</th>
+                <td class="txtal">
+                    <span class="form-g5">
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>낱말</label>
+                        <input type="radio" id="c4" name="cc"> <label for="c4"><span></span>문장</label>
+                        <input type="radio" id="c4" name="cc"> <label for="c4"><span></span>그 밖</label>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th class="bdln">분야</th>
+                <td class="txtal">
+                    <span class="form-g5">
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>신문/방송</label>
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>교육</label>
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>법률</label>
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>행정</label>
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>의료</label>
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>문화/예술</label>
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>기타</label>
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>신문/방송</label>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th class="bdln">제보 사진 붙임</th>
+                <td class="txtal">
+                <span class="filebox bs3-primary add-wrap">
+                    <input class="upload-name form-width2" value="참고할 사진이나 파일을 덧붙여 주세요." disabled=""><a href="#" class="btn18"><span class="hide-text">지우기</span></a><label class="btn12" for="ex_filename"><span class="hide-text">추가</span></label>
+                    <input type="file" id="ex_filename" class="upload-hidden">
+                </span>
+                    <br>
+                    <span class="ml2 mb8 ib">[총 0개] 0KB/50M</span>
+                </td>
+            </tr>
+            <tr>
+                <th class="bdln">분야</th>
+                <td class="txtal">
+                    <span class="form-g5">
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>신문/방송</label>
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>교육</label>
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>법률</label>
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>행정</label>
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>의료</label>
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>문화/예술</label>
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>기타</label>
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>신문/방송</label>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th class="bdln">내용설명</th>
+                <td class="txtal">
+                    <textarea class="ta5"></textarea>
+                </td>
+            </tr>
+        </table>
+        <div class="btn-wrap">
+            <a class="btn11" href="#">취소</a> <a class="btn11 conform" href="#">제보하기</a>
+        </div>
+        <table class="tbl1 txtal">
+            <caption>공공 언어 개선 시민 제보표</caption>
+            <colgroup>
+                <col style="width: 10%">
+                <col style="width: 40%">
+                <col style="width: 10%">
+                <col style="width: 40%">
+            </colgroup>
+            <tr>
+                <th colspan="4" class="txtal bdln">
+                    교통 표지판 대교 명 통일해주세요
+                    <span class="date1 fr">2016-09-09 21:10</span>
+                </th>
+            </tr>
+
+            <tr>
+                <th class="bdln bgn">작성자</th>
+                <td class="bgn" colspan="3">홍길동</td>
+            </tr>
+            <tr>
+                <th class="bdln bgn">전화번호</th>
+                <td>010-9876-5432</td>
+                <th class="bgn">전자우편</th>
+                <td>hgd@naver.com</td>
+            </tr>
+            <tr>
+                <th class="bdln bgn">공개유무</th>
+                <td>비 공개</td>
+                <th class="bgn">구분</th>
+                <td>낱말</td>
+            </tr>
+            <tr>
+                <th class="bdln bgn">결과수신</th>
+                <td>전자우편</td>
+                <th class="bgn">분야</th>
+                <td>신문/방송</td>
+            </tr>
+            <tr>
+                <th class="bdln bgn">붙임</th>
+                <td colspan="3">영암군청.hwp (25k)</td>
+            </tr>
+            <tr>
+                <td class="sam-img1 bdln" colspan="4"><img src="../image/common/sample_img.jpg" alt=""><br>
+                    <br> Daegyo vs gyo 하나로 통일해서 표기했으면 좋겠어요.
+                </td>
+            </tr>
+
+        </table>
+        <table class="tbl1 txtal">
+            <caption>공공 언어 개선 시민 제보표</caption>
+            <colgroup>
+                <col style="width: 10%">
+                <col style="width: 40%">
+                <col style="width: 10%">
+                <col style="width: 40%">
+            </colgroup>
+            <tr>
+                <th colspan="4" class="txtal bdln">
+                    교통 표지판 대교 명 통일해주세요
+                    <span class="date1 fr">2016-09-09 21:10</span>
+                </th>
+            </tr>
+
+            <tr>
+                <th class="bdln bgn">작성자</th>
+                <td class="bgn" colspan="3"><input type="text" class="form-width2"></td>
+            </tr>
+            <tr>
+                <th class="bdln bgn">전화번호</th>
+                <td><input type="text" class="form-width5"></td>
+                <th class="bgn">전자우편</th>
+                <td><input type="text" class="form-width5"></td>
+            </tr>
+            <tr>
+                <th class="bdln bgn">공개유무</th>
+                <td><span class="form-g6">
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>공개</label>
+                        <input type="radio" id="c4" name="cc"> <label for="c4"><span></span>수신을 원하지 않음</label></span>
+                    <input type="password" class="form-width1 ml4" placeholder="비밀번호입력"></td>
+                <th class="bgn">구분</th>
+                <td>낱말</td>
+            </tr>
+            <tr>
+                <th class="bdln bgn">결과수신</th>
+                <td><span class="form-g6">
+                        <input type="radio" id="c2" name="cc"> <label for="c2"><span></span>전자우편</label>
+                        <input type="radio" id="c3" name="cc"> <label for="c3"><span></span>전화/문자메세지</label>
+                        <input type="radio" id="c4" name="cc"> <label for="c4"><span></span>수신을 원하지 않음</label>
+                    </span></td>
+                <th class="bgn">분야</th>
+                <td>신문/방송</td>
+            </tr>
+            <tr>
+                <th class="bdln bgn">붙임</th>
+                <td colspan="3">
+                <span class="filebox bs3-primary add-wrap">
+                    <input class="upload-name form-width2" value="참고할 사진이나 파일을 덧붙여 주세요." disabled=""><a href="#" class="btn18"><span class="hide-text">지우기</span></a><label class="btn12" for="ex_filename"><span class="hide-text">추가</span></label>
+                    <input type="file" id="ex_filename" class="upload-hidden">
+                </span>
+                    <br>
+                    <span class="ml2 mb8 ib">[총 0개] 0KB/50M</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="sam-img1 bdln" colspan="4"><textarea class="ta2"></textarea>
+                </td>
+            </tr>
+
+        </table>
+        <div class="btn-wrap">
+            <a class="btn11" href="#">목록</a> <a class="btn11" href="#">지우기</a> <a class="btn11 conform" href="#">고치기</a>
+        </div>
+        <table class="tbl1 txtal">
+            <caption>답글표</caption>
+            <colgroup>
+
+                <col style="width: 10%">
+                <col style="width: 40%">
+                <col style="width: 10%">
+                <col style="width: 40%">
+
+            </colgroup>
+            <tr>
+                <th colspan="4" class="txtal bdln">
+                    답글
+                </th>
+            </tr>
+
+            <tr>
+                <th class="bdln bgn">담당자</th>
+                <td class="bgn" colspan="3">이뉴미/공공언어학과</td>
+            </tr>
+            <tr>
+                <th class="bdln bgn">전자우편</th>
+                <td>hgd@naver.com</td>
+                <th class="bgn">전화번호</th>
+                <td>000-0000-0000</td>
+            </tr>
+            <tr>
+                <th class="bdln bgn">진행상태</th>
+                <td>처리 완료</td>
+                <th class="bgn">처리 결과</th>
+                <td>담당자 통화</td>
+            </tr>
+            <tr>
+                <th class="bdln bgn">파일붙임</th>
+                <td colspan="3">첨부파일이 없습니다</td>
+            </tr>
+            <tr>
+                <th class="bdln bgn">다듬는 말</th>
+                <td colspan="3">다듬은 말이 없습니다</td>
+            </tr>
+
+        </table>
+        <div class="btn-wrap">
+            <a class="btn11" href="#">목록</a>
+        </div>
+    </section>
+</div>
+<footer class="clfix">
+    <div class="col">
+        <div class="foot-mark">
+            <span class="hide-text">국어원</span>
+        </div>
+        <address>
+            우) 07511 서울특별시 강서구 금낭화로 154(방화3동 827) | 대표전화 02-2669-9775 | 전송 02-2669-9727<br> 이 누리집의 저작권은 국립국어원에 있습니다.
+        </address>
+    </div>
+</footer>
+
+
+<div class="remodal modal6" data-remodal-id="modal6">
+    <div class="pop-head">
+        <h2>비밀번호 확인</h2>
+        <a data-remodal-action="close" class="remodal-close" href="#">
+            <span class="hide-text">닫기</span>
+        </a>
+    </div>
+    <div class="pop-content txtac">
+        <p class="text3 mb2">
+            비 공개 글입니다.<br> 작성 하실 때 입력하신 비밀번호를 입력하세요. </p>
+        <input type="text" class="form-width7 mb2">
+    </div>
+    <div class="pop-ft">
+        <a href="#" class="btn1" data-remodal-action="cancel">취소</a>
+        <a href="#" class="btn1 upload" data-remodal-action="confirm">확인</a>
+    </div>
+</div>
+
+
+</body>
+</html>
