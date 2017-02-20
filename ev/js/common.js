@@ -147,7 +147,7 @@ $(function () {
 
     getMedia();
     $(window).off('resize').on('resize', function () {
-        getMedia();
+        // getMedia();
         if ($(".main-banner-prev").hasClass("main-banner-prev")) {
             mainBannerSlide.reloadSlider();
         }

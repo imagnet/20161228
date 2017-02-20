@@ -1,0 +1,1174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=euc-kr"/> <!-- charset must be first -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title></title>
+    <link rel="shortcut icon" href="/cs/images/common/Icon_64.ico"/>
+    <link rel="stylesheet" href="/cs/css/import.css" type="text/css"/>
+    <script type="text/javascript" src="/cs/js/json2.js"></script> <!-- json polyfill for json ajax -->
+    <script type="text/javascript" src="/cs/js/store.min.js"></script>    <!-- local Storage polyfill -->
+    <script type="text/javascript" src="/cs/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/cs/js/underscore.min.js"></script>
+    <script type="text/javascript" src="/cs/js/placeholders.min.js"></script> <!-- placeholer enable for ie8,9 -->
+    <script type="text/javascript" src="/cs/js/ko.js"></script>
+    <script type="text/javascript" src="/cs/js/common.js"></script>
+    <script type="text/javascript" src="/cs/js/bizCommon.js"></script>
+</head>
+
+<body>
+
+
+<div id="accessibility">
+
+    <a href="#main_wrap">본문 바로가기</a>
+
+</div>
+<hr/>
+
+<!-- // 20161219 웹접근성 관련 아래 태그 삭제
+<ul id="accessibility">
+    <li><a href="#gnb">메뉴 바로가기</a></li>
+    <li><a href="#wrap">본문 바로가기</a></li>
+    <li><a href="#footer">페이지 하단 바로가기</a></li>
+</ul>
+<hr />
+ -->
+<div id="main_pop_layer">
+
+</div>
+
+
+<div id="head">
+    <div class="head_inner">
+        <h1><a href="http://b2b.tworld.co.kr/cs/main.jsp"><img src="/cs/images/common/h1_biz_tworld.png"
+                                                               alt="biz Tworld"/></a></h1>
+        <hr/>
+        <div class="top_link">
+            <ul>
+                <li class="tlink1"><a href="http://www.tworld.co.kr/outsitens.jsp" target="_blank">개인</a></li>
+                <li class="tlink2"><a href="http://b2b.tworld.co.kr/bizts/main.bs"
+                                      target="_blank"><strong>기업</strong></a></li>
+                <li class="tlink3"><a href="http://b2b.tworld.co.kr/bizts/main.bs" target="_blank">솔루션</a></li>
+                <li class="tlink4"><a href="http://b2b.tworld.co.kr/cs/main.jsp"><strong>고객센터</strong></a></li>
+            </ul>
+        </div>
+        <hr/><!-- end top_link -->
+
+
+        <div class="top_login">
+            <a href="https://b2b.tworld.co.kr/cs/login/loginMain.jsp">로그인</a>
+            <a href="/cs/join/memberStipulation.jsp">회원가입</a>
+        </div>
+
+        <!-- end top_login -->
+        <div id="gnb">
+            <div class="navigation">
+                <ul class="menulist">
+                    <li class="menu" id="menu1">
+                        <strong><a href="#subnav1">회선/사용자관리</a></strong>
+                        <div class="subnav" id="subnav1">
+                            <fieldset>
+                                <legend>회선/사용자관리</legend>
+                                <p class="descript">법인회선 및 개인인증 <br/>사용자를 빠르고 쉽게 <br/>관리하실 수 있습니다. </p>
+                                <ul class="sublist">
+                                    <li><span>회선관리</span>
+                                        <div class="depth3">
+                                            <ul>
+                                                <li><a href="/cs/linemgmt/svcNumCorp.jsp">법인회선 전체조회</a></li>
+                                                <li><a href="/cs/linemgmt/mngSvcNumList.jsp"
+                                                       shared="/cs/linemgmt/mngSvcNumAdd.jsp">대표회선 추가/삭제</a></li>
+                                                <li><a href="/cs/linemgmt/svcStatusCorp.jsp">My 관리회선 조회</a></li>
+                                                <li><a href="/cs/linemgmt/lineSearch.jsp">가입 가능 회선 수 조회</a></li>
+                                            </ul>
+                                        </div><!-- end depth3 -->
+                                    </li>
+                                    <li><span>사용자 관리</span>
+                                        <div class="depth3">
+                                            <ul>
+                                                <li><a href="/cs/usermgmt/confirm.jsp"
+                                                       shared="/cs/usermgmt/confirmMgmt.jsp,/cs/usermgmt/corporationMgmt.jsp">법인폰
+                                                    개인인증 승인</a></li>
+                                                <li><a href="/cs/gms/usermgmt/gmsMemberMaster.jsp"
+                                                       shared="/cs/gms/usermgmt/gmsMemberAdd.jsp">GMS 회원관리</a></li>
+                                                <li><a href="/cs/roaming/b2bOnePassDCMng.jsp"
+                                                       shared="/cs/roaming/b2bOnePassDCRegList.jsp,/cs/roaming/b2bOnePassDCHistMgmt.jsp,/cs/roaming/b2bOnePassDCInfo.jsp">T로밍
+                                                    Biz 할인형 임직원 관리</a></li>
+                                                <li><a href="/cs/etcproduct/corpChargeInfo.jsp"
+                                                       shared="/cs/etcproduct/corpChargeMemInqDel.jsp,/cs/etcproduct/corpChargeMemAdd.jsp,/cs/etcproduct/corpChargeGuide.jsp">T끼리
+                                                    법인 요금제 관리</a></li>
+                                            </ul>
+                                        </div><!-- end depth3 -->
+                                    </li>
+                                    <li><span>법인위임대리인신청</span>
+                                        <div class="depth3">
+                                            <ul>
+                                                <li><a href="/cs/agentmgmt/agentGuide.jsp"
+                                                       shared="/cs/agentmgmt/agentBrowserChk.jsp">법인위임대리인신청 안내</a></li>
+                                                <li><a href="/cs/agentmgmt/agentAgree.jsp"
+                                                       shared="/cs/agentmgmt/agentCorpCertify.jsp,/cs/agentmgmt/agentCorpForm.jsp,/cs/agentmgmt/agentPersCertify.jsp,/cs/agentmgmt/agentAttach.jsp,/cs/agentmgmt/agentApplyFin.jsp">법인위임대리인신청</a>
+                                                </li>
+                                                <li><a href="/cs/agentmgmt/agentExtendAgree.jsp"
+                                                       shared="/cs/agentmgmt/agentExtendCorpCertify.jsp,/cs/agentmgmt/agentExtendCorpForm.jsp,/cs/agentmgmt/agentExtendPersCertify.jsp,/cs/agentmgmt/agentExtendAttach.jsp,/cs/agentmgmt/agentExtendApplyFin.jsp">법인위임대리인
+                                                    연장신청</a></li>
+                                            </ul>
+                                        </div><!-- end depth3 -->
+                                    </li>
+                                    <li><span>법인폰 개인인증 신청</span>
+                                        <div class="depth3">
+                                            <ul>
+                                                <li><a href="/cs/counsel/CertService.jsp">법인폰 개인인증 신청안내</a></li>
+                                                <li><a href="/cs/counsel/CertificationStep2Agree.jsp"
+                                                       shared="/cs/counsel/CertificationStep1Info.jsp,/cs/counsel/CertificationStep2Agree.jsp,/cs/counsel/CertificationStep3Reg.jsp,/cs/counsel/CertificationStep5OK.jsp">법인폰
+                                                    개인인증 서비스 신청</a></li>
+                                            </ul>
+                                        </div><!-- end depth3 -->
+                                    </li>
+                                    <li><span><a href="/cs/servicemgmt/singleLineProcResList.jsp"
+                                                 shared="/cs/servicemgmt/multiLineProcResList.jsp">서비스 처리결과</a></span>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <!-- <button class="layer_close" onclick="layerhide('subnav1');">메뉴 닫기</button> -->
+                            <p class="allMenuLink"><a href="/cs/inc/siteMap.jsp"><span>전체메뉴 보기</span></a></p>
+                        </div><!-- end subnav -->
+                    </li>
+
+                    <li class="menu" id="menu2"><strong><a href="#subnav2">요금관리</a></strong>
+                        <div class="subnav" id="subnav2">
+                            <fieldset>
+                                <legend>요금관리</legend>
+                                <p class="descript">청구요금과 실시간 요금 조회 및 세금계산서 <br/>재발행이 가능합니다.</p>
+                                <ul class="sublist">
+                                    <li><span>요금조회</span>
+                                        <div class="depth3">
+                                            <ul>
+                                                <li><a href="/cs/usermgmt/svcBillCorp.jsp"
+                                                       shared="/cs/usermgmt/svcBillDetByRepNum.jsp,/cs/usermgmt/svcBillByNum.jsp,/cs/usermgmt/svcBillDetUnPay.jsp">청구요금조회</a>
+                                                </li>
+                                                <li><a href="/cs/usermgmt/svcPayCorp.jsp">납부요금조회</a></li>
+                                                <li><a href="/cs/chargemgmt/svcCallhistList.jsp">통화내역조회</a></li>
+                                                <li><a href="/cs/chargemgmt/svcHotBill.jsp">실시간사용요금 조회</a></li>
+                                                <li><a href="/cs/billservice/svcFreeCDR.jsp">잔여기본통화조회</a></li>
+                                            </ul>
+                                        </div><!-- end depth3 -->
+                                    </li>
+                                    <li><span>납부관리</span>
+                                        <div class="depth3">
+                                            <ul>
+                                                <li><a href="/cs/billservice/autoWithdrawal.jsp"
+                                                       shared="/cs/billservice/autoWithdrawalDetail.jsp">자동인출조회</a></li>
+                                                <li><a href="/cs/billservice/billInstallmentsGuide.jsp">분리납부안내</a></li>
+                                            </ul>
+                                        </div><!-- end depth3 -->
+                                    </li>
+                                    <li><span>청구서관리</span>
+                                        <div class="depth3">
+                                            <ul>
+                                                <li><a href="/cs/billservice/billTypeInquiry.jsp"
+                                                       shared="/cs/billservice/billTypeDetail.jsp">청구서 신청/변경</a></li>
+                                                <li><a href="/cs/billservice/billReissueInquiry.jsp">청구서 재발행</a></li>
+                                                <li><a href="/cs/billservice/billAddressInquiry.jsp"
+                                                       shared="/cs/billservice/billAddressDetail.jsp">청구지주소 조회/변경</a>
+                                                </li>
+                                            </ul>
+                                        </div><!-- end depth3 -->
+                                    </li>
+                                    <li><span>세금계산서관리</span>
+                                        <div class="depth3">
+                                            <ul>
+                                                <li><a href="/cs/billservice/taxBillReissue.jsp">세금계산서 재발행</a></li>
+                                            </ul>
+                                        </div><!-- end depth3 -->
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <p class="allMenuLink"><a href="/cs/inc/siteMap.jsp"><span>전체메뉴 보기</span></a></p>
+                        </div><!-- end subnav -->
+                    </li>
+
+                    <li class="menu" id="menu3"><strong><a href="#subnav3">상품관리</a></strong>
+                        <div class="subnav" id="subnav3">
+                            <fieldset>
+                                <legend>상품관리</legend>
+                                <p class="descript">사용중인 상품 조회 후 <br/>폼나는 요금제/부가서비스에 가입해보세요.</p>
+                                <ul class="sublist">
+                                    <li><span>사용중인상품 조회</span>
+                                        <div class="depth3">
+                                            <ul>
+                                                <li><a href="/cs/basicproduct/usingNormalBill.jsp"
+                                                       excepted="/cs/basicproduct/normalBillInfo.jsp">사용중인 요금제</a></li>
+                                                <li><a href="/cs/etcproduct/usingAddService.jsp"
+                                                       shared="/cs/etcproduct/lettering.jsp"
+                                                       excepted="/cs/etcproduct/addServiceInfo.jsp">사용중인 부가서비스</a></li>
+                                            </ul>
+                                        </div><!-- end depth3 -->
+                                    </li>
+                                    <li><span>요금제</span>
+                                        <div class="depth3">
+                                            <ul>
+                                                <li><a href="/cs/basicproduct/normalBillList.jsp"
+                                                       shared="/cs/basicproduct/normalBillInfo.jsp">기본 요금제</a></li>
+
+                                            </ul>
+                                        </div><!-- end depth3 -->
+                                    </li>
+                                    <li><span><a href="/cs/etcproduct/addServiceList.jsp"
+                                                 shared="/cs/etcproduct/addServiceInfo.jsp">부가서비스</a></span></li>
+                                    <li><span><a href="/cs/basicproduct/bizUseProd.jsp">Biz 전용 상품&서비스</a></span></li>
+                                </ul>
+                            </fieldset>
+                            <p class="allMenuLink"><a href="/cs/inc/siteMap.jsp"><span>전체메뉴 보기</span></a></p>
+                        </div><!-- end subnav -->
+                    </li>
+
+                    <li class="menu" id="menu4"><strong><a href="#subnav4">법인폰관리</a></strong>
+                        <div class="subnav" id="subnav4">
+                            <fieldset>
+                                <legend>법인폰관리</legend>
+                                <p class="descript">기기변경 및 일시정지/<br/>해제 등 손쉽게 휴대폰 <br/>관리가 가능합니다.</p>
+                                <ul class="sublist">
+                                    <li><span>휴대폰관리</span>
+                                        <div class="depth3">
+                                            <ul>
+                                                <li><a href="/cs/phonemgmt/chgPhon.jsp">기기변경</a></li>
+                                                <li><a href="/cs/phonemgmt/chgNum.jsp"
+                                                       shared="/cs/phonemgmt/chgNumService.jsp">번호변경</a></li>
+                                                <li><a href="/cs/phonemgmt/reqTempSuspension.jsp">일시정지</a></li>
+                                                <li><a href="/cs/phonemgmt/cnclTempSuspension.jsp">정지해제</a></li>
+                                                <li><a href="/cs/phonemgmt/lossPhone.jsp">분실신고</a></li>
+                                                <li><a href="/cs/phonemgmt/findPhone.jsp">습득신고</a></li>
+                                                <li><a href="/cs/phonemgmt/inqSuspension.jsp">정지조회</a></li>
+                                            </ul>
+                                        </div><!-- end depth3 -->
+                                    </li>
+                                    <li><span>임대로밍</span>
+                                        <div class="depth3">
+                                            <ul>
+                                                <li><a href="/cs/etcproduct/roamingInfo.jsp">임대로밍 안내</a></li>
+                                            </ul>
+                                        </div><!-- end depth3 -->
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <p class="allMenuLink"><a href="/cs/inc/siteMap.jsp"><span>전체메뉴 보기</span></a></p>
+                        </div><!-- end subnav -->
+                    </li>
+
+                    <li class="menu" id="menu5"><strong><a href="#subnav5">고객센터</a></strong>
+                        <div class="subnav" id="subnav5">
+                            <fieldset>
+                                <legend>고객센터</legend>
+                                <p class="descript">기업 T world 및 멤버십/<br/>포인트 이용에 대해 조목조목 알려드립니다.</p>
+                                <ul class="sublist">
+                                    <li><span>기업 T world 이용안내</span>
+                                        <div class="depth3">
+                                            <ul>
+                                                <li><a href="/cs/counsel/lawServiceInfo.jsp">법인위임대리인이란?</a></li>
+                                                <li><a href="/cs/counsel/certServiceInfo.jsp">법인 폰 개인인증이란?</a></li>
+                                            </ul>
+                                        </div><!-- end depth3 -->
+                                    </li>
+                                    <li><span>회원/정책</span>
+                                        <div class="depth3">
+                                            <ul>
+                                                <li><a href="/cs/counsel/membershipGuide.jsp">회원안내</a></li>
+                                                <li><a href="/cs/counsel/privacyNotify.jsp">개인정보처리방침</a></li>
+                                                <li><a href="/cs/counsel/termsOfAgreement.jsp">이용약관</a></li>
+                                                <li><a href="/cs/counsel/membershipInfo.jsp">멤버십 회원약관</a></li>
+                                                <li><a href="/cs/counsel/legalNotify.jsp">책임의 한계와 법적 고지</a></li>
+                                            </ul>
+                                        </div><!-- end depth3 -->
+                                    </li>
+                                    <li><span>레인보우포인트</span>
+                                        <div class="depth3">
+                                            <ul>
+                                                <li><a href="/cs/membership/rainbowInfo.jsp">레인보우포인트안내</a></li>
+                                                <li><a href="/cs/membership/rainbowFreeSvc.jsp"
+                                                       shared="/cs/membership/rainbowFreeSvcDetail.jsp,/cs/membership/rainbowFreeAdd.jsp,/cs/membership/rainbowFreeAddDetail.jsp,/cs/membership/rainbowFreeRoaming.jsp,/cs/membership/rainbowFreeRoamingDetail.jsp">레인보우
+                                                    포인트 사용</a></li>
+                                                <li><a href="/cs/membership/rainbowPointsTrans.jsp"
+                                                       shared="/cs/membership/rainbowPointsTransDetail.jsp">레인보우 포인트
+                                                    합산</a></li>
+                                            </ul>
+                                        </div><!-- end depth3 -->
+                                    </li>
+                                    <li>
+                                        <span><a href="/cs/counsel/aboutMembership.jsp">멤버십 안내</a></span>
+                                    </li>
+                                    <li><span>고객 상담/지원</span>
+                                        <div class="depth3">
+                                            <ul>
+                                                <li><a href="/cs/counsel/aboutSubscription.jsp">법인 이동전화 가입문의</a></li>
+                                                <li><a href="/cs/counsel/faqList.jsp"
+                                                       shared="/cs/counsel/faqDetail.jsp">자주 하는 질문</a></li>
+                                                <li><a href="/cs/counsel/emailInquiry.jsp">이메일문의</a></li>
+                                                <li><a href="/cs/counsel/emailReply.jsp"
+                                                       shared="/cs/counsel/emailReplyDetail.jsp">이메일문의 결과확인</a></li>
+                                                <li><a href="/cs/counsel/branchShopInfo.jsp">지점/대리점/AS센터안내</a></li>
+                                                <li><a href="/cs/counsel/pdsList.jsp"
+                                                       shared="/cs/counsel/pdsDetail.jsp">신청서 다운로드</a></li>
+                                            </ul>
+                                        </div><!-- end depth3 -->
+                                    </li>
+                                    <li><span><a href="/cs/notice/noticeList.jsp" shared="/cs/notice/noticeDetail.jsp">공지사항</a></span>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <p class="allMenuLink"><a href="/cs/inc/siteMap.jsp"><span>전체메뉴 보기</span></a></p>
+                        </div><!-- end subnav -->
+                    </li>
+                </ul>
+            </div>
+            <hr/><!-- end navigation -->
+
+            <div class="etc">
+                <a href="#qMenu" id="btn_qMenu" title="즐겨찾는 메뉴"><span>즐겨찾는 메뉴</span></a>
+                <!-- 20161124 title 속성 추가 / 텍스트 변경 -->
+                <div class="qMenu" id="qMenu" style="display: none;">
+                    <div class="menu">
+                        <ul>
+                            <li class="corp_mn1"><a href="/cs/billservice/svcFreeCDR.jsp">잔여기본통화조회</a></li>
+                            <li class="corp_mn2"><a href="/cs/chargemgmt/svcCallhistList.jsp">통화내역조회</a></li>
+                            <li class="corp_mn3"><a href="/cs/phonemgmt/chgNum.jsp">번호변경</a></li>
+                            <li class="corp_mn4"><a href="/cs/usermgmt/svcBillCorp.jsp">청구요금조회</a></li>
+                            <li class="corp_mn5"><a href="/cs/chargemgmt/svcHotBill.jsp">실시간사용요금조회</a></li>
+                            <li class="corp_mn6"><a href="/cs/linemgmt/svcStatusCorp.jsp">MY관리회선조회</a></li>
+                            <li class="corp_mn7"><a href="/cs/billservice/taxBillReissue.jsp">세금계산서재발행</a></li>
+                            <li class="corp_mn8"><a href="/cs/usermgmt/svcPayCorp.jsp">납부요금조회</a></li>
+                        </ul>
+                    </div>
+                    <!-- 20161123 버튼 추가 -->
+                    <button class="layer_close" onclick="layerQMenuHide('qMenu');"><span>닫기</span></button>
+                    <!-- //20161123 버튼 추가 -->
+                </div><!-- end qMenu -->
+
+                <a href="#top_search" id="btn_search"><span>검색</span></a>
+                <div class="top_search" id="top_search" style="display: none;">
+                    <div class="container">
+                        <div class="contentInner">
+
+                            <div class="box_searchTop">
+
+                                <input type="text" name="kwd" id="srchKwd" class="searchInput"
+                                       placeholder="검색어를 입력해주세요." title="통합검색(검색어 입력)"/>
+
+                                <a href="#" class="btn_autoComplete ir">자동완성기능 펼치기/접기</a><!-- 활성화 class="on" -->
+
+                                <div class="layer_autoComplete">
+                                    <span class="open">자동완성기능 펼치기<em class="ir">▼</em></span><!-- 활성화 class="on" -->
+                                    <span class="close">자동완성기능 접기<em class="ir">▲</em></span><!-- 활성화 class="on" -->
+                                </div>
+
+                                <div class="keywordList">
+                                    <ul>
+
+
+                                    </ul>
+
+                                    <div class="keywordBtm">
+                                        <a href="#" class="btn_func">자동완성
+                                            <span class="open">켜기</span><!-- 활성화 class="on" -->
+                                            <span class="close on">끄기</span><!-- 활성화 class="on" -->
+                                        </a>
+                                        <div class="layer_func">기능을 다시 켤때는 <span class="hidden">자동완성기능 펼치기</span>▼를
+                                            클릭하세요. <em class="ir">&nbsp;</em></div><!-- 활성화 class="on" -->
+                                    </div>
+
+                                </div>
+
+                                <button class="btn_searchTop" id="b2bSearch">검색</button>
+                            </div>
+
+
+                            <div class="recommendWordTop">
+                                <img src="/cs/images/common/txt_searchKeyword.gif" alt="추천"/>
+
+                            </div>
+
+
+                        </div>
+                        <button class="layer_close" onclick="layerSearchHide('top_search');"><span>닫기</span></button>
+                    </div><!-- end container -->
+                </div><!-- end top_search -->
+            </div>
+        </div>
+        <hr/><!-- end gnb -->
+    </div><!-- end head_inner -->
+</div>
+<hr/><!-- end head -->
+
+
+<script language="JavaScript">
+    //2016-11-24
+    $(window).load(function () {
+        var $mainPopLayer = $("#main_pop_layer");
+        var mainPopLayer_height = $mainPopLayer.find(".layer_content").height();
+        var $mainPopLayerClose = $mainPopLayer.find("a.button");
+
+        function mainPopLayerInit() {
+            $mainPopLayer.animate({"height": mainPopLayer_height}, {
+                duration: 600
+            });
+        }
+
+        function mainPopLayerClose() {
+            //2016-11-25
+            if (document.notice_form) {
+                if (document.notice_form.chkbox.checked) {
+                    setCookie("mainPop", "done", 1);
+                }
+            }
+            //2016-11-25
+            $mainPopLayer.animate({"height": 0}, {
+                duration: 600
+            });
+        }
+
+        $mainPopLayerClose.bind("click", function () {
+            mainPopLayerClose();
+            return false;
+        });
+        cookiedata = document.cookie;
+        if (cookiedata.indexOf("mainPop=done") < 0) {
+            mainPopLayerInit();
+        }
+        else {
+            mainPopLayerClose();
+        }
+    });
+    function setCookie(name, value, expiredays) {
+        var todayDate = new Date();
+        todayDate.setDate(todayDate.getDate() + expiredays);
+        document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+    }
+    /* 2016-11-25 주석처리
+     function closeWin() {
+     if ( document.notice_form.chkbox.checked ){
+     setCookie( "mainPop", "done", 1 ); //2016-11-25
+     }
+     //document.getElementById("main_pop_layer").style.visibility = "hidden";
+     //document.getElementById("main_pop_layer").style.display = "none";
+     }
+     */
+    //2016-11-24
+</script>
+
+<script type="text/javascript">
+    //<![CDATA[
+    var urlflag = "";
+
+    var naviSkipKeyWord = ["siteMap/전체메뉴", "loginSuccess/로그인 | 위임대리인 로그인", "usableGrade/이용 가능 등급안내"];
+
+    var etcMenuMain = [
+        "GMS|1"
+        , "회원|2"
+    ];
+
+    var etcMenuSub = [
+        "1|GMS 안내|/cs/gms/gmsInfo.jsp"
+        , "1|GMS 메시지 보내기|/cs/gms/gmsLogin.jsp,/cs/gms/gmsSendMsg.jsp,/cs/gms/gmsCertiSMS.jsp,/cs/gms/gmsGroupMaster.jsp,/cs/gms/gmsSendMsgSearch.jsp,/cs/gms/gmsGroupMemberEdit.jsp"
+        , "2|회원가입|/cs/join/memberStipulation.jsp,/cs/join/memberCheck_IPIN.jsp,/cs/join/memberCheck_Init.jsp,/cs/join/memberCheck.jsp,/cs/join/memberJoin.jsp,/cs/join/memberOk.jsp"
+        , "2|아이디/비밀번호 찾기|/cs/login/idpw_onetimepass.jsp"
+        , "2|회원정보 수정|/cs/mbrinfo/memPwdCheck.jsp,/cs/mbrinfo/MemSearch.jsp"
+        , "2|회원탈퇴|/cs/mbrinfo/MemberTermInfo.jsp,/cs/mbrinfo/MemTerm.jsp"
+    ];
+
+    var exceptedUri = [
+        "/cs/etcproduct/addServiceInfo.jsp"
+        , "/cs/basicproduct/normalBillInfo.jsp"
+    ];
+
+    var title;
+    var uri = "/cs/main.jsp";
+    var ismain = "true";
+    var prefix = "";
+
+    if (ismain === "true") {
+        document.title = prefix + "기업 | T world";
+        $('#path').hide();
+    } else if (checkNaviSkip(uri)) {
+        document.title = prefix + title;
+        $('#path').hide();
+    } else {
+        var hasMenuIdx = false;
+        var mainMenus = $('.menulist').find('[class=menu]');
+
+        $(mainMenus).each(function (idx, menu) {
+            var mainMenuNm = $(menu).find('strong').children().text();
+            //console.log(mainMenuNm);
+            var subMenus = $(menu).find('[class=sublist]').children();
+            if (subMenus.length > 0) {
+                $(subMenus).each(function (idx1, dets) {
+                    var subMenuNm = $(dets).find('span').text();
+                    //console.log("=▶"+subMenuNm);
+                    var detMenus = $(dets).find('li');
+                    if (detMenus.length > 0) {
+                        $(detMenus).each(function (idx2, det) {
+                            //console.log("===▶"+$(det).find('a').text());
+                            var detMenuNm = $(det).find('a').text();
+                            var detMenuUrl = $(det).find('a').attr('href');
+
+                            if (uri === detMenuUrl) {
+                                setMainMenuNavigation(mainMenus, mainMenuNm);
+                                setSubMenuNavigation(subMenus, subMenuNm, false);
+                                setDetMenuNavigetion(detMenus, detMenuNm);
+                                setTitle(mainMenuNm, subMenuNm, detMenuNm);
+                                hasMenuIdx = true;
+                                return false;
+                            } else {
+                                if (iIsExceptedUri(uri)) {
+                                    if ($(det).find('a').attr('excepted')) {
+                                        var exceptedPages = $(det).find('a').attr('excepted').split(',');
+                                        $(exceptedPages).each(function (idx4, epage) {
+                                            if (epage === uri) {
+                                                setMainMenuNavigation(mainMenus, mainMenuNm);
+                                                setSubMenuNavigation(subMenus, subMenuNm);
+                                                setDetMenuNavigetion(detMenus, detMenuNm);
+                                                setTitle(mainMenuNm, subMenuNm, detMenuNm);
+                                                hasMenuIdx = true;
+                                                return false;
+                                            }
+                                        });
+                                    }
+                                } else {
+                                    if ($(det).find('a').attr('shared')) {
+                                        var sharedPages = $(det).find('a').attr('shared').split(',');
+                                        $(sharedPages).each(function (idx3, page) {
+                                            if (page === uri) {
+                                                setMainMenuNavigation(mainMenus, mainMenuNm);
+                                                setSubMenuNavigation(subMenus, subMenuNm);
+                                                setDetMenuNavigetion(detMenus, detMenuNm);
+                                                setTitle(mainMenuNm, subMenuNm, detMenuNm);
+                                                hasMenuIdx = true;
+                                                return false;
+                                            }
+                                        });
+                                    }
+                                }
+                            }
+                        });
+                    } else { // 2depth 메뉴 처리
+                        if ($(dets).find('span').find('a')) {
+                            if (uri === $(dets).find('span').find('a').attr('href')) {
+                                //$('#path').children().find('div.depth3').hide();
+                                $('#path').children().find('div.depth3').empty();
+                                setMainMenuNavigation(mainMenus, mainMenuNm);
+                                setSubMenuNavigation(subMenus, subMenuNm, true);
+                                setTitle(mainMenuNm, subMenuNm, null);
+                                hasMenuIdx = true;
+                                return false;
+                            } else {
+                                if (iIsExceptedUri(uri)) {
+                                    if ($(dets).find('span').find('a').attr('excepted')) {
+                                        //console.log("Has excepted");
+                                        var subExceptedPages = $(dets).find('a').attr('excepted').split(',');
+                                        $(subExceptedPages).each(function (idx6, exSub) {
+                                            //console.log("exSub : "+exSub);
+                                            if (exSub === uri) {
+                                                //$('#path').children().find('div.depth3').hide();
+                                                $('#path').children().find('div.depth3').empty();
+                                                setMainMenuNavigation(mainMenus, mainMenuNm);
+                                                setSubMenuNavigation(subMenus, subMenuNm, true);
+                                                setTitle(mainMenuNm, subMenuNm, null);
+                                                hasMenuIdx = true;
+                                                return false;
+                                            }
+                                        });
+                                    }
+                                } else {
+                                    if ($(dets).find('span').find('a').attr('shared')) {
+                                        //console.log("Has shared");
+                                        var subSharedPages = $(dets).find('a').attr('shared').split(',');
+                                        $(subSharedPages).each(function (idx4, shSub) {
+                                            //console.log("shSub : "+shSub);
+                                            if (shSub === uri) {
+                                                //$('#path').children().find('div.depth3').hide();
+                                                $('#path').children().find('div.depth3').empty();
+                                                setMainMenuNavigation(mainMenus, mainMenuNm);
+                                                setSubMenuNavigation(subMenus, subMenuNm, true);
+                                                setTitle(mainMenuNm, subMenuNm, null);
+                                                hasMenuIdx = true;
+                                                return false;
+                                            }
+                                        });
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    //검색영역처리 네비게이션 처리 : 1depth 영역
+                    if (uri.match("b2bSearch")) {
+                        //$('#path').children().find('div.depth2').hide();
+                        //$('#path').children().find('div.depth3').hide();
+                        $('#path').children().find('div.depth2').empty();
+                        $('#path').children().find('div.depth3').empty();
+                        setMainMenuNavigation(null, "통합검색");
+                        return false;
+                    }
+
+                });
+            }
+        });
+
+        if (!hasMenuIdx) {
+            var subIdx;
+            $(etcMenuSub).each(function (idx, sub) {
+                if (sub.split("|")[2].split(",").length > 1) {
+                    $(sub.split("|")[2].split(",")).each(function (idx, msub) {
+                        if (msub === uri) {
+                            subIdx = sub.split("|")[0];
+                            $('.depth1').find('span').text(etcMenuMain[sub.split("|")[0] - 1].split("|")[0]);
+                            $('.depth2').find('span').find('a').text(sub.split("|")[1]);
+                            $('#path').children().find('div.depth3').empty();
+                            setTitle(etcMenuMain[sub.split("|")[0] - 1].split("|")[0], sub.split("|")[1], null);
+                            return false;
+                        }
+                    });
+                } else {
+                    if (sub.split("|")[2] === uri) {
+                        subIdx = sub.split("|")[0];
+                        $('.depth1').find('span').text(etcMenuMain[sub.split("|")[0] - 1].split("|")[0]);
+                        $('.depth2').find('span').find('a').text(sub.split("|")[1]);
+                        $('#path').children().find('div.depth3').empty();
+                        setTitle(etcMenuMain[sub.split("|")[0] - 1].split("|")[0], sub.split("|")[1], null);
+                        return false;
+                    }
+                }
+
+            });
+
+            if (subIdx) {
+                $(etcMenuSub).each(function (idx, subx) {
+                    if (subIdx === subx.split("|")[0]) {
+                        if (subx.split("|")[2].split(",").length > 1) {
+                            var hasUri = false;
+
+                            $(subx.split("|")[2].split(",")).each(function (idx, msubx) {
+                                if (msubx === uri) {
+                                    hasUri = true;
+                                    return false;
+                                }
+                            });
+                            if (!hasUri) {
+                                $('#path_depth2').append('<li><a href="' + subx.split("|")[2].split(",")[0] + '">' + subx.split("|")[1] + '</a></li>');
+                            }
+                            ;
+                        } else {
+                            if (subx.split("|")[2] != uri) {
+                                $('#path_depth2').append('<li><a href="' + subx.split("|")[2] + '">' + subx.split("|")[1] + '</a></li>');
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+    }
+    ;
+
+    function setMainMenuNavigation(mainMenus, mainNm) {
+        $('.depth1').find('span').text(mainNm);
+    }
+    ;
+
+    function setSubMenuNavigation(subMenus, subNm, is2depth) {
+        if (is2depth) {
+            $(subMenus).each(function (idx, sub) {
+                if ($(sub).find('span').text() === subNm) {
+                    $('.depth2').find('span').find('a').text(subNm);
+                    $('.depth2').find('span').wrap('<strong/>');
+
+                    if ($(sub).find('li').length > 0) {
+                        $('#path_depth2').append('<li class="thisMenu" ><a href="' + $(sub).find('li').eq(0).find('a').attr('href') + '">' + $(sub).find('span').text() + '</a></li>');
+                    } else {
+                        if ($(sub).find('span').find('a')) {
+                            $('#path_depth2').append('<li class="thisMenu" ><a href="' + $(sub).find('span').find('a').attr('href') + '">' + $(sub).find('span').text() + '</a></li>');
+                        } else {
+                            $('#path_depth2').append('<li class="thisMenu" ><a href="#">' + $(sub).find('span').text() + '</a></li>');
+                        }
+                    }
+                } else {
+                    if ($(sub).find('li').length > 0) {
+                        $('#path_depth2').append('<li><a href="' + $(sub).find('li').eq(0).find('a').attr('href') + '">' + $(sub).find('span').text() + '</a></li>');
+                    } else {
+                        if ($(sub).find('span').find('a')) {
+                            $('#path_depth2').append('<li><a href="' + $(sub).find('span').find('a').attr('href') + '">' + $(sub).find('span').text() + '</a></li>');
+                        } else {
+                            $('#path_depth2').append('<li><a href="#">' + $(sub).find('span').text() + '</a></li>');
+                        }
+                    }
+                }
+            });
+        } else {
+            $('.depth2').find('span').empty();
+            $('.depth2').find('span').addClass('none');
+            $('.depth2').find('span').text(subNm);
+        }
+    }
+    ;
+
+    function setDetMenuNavigetion(detMenus, detNm) {
+        $(detMenus).each(function (idx, det) {
+            if ($(det).find('a').text() === detNm) {
+                $('.depth3').find('span').find('a').text(detNm);
+                $('#path_depth3').append('<li class="thisMenu" ><a href="' + $(det).find('a').attr('href') + '">' + $(det).find('a').text() + '</a></li>');
+            } else {
+                $('#path_depth3').append('<li><a href="' + $(det).find('a').attr('href') + '">' + $(det).find('a').text() + '</a></li>');
+            }
+        });
+    }
+    ;
+
+    function setTitle(mainMenuNm, subMenuNm, detMenuNm) {
+        if (detMenuNm) {
+            document.title = prefix + detMenuNm + " | " + subMenuNm + " | " + mainMenuNm;
+        } else {
+            document.title = prefix + subMenuNm + " | " + mainMenuNm
+        }
+    }
+    ;
+
+    function checkNaviSkip(uri) {
+        var res = false;
+        if (uri) {
+            $(naviSkipKeyWord).each(function (idx, keyword) {
+                if (uri.match(keyword.split('/')[0])) {
+                    title = keyword.split('/')[1];
+                    res = true;
+                }
+            });
+        }
+        return res;
+    }
+    ;
+
+    function iIsExceptedUri(uri) {
+        var res = false;
+        $(exceptedUri).each(function (idx, extMenu) {
+            if (uri === extMenu) {
+                if (urlflag) {
+                    res = true;
+                }
+            }
+        });
+        return res;
+    }
+
+    //]]>
+</script>
+<script type="text/javascript" src="/cs/js/search/b2bCommonSearch.js"></script>
+
+<hr/><!-- end navigation -->
+
+
+<form name="noticsDeatilForm" method="post" action="/cs/notice/noticeDetail.jsp">
+    <input name="idx" type="hidden" value=""/>
+</form>
+<div id="main_wrap">
+
+    <div class="mainSlider">
+        <div class="mainBxSlider">
+            <div class="bizBx_pause_play"></div>
+            <div class="bizBx_control"></div>
+            <div class="bizBx_pager"></div>
+            <ul class="slider">
+
+                <li class="item" id="mainSliderItem1">
+                    <a href="http://b2b.tworld.co.kr/cs/counsel/CertService.jsp" target="_self" title="자세히보기">
+                        <img src="/files/images/mainSliderBanner1.png" alt="이제 웹과 모바일에서 법인폰으로 개인인증
+법인 폰 개인인증
+법인 명의 이동전화를 사용하는 개인이 
+웹과 모바일에서 본인 인증을 할 수 있는 서비스
+자세히보기"/>
+                    </a>
+                </li>
+
+                <li class="item" id="mainSliderItem2">
+                    <a href="http://b2b.tworld.co.kr/cs/etcproduct/addServiceInfo.jsp?prod_id=NA00005513" target="_self"
+                       title="자세히보기">
+                        <img src="/files/images/mainSliderBanner2.png" alt="철저한 보안과 빠른 속도 기업전용 LTE
+Band 비즈 LTE
+일반망과 분리된 기업전용망을 통해 
+업무용 데이터를 사용할 수 있는 서비스
+자세히보기"/>
+                    </a>
+                </li>
+
+                <li class="item" id="mainSliderItem3">
+                    <a href="http://b2b.tworld.co.kr/cs/etcproduct/addServiceInfo.jsp?prod_id=NA00004720" target="_self"
+                       title="자세히보기">
+                        <img src="/files/images/mainSliderBanner3.png" alt="출퇴근, 점심시간 직장인을 위한 선택!
+band 타임 프리
+출퇴근, 점심시간 매일 1GB로 데이터 걱정 없이 즐긴다!
+합리적 직장인을 위한 최고의 선택
+자세히보기"/>
+                    </a>
+                </li>
+
+                <li class="item" id="mainSliderItem4">
+                    <a href="http://b2b.tworld.co.kr/cs/basicproduct/normalBillInfo.jsp?prod_id=NA00005292"
+                       target="_self" title="자세히보기">
+                        <img src="/files/images/mainSliderBanner5.png" alt="새로운 데이터 시대, 역대 최강 요금제!
+T시그니처 Master
+통신,단말,안심 3대 영역의 시그니처 혜택을 제공 
+(데이터 35GB+매일2GB 이후 속도제어)
+자세히보기"/>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div><!-- end mainSlider -->
+
+    <script type="text/javascript" src="/cs/js/jquery.bxslider.min.js"></script>
+
+    <script language="Javascript">
+        /* $(function(){
+         //법인 전용 상품 이미지 슬라이드
+         var slider = $(".mainBxSlider .slider").bxSlider({
+         auto: true,
+         pause: 7000,
+         autoControls: true,
+         autoControlsCombine: true,
+         autoControlsSelector: ".bizBx_pause_play",
+         pagerSelector: ".bizBx_pager",
+         prevSelector: ".bizBx_control",
+         nextSelector: ".bizBx_control",
+         preloadImages: "all",
+         onSliderLoad: function(currentIndex){
+         var itemSize = $(".mainBxSlider .slider .item").not(".bx-clone").length;
+         if( itemSize <= 1 ) {
+         $(".bizBx_pause_play").hide();
+         $(".bizBx_pager").hide();
+         $(".bizBx_control").hide();
+         }
+         $(".mainBxSlider .slider").find("a").attr("tabindex", -1);
+         $(".mainBxSlider .slider").find(".item").not(".bx-clone").eq( currentIndex ).find("a").attr("tabindex", 0);
+         },
+         onSlideBefore: function($slideElement, oldIndex, newIndex){
+         $(".mainBxSlider .slider").find("a").attr("tabindex", -1);
+         $(".mainBxSlider .slider").find(".item").not(".bx-clone").eq( newIndex ).find("a").attr("tabindex", 0);
+         }
+         });
+         }); */
+
+
+        $(function () {
+            //메인 슬라이드
+            var slider = $(".mainBxSlider .slider").bxSlider(
+                {
+                    auto: true,
+                    pause: 7000,
+                    autoControls: true,
+                    autoControlsCombine: true,
+                    autoControlsSelector: ".mainBxSlider .bizBx_pause_play",
+                    pagerSelector: ".mainBxSlider .bizBx_pager",
+                    prevSelector: ".mainBxSlider .bizBx_control",
+                    nextSelector: ".mainBxSlider .bizBx_control",
+                    preloadImages: "all",
+                    onSliderLoad: function (currentIndex) {
+                        var itemSize = $(".mainBxSlider .slider .item").not(".bx-clone").length;
+                        if (itemSize <= 1) {
+                            $(".mainBxSlider .bizBx_pause_play").hide();
+                            $(".mainBxSlider .bizBx_pager").hide();
+                            $(".mainBxSlider .bizBx_control").hide();
+                        }
+                        $(".mainBxSlider .slider").find("a").attr("tabindex", -1);
+                        $(".mainBxSlider .slider").find(".item").not(".bx-clone").eq(currentIndex).find("a").attr("tabindex", 0);
+                    },
+                    onSlideBefore: function ($slideElement, oldIndex, newIndex) {
+                        $(".mainBxSlider .slider").find("a").attr("tabindex", -1);
+                        $(".mainBxSlider .slider").find(".item").not(".bx-clone").eq(newIndex).find("a").attr("tabindex", 0);
+                    }
+                });
+        });
+
+        function goNoticeDetail(val) {
+            var form = document.noticsDeatilForm;
+            form.idx.value = val;
+            form.submit();
+        }
+    </script>
+    <div class="mainQuickLink">
+        <ul>
+            <li class="link1"><a href="/cs/billservice/svcFreeCDR.jsp">잔여기본통화<br/>조회</a></li>
+            <li class="link2"><a href="/cs/chargemgmt/svcCallhistList.jsp">통화 내역<br/>조회</a></li>
+            <li class="link3"><a href="/cs/phonemgmt/chgNum.jsp">번호변경</a></li>
+            <li class="link4"><a href="/cs/usermgmt/svcBillCorp.jsp">청구요금<br/>조회</a></li>
+            <li class="link5"><a href="/cs/chargemgmt/svcHotBill.jsp">실시간 사용<br/>요금조회</a></li>
+            <li class="link6"><a href="/cs/linemgmt/svcStatusCorp.jsp">MY 관리회선<br/>조회</a></li>
+            <li class="link7"><a href="/cs/billservice/taxBillReissue.jsp">세금계산서<br/>재발행</a></li>
+            <li class="link8"><a href="/cs/usermgmt/svcPayCorp.jsp">납부요금<br/>조회</a></li>
+        </ul>
+    </div><!-- end mainQuickLink -->
+    <div class="mainBanner">
+        <ul>
+            <li class="banner1">
+                <dl>
+                    <dt>법인 위임대리인을 신청해 보세요</dt>
+                    <dd><a href="/cs/counsel/lawServiceInfo.jsp">법인 이동전화의 신청/변경업무를 온라인으로 <br/>편리하게 처리할 수 있습니다.</a></dd>
+                </dl>
+            </li>
+            <li class="banner2">
+                <dl>
+                    <dt>법인폰 개인인증이란?</dt>
+                    <dd><a href="/cs/counsel/certServiceInfo.jsp">사용중인 법인 이동전화로 실사용자가 <br/>본인 인증을 이용하기 위한 서비스</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </div><!-- end mainBanner -->
+    <div class="mainService">
+        <h2>Biz 전용 상품&amp;서비스</h2>
+        <div class="list">
+
+            <ul>
+
+                <li>
+                    <a href="http://b2b.tworld.co.kr/cs/etcproduct/addServiceInfo.jsp?prod_id=NA00005513"
+                       target="_self">
+                        <strong>band 비즈 LTE</strong>
+                        <span>기업의 업무용 LTE 데이터를<br/>전용망으로 전달,<br/>보안성이 높은 기업 전용 서비스</span>
+                        <img src="/files/images/img_service1.jpg" alt="band 비즈 LTE 대표 이미지"/>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="http://b2b.tworld.co.kr/cs/etcproduct/addServiceInfo.jsp?prod_id=NA00003696"
+                       target="_self">
+                        <strong>비즈태블릿그룹웨어</strong>
+                        <span>법인 임직원이 태블릿 PC등으로<br/>업무 전용 IP에 접속하여<br/>업무용 솔루션을 이용하는 서비스</span>
+                        <img src="/files/images/img_service2.jpg" alt="비즈태블릿그룹웨어 대표이미지"/>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="http://b2b.tworld.co.kr/cs/etcproduct/addServiceInfo.jsp?prod_id=NA00004185"
+                       target="_self">
+                        <strong>T데이터모아</strong>
+                        <span>동일 법인 또는 임직원끼리  <br/>잔여 데이터를 나누어 <br/>쓸 수 있는 부가요금제 서비스</span>
+                        <img src="/files/images/img_service3.jpg" alt="T데이터모아 대표이미지"/>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="http://b2b.tworld.co.kr/cs/etcproduct/addServiceInfo.jsp?prod_id=NA00002974"
+                       target="_self">
+                        <strong>T끼리법인요금제</strong>
+                        <span>법인 구성원간<br/>국내 음성통화료에 대해<br/>75% 할인혜택 제공</span>
+                        <img src="/files/images/img_service4.jpg" alt="T끼리법인요금제 대표이미지"/>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div><!-- end list -->
+        <p class="link"><a href="/cs/basicproduct/bizUseProd.jsp"><img src="/cs/images/main/icon_main_bizlink.gif"
+                                                                       alt="전용상품 서비스 이동"/></a></p>
+    </div><!-- end mainService -->
+
+    <div class="notice">
+        <div class="inner_wrap">
+            <strong class="notice_tit">공지사항</strong><!-- 2016-11-24 문구 추가 -->
+            <div class="noticeSlider">
+                <div class="noticeBxSlider">
+                    <div class="bizBx_control"></div>
+                    <ul class="slider">
+
+                        <li class="item" id="noticeSliderItem1">
+                            <a href="javascript:goNoticeDetail(418);">서비스 일시 중단 안내 [2/26(일) 0... <span>2017-02-20</span></a>
+                        </li>
+
+                        <li class="item" id="noticeSliderItem2">
+                            <a href="javascript:goNoticeDetail(417);">서비스 일시 중단 안내 [2/18(토) 2... <span>2017-02-15</span></a>
+                        </li>
+
+                        <li class="item" id="noticeSliderItem3">
+                            <a href="javascript:goNoticeDetail(414);">기업 T world 고객센터 개편 안내 <span>2016-11-27</span></a>
+                        </li>
+
+                        <li class="item" id="noticeSliderItem4">
+                            <a href="javascript:goNoticeDetail(410);">biz T world 서비스명 변경 안내(... <span>2016-11-16</span></a>
+                        </li>
+
+                        <li class="item" id="noticeSliderItem5">
+                            <a href="javascript:goNoticeDetail(305);">서비스 일시 중단 안내 [12.18 00:... <span>2011-12-16</span></a>
+                        </li>
+
+                    </ul>
+                    <a href="/cs/notice/noticeList.jsp" class="list"><img src="/cs/images/main/icon_main_plus.gif"
+                                                                          alt="공지로 이동"/></a>
+                </div><!-- end noticeBxSlider -->
+            </div><!-- end noticeSlider -->
+        </div><!-- end inner_wrap -->
+    </div><!-- end notice -->
+    <script type="text/javascript">
+        // 공지사항
+        $(function () {
+            var slider = $(".noticeBxSlider .slider").bxSlider({
+                auto: false,
+                pause: 7000,
+                autoControls: true,
+                mode: "vertical",
+                autoControlsCombine: true,
+                autoControlsSelector: ".noticeBxSlider .bizBx_pause_play",
+                prevSelector: ".noticeBxSlider .bizBx_control",
+                nextSelector: ".noticeBxSlider .bizBx_control",
+                preloadImages: "all",
+                onSliderLoad: function (currentIndex) {
+                    var itemSize = $(".mainBxSlider .slider .item").not(".bx-clone").length;
+                    if (itemSize <= 1) {
+                        $(".noticeBxSlider .bizBx_control").hide();
+                    }
+                    $(".noticeBxSlider .slider").find("a").attr("tabindex", -1);
+                    $(".noticeBxSlider .slider").find(".item").not(".bx-clone").eq(currentIndex).find("a").attr("tabindex", 0);
+                },
+                onSlideBefore: function ($slideElement, oldIndex, newIndex) {
+                    $(".noticeBxSlider .slider").find("a").attr("tabindex", -1);
+                    $(".noticeBxSlider .slider").find(".item").not(".bx-clone").eq(newIndex).find("a").attr("tabindex", 0);
+                }
+            });
+
+        });
+    </script>
+
+    <div class="mainEtc">
+        <div class="inner_wrap">
+            <ul class="mainList">
+                <li class="list1">
+                    <dl>
+                        <dt><a href="/cs/counsel/faqList.jsp">자주하는 질문</a></dt>
+                        <dd><a href="/cs/counsel/faqList.jsp">기업 T world 고객센터 이용관련 <br/>궁금한 점을 확인해 보세요</a></dd>
+                    </dl>
+                </li>
+                <li class="list2">
+                    <dl>
+                        <dt><a href="/cs/counsel/pdsList.jsp">신청서 다운로드</a></dt>
+                        <dd><a href="/cs/counsel/pdsList.jsp">법인명의의 이동전화 관련 <br/>각종 신청서 확인 및 다운로드</a></dd>
+                    </dl>
+                </li>
+                <li class="list3">
+                    <dl>
+                        <dt><a href="/cs/counsel/branchShopInfo.jsp">대리점 / AS센터 안내</a></dt>
+                        <dd><a href="/cs/counsel/branchShopInfo.jsp">가까운 매장 및 AS센터를 <br/>찾아보세요</a></dd>
+                    </dl>
+                </li>
+            </ul>
+            <ul class="etcList">
+                <!-- 2016-11-24 내용 수정 -->
+                <li class="list1">
+                    <dl>
+                        <dt>법인 고객센터</dt>
+                        <dd class="desc">휴대폰 국번없이</dd>
+                        <dd>T. 153-114 <span>(무료)</span></dd>
+                        <dd>T. 1599-6011 <span>(유료)</span></dd>
+                    </dl>
+                </li>
+                <!-- end 2016-11-24 내용 수정 -->
+                <li class="list2">
+                    <dl>
+                        <dt>법인이동전화 가입상담</dt>
+                        <dd>T. 070-7470-1305</dd>
+                    </dl>
+                </li>
+                <!-- end 2016-11-16 내용 수정 -->
+            </ul>
+        </div><!-- end inner_wrap -->
+    </div><!-- end mainEtc -->
+</div><!-- end main_wrap -->
+<!-- [ 컨텐츠 화면영역  끝   ] ####################################################################################################################################################### -->
+<!-- end footer -->
+
+<div id="footer">
+    <div class="other_link">
+        <a href="/cs/gms/gmsInfo.jsp">GMS</a> |
+        <a href="/docs/wzone/wzoneLogin.jsp" target="_blank" title="새창열기">W Zone</a>
+    </div><!-- end other_link -->
+    <div class="footer_wrap">
+        <ul>
+            <li><a href="/cs/counsel/termsOfAgreement.jsp">이용약관</a></li>
+            <li><a href="/cs/counsel/privacyNotify.jsp">개인정보 처리방침</a></li>
+            <li><a href="/cs/counsel/legalNotify.jsp">책임의 한계와 법적고지</a></li>
+            <li><a href="/cs/counsel/membershipInfo.jsp">멤버십 회원 약관</a></li>
+            <li><a href="javascript:;"
+                   onclick="openPopUpCenter('/cs/comm/emailSecurityNotify.jsp', 650, 350);return false;">이메일 무단 수집
+                거부</a></li>
+        </ul>
+        <div class="award_list">
+            <a href="http://www.sktform.co.kr/index.php/20441/" target="_blank" title="새창이동"><img
+                    src="/cs/images/common/img_footer1.gif" alt="국가고객만족도 19년 연속 1위"/></a>
+            <a href="http://www.sktform.co.kr/index.php/76682/" target="_blank" title="새창이동"><img
+                    src="/cs/images/common/img_footer2.gif" alt="이동전화 부문 17년 연속 1위"/></a>
+            <a href="http://www.sktform.co.kr/index.php/81269/" target="_blank" title="새창이동"><img
+                    src="/cs/images/common/img_footer3.gif" alt="한국산업고객만족도 19년 연속 1위"/></a>
+            <a href="http://www.tworld.co.kr/tglink.jsp?urlname=get_3050" target="_blank" title="새창이동"><img
+                    src="/cs/images/common/img_footer4.gif" alt="와이즈 유저"/></a>
+            <!-- 20170109 웹접근성 인증마크 추가 -->
+            <a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" target="_blank" title="새창이동"><img
+                    src="/cs/images/common/wai.jpg" alt="미래창조과학부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)"
+                    title="국가 공인 인증기관 : 웹와치"/></a>
+            <!-- //20170109 웹접근성 인증마크 추가 -->
+        </div><!-- end award_list -->
+        <address>
+            <span>서울특별시 중구 을지로 65</span><span>사장 : 박정호</span><span>사업자등록번호 : 104-81-37225</span><span>판매허가번호 : 중구 02923호  <a
+                href="http://www.ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2004301010030201122&area1=&area2=&currpage=1&searchKey=01&searchVal=%BF%A1%BD%BA%C4%C9%C0%CC%C5%DA%B7%B9%C4%DE&stdate=&enddate="
+                class="btn" target="_blank" title="새창열기">사업자 정보확인</a></span><br/>
+            <span>고객상담 : 휴대폰 국번없이 T.153-114(무료) 또는 T.1599-6011(유료) <a href="/cs/counsel/emailInquiry.jsp" class="btn">이메일문의</a></span>
+        </address>
+        <p class="copyright">COPYRIGHT &copy; SK TELECOM CO., LTD. ALL RIGHTS RESERVED.</p>
+        <div id="familysite">
+            <a href="#fm_list" class="link">Family Site</a>
+            <ul id="fm_list">
+                <li><a href="http://www.tworld.co.kr" target="_blank" title="새창이동">T world</a></li>
+                <li><a href="http://www.sktelecom.com/index_real.html" target="_blank" title="새창이동">SK Telecom</a></li>
+                <li><a href="http://www.skbroadband.com/Main.do" target="_blank" title="새창이동">SK 브로드밴드</a></li>
+                <li><a href="http://www.sksports.net/" target="_blank" title="새창이동">SK 스포츠단</a></li>
+                <li><a href="http://ttogether.sktelecom.com/" target="_blank" title="새창이동">T together</a></li>
+                <li><a href="http://www.twifi.co.kr" target="_blank" title="새창이동">T wifi zone</a></li>
+                <li><a href="http://partneron.sktelecom.com/" target="_blank" title="새창이동">파트너온</a></li>
+                <li><a href="http://www.nugu.co.kr" target="_blank" title="새창이동">NUGU</a></li>
+            </ul>
+        </div><!-- end familysite -->
+
+    </div><!-- end footer_wrap -->
+</div><!-- end footer -->
+
+<div class="quickbar" id="quickbar">
+    <a href="#" class="btn_quick_toggle"><span class="blind">퀵메뉴 보이기/숨기기</span></a>
+    <fieldset>
+        <legend><a href="/cs/main.jsp"><img src="/cs/images/common/quickbar_title.gif" alt="Tworld"/></a></legend>
+        <p><a href="#top"><img src="/cs/images/common/quickbar_top.gif" alt="Top"/></a></p>
+        <ul>
+            <li><a href="/cs/counsel/aboutSubscription.jsp"><img src="/cs/images/common/quickbar_link1.gif"
+                                                                 alt="이동전화 가입문의"/></a></li>
+            <li><a href="/cs/agentmgmt/agentGuide.jsp"><img src="/cs/images/common/quickbar_link2.gif" alt="위임대리인 신청"/></a>
+            </li>
+            <li><a href="/cs/counsel/CertService.jsp"><img src="/cs/images/common/quickbar_link3.gif"
+                                                           alt="법인폰 개인인증"/></a></li>
+        </ul>
+    </fieldset>
+</div><!-- end quickbar -->
+<script type="text/javascript" src="/cs/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/cs/js/quick.js"></script>
+<script language="Javascript">
+    var uri = "/cs/main.jsp";
+    var quickSkipKeyWord = ["loginMain", "login_failcount", "main", "memPwdCheck", "idpw_onetimepass", "info1_onetimepass", "sms.jsp", "to_mail_otp.jsp", "to_mail2_otp.jsp"];
+    if (uri) {
+        $(quickSkipKeyWord).each(function (idx, keyword) {
+            if (uri.match(keyword)) {
+                $('#quickbar').empty();
+            } else if (uri === "/") {
+                $('#quickbar').empty();
+            }
+        });
+    } else {
+        $('#quickbar').empty();
+    }
+</script>
+<div id="mask"></div>
+</body>
+</html>
