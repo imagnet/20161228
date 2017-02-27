@@ -134,13 +134,13 @@ $(function () {
 
 
     mainBannerSlide = $('.main-banner-slide').bxSlider({
-        auto: true,
-        pause: 4000,
+        // auto: true,
+        // pause: 4000,
         slideWidth: 160,
         minSlides: 2,
         maxSlides: 7,
         moveSlides: 1,
-        pager: false,
+        pager: true,
         nextSelector: $(".main-banner-next"),
         prevSelector: $(".main-banner-prev")
     });
@@ -153,7 +153,7 @@ $(function () {
         }
 
     });
-
+    $("body").find(".bx-clone > a").attr("tabindex", -1);
     // tab
     $('body').on('click', '.tab1 a', function () {
 

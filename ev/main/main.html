@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="../css/reset.css"/>
     <link rel="stylesheet" href="../css/common.css"/>
     <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <style>
+        .main-banner-slide { width: 100px; height: 100px; /*background-color: red;*/ position: relative; -webkit-animation-name: example; /* Safari 4.0 - 8.0 */ -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */ -webkit-animation-iteration-count: 3; /* Safari 4.0 - 8.0 */ animation-name: example; animation-duration: 4s; animation-iteration-count: 3; }
+
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes example { 0%   {background-color:red; left:0px; top:0px;} 25%  {background-color:yellow; left:200px; top:0px;} 50%  {background-color:blue; left:200px; top:200px;} 75%  {background-color:green; left:0px; top:200px;} 100% {background-color:red; left:0px; top:0px;} }
+        @keyframes example { 0%   {background-color:red; left:0px; top:0px;} 25%  {background-color:yellow; left:200px; top:0px;} 50%  {background-color:blue; left:200px; top:200px;} 75%  {background-color:green; left:0px; top:200px;} 100% {background-color:red; left:0px; top:0px;} }
+    </style>
     <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="../js/modernizr-2.6.2.min.js"></script>
     <script type="text/javascript" src="../js/iscroll.js"></script>
@@ -208,12 +215,12 @@
                 <span class="main-banner-prev"></span>
                 <div>
                     <ul class="main-banner-slide">
-                        <li class="slide"><a href="#" tabindex="-1"><img src="../image/common/img_slide01.png"></a></li>
+                        <li class="slide"><a href="#"><img src="../image/common/img_slide01.png"></a></li>
                         <li class="slide"><a href="#"><img src="../image/common/img_slide02.png"></a></li>
                         <li class="slide"><a href="#"><img src="../image/common/img_slide03.png"></a></li>
                         <li class="slide"><a href="#"><img src="../image/common/img_slide01.png"></a></li>
                         <li class="slide"><a href="#"><img src="../image/common/img_slide02.png"></a></li>
-                        <li class="slide"><a href="#" tabindex="-1"><img src="../image/common/img_slide03.png"></a></li>
+                        <li class="slide"><a href="#"><img src="../image/common/img_slide03.png"></a></li>
                     </ul>
                 </div>
 
